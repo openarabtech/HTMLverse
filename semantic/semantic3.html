@@ -27,18 +27,346 @@
 <main>
 
 <!-- semantic 1 -->
-<div class="box">
+<section class="box">
 	<div class="sub-title">
         <h2>٣. إنشاء قائمة بأهم متصفحات الويب</h2>
 		<span class="hint">ورشة عمل</span>
-        <p>قريبا</p>
+        <p>في هذه الورشة، ستُنشئ قائمةً بأهم متصفحات الويب <em>web browsers</em>. وقد تم تزويدك بنموذج "اتش.تي.إم.إل" <em>The HTML boilerplate</em>.</p>
 	</div>
 
 	<section>
+		<h3>نموذج "اتش.تي.إم.إل" <em>The HTML boilerplate</em>.</h3>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+        <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+        <span class="tag">&lt;title&gt;</span>قائمة المتصفحات والأوصاف<span class="tag">&lt;/title&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+
+    <span class="tag">&lt;body&gt;</span>
+
+	<span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+
+    <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+			</code></pre>
+		</div>
 	</section>
+
+
+	<section>
+		<h3>الخطوة الأولى :</h3>
+		<p>ابدأ بإضافة عنوان إلى صفحتك يتضمن <code class="br-white">قائمة متصفحات الويب الرئيسية</code> باستخدام عنصر <code class="br">h1</code> داخل عنصر <code class="br">body</code>.</p>
+        
+
+        <h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+	<span class="tag">&lt;h1&gt;<span class="txt">قائمة متصفحات الويب الرئيسية</span>&lt;/h1&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			<h1>قائمة متصفحات الويب الرئيسية</h1>
+		</div>
+	
+	</section>
+
+
+    <section>
+		<h3>الخطوة الثانية :</h3>
+		<p>كما تتذكرون من درس سابق، يتم استخدام قوائم الوصف <strong>description lists</strong> لتقديم المصطلحات <em>terms</em> والتعريفات <em>definitions</em> بتنسيق منظم وسهل القراءة.</p>
+		<h4>وهنا مثال:</h4>
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;dl&gt;</span>
+	<span class="tag">&lt;dt&gt;<span class="txt">HTML</span>&lt;/dt&gt;</span>
+	<span class="tag">&lt;dd&gt;<span class="txt">HyperText Markup Language</span>&lt;/dd&gt;</span>
+	
+	<span class="tag">&lt;dt&gt;<span class="txt">CSS</span>&lt;/dt&gt;</span>
+	<span class="tag">&lt;dd&gt;<span class="txt">Cascading Style Sheets</span>&lt;/dd&gt;</span>
+<span class="tag">&lt;/dl&gt;</span>
+			</code></pre>
+		</div>
+		<br>
+		<p>أسفل عنصر <code class="br">h1</code>، أنشئ عنصر <code class="br">dl</code>. سيحتوي هذا العنصر على قائمة المتصفحات <i>list of browsers</i>.</p>
+	
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+	<span class="tag">&lt;h1&gt;<span class="txt">قائمة متصفحات الويب الرئيسية</span>&lt;/h1&gt;</span>
+	
+	<span class="tag">&lt;dl&gt;</span>
+
+	<span class="tag">&lt;/dl&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			<h1>قائمة متصفحات الويب الرئيسية</h1>
+			<dl>
+
+			</dl>
+		</div>
+	</section>
+
+
+	<section>
+    <h3>الخطوة الثالثة :</h3>
+	<p>تتكون قوائم الوصف <em>Description lists</em> من قائمة مصطلحات <em>terms</em> وتفاصيل <em>details</em>. يمثل عنصر <code class="br">dt</code> مصطلح الوصف <strong>the Description Term</strong>، بينما يمثل عنصر <code class="br">dd</code> تفاصيل الوصف <strong>the Description Detail</strong>.</p>
+	<p>المتصفح الأول الذي ستضيفه إلى قائمة الوصف <em>description list</em> الخاصة بك سيكون لمتصفح "غوغل كروم" Google Chrome.</p>
+	<p>داخل عنصر <code class="br">dl</code> الخاص بك، أضف عنصر <code class="br">dt</code> يحتوي على النص <code class="br-white">Google Chrome</code>.</p>
+    <p>أسفل عنصر <code class="br">dt</code>، أضف عنصر <code class="br">dd</code> بالنص التالي:</p>
+	<p><code class="br-white">هذا متصفح ويب مجاني تم تطويره بواسطة Google وتم إصداره لأول مرة في عام 2008.</code></p>
+
+	<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+	<span class="tag">&lt;h1&gt;<span class="txt">قائمة متصفحات الويب الرئيسية</span>&lt;/h1&gt;</span>
+	
+	<span class="tag">&lt;dl&gt;</span>
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Google Chrome</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.2008</span> <span>وتم إصداره لأول مرة في عام</span> <span>Google</span> <span>هذا متصفح ويب مجاني تم تطويره بواسطة</span></span><span class="tag">&lt;/dd&gt;</span>
+	<span class="tag">&lt;/dl&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			<h1>قائمة متصفحات الويب الرئيسية</h1>
+			<dl>
+				<dt>Google Chrome</dt>
+				<dd>هذا متصفح ويب مجاني تم تطويره بواسطة Google وتم إصداره لأول مرة في عام 2008.</dd>
+			</dl>
+		</div>
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة الرابعة :</h3>
+		<p>الآن حان الوقت لإضافة المتصفح الثاني إلى القائمة <em>the list</em>.</p>
+		<p>أضف عنصر <code class="br">dt</code> آخر أسفل مدخل <code class="br-white">Google Chrome</code> يحتوي على النص <code class="br-white">Firefox</code>.</p>
+		<p>أسفل عنصر <code class="br">dt</code>، أضف عنصر <code class="br">dd</code> بالنص التالي:</p>
+		<p><code class="br-white">هذا متصفح ويب مجاني تم تطويره بواسطة شركة Mozilla Corporation وتم إنشاؤه لأول مرة في عام 2004.</code></p>
+
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+	<span class="tag">&lt;h1&gt;<span class="txt">قائمة متصفحات الويب الرئيسية</span>&lt;/h1&gt;</span>
+	
+	<span class="tag">&lt;dl&gt;</span>
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Google Chrome</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.2008</span> <span>وتم إصداره لأول مرة في عام</span> <span>Google</span> <span>هذا متصفح ويب مجاني تم تطويره بواسطة</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Firefox</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.2004</span> <span>وتم إنشاؤه لأول مرة في عام</span> <span>Mozilla Corporation</span> <span>هذا متصفح ويب مجاني تم تطويره بواسطة شركة</span></span><span class="tag">&lt;/dd&gt;</span>
+	
+	<span class="tag">&lt;/dl&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			<h1>قائمة متصفحات الويب الرئيسية</h1>
+			<dl>
+				<dt>Google Chrome</dt>
+				<dd>هذا متصفح ويب مجاني تم تطويره بواسطة Google وتم إصداره لأول مرة في عام 2008.</dd>
+				<dt>Firefox</dt>
+				<dd>هذا متصفح ويب مجاني تم تطويره بواسطة شركة Mozilla Corporation وتم إنشاؤه لأول مرة في عام 2004.</dd>
+			</dl>
+		</div>
+
+
+	</section>
+    
+
+    <section>
+		<h3>الخطوة الخامسة :</h3>
+		<p>المتصفح الثالث الذي ستضيفه إلى القائمة سيكون لمتصفح الويب Safari.</p>
+		<p>أضف عنصر <code class="br">dt</code> آخر يحتوي على النص <code class="br-white">Safari</code>.</p>
+		<p>أسفل عنصر <code class="br">dt</code>، أضف عنصر <code class="br">dd</code> بالنص التالي:</p>
+		<p><code class="br-white">تم تطوير هذا المتصفح بواسطة Apple وهو المتصفح الافتراضي لأجهزة iPhone iPad  Mac .</code></p>
+
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+	<span class="tag">&lt;h1&gt;<span class="txt">قائمة متصفحات الويب الرئيسية</span>&lt;/h1&gt;</span>
+	
+	<span class="tag">&lt;dl&gt;</span>
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Google Chrome</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.2008</span> <span>وتم إصداره لأول مرة في عام</span> <span>Google</span> <span>هذا متصفح ويب مجاني تم تطويره بواسطة</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Firefox</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.2004</span> <span>وتم إنشاؤه لأول مرة في عام</span> <span>Mozilla Corporation</span> <span>هذا متصفح ويب مجاني تم تطويره بواسطة شركة</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Safari</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>. iPhone iPad  Mac</span> <span>وهو المتصفح الافتراضي لأجهزة</span> <span>Apple</span> <span>تم تطوير هذا المتصفح بواسطة</span></span><span class="tag">&lt;/dd&gt;</span>
+	
+	<span class="tag">&lt;/dl&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			<h1>قائمة متصفحات الويب الرئيسية</h1>
+			<dl>
+				<dt>Google Chrome</dt>
+				<dd>هذا متصفح ويب مجاني تم تطويره بواسطة Google وتم إصداره لأول مرة في عام 2008.</dd>
+				<dt>Firefox</dt>
+				<dd>هذا متصفح ويب مجاني تم تطويره بواسطة شركة Mozilla Corporation وتم إنشاؤه لأول مرة في عام 2004.</dd>
+				<dt>Safari</dt>
+				<dd>تم تطوير هذا المتصفح بواسطة Apple وهو المتصفح الافتراضي لأجهزة iPhone iPad  Mac .</dd>
+			</dl>
+		</div>
+
+		
+	</section>
+
+	<section>
+		<h3>الخطوة السادسة :</h3>
+		<p>الآن حان الوقت لإضافة المتصفح الرابع إلى القائمة <em>the list</em>.</p>
+		<p>أضف عنصر <code class="br">dt</code> آخر يحتوي على النص <code class="br-white">Brave</code>.</p>
+		<p>أسفل عنصر <code class="br">dt</code>، أضف عنصر <code class="br">dd</code> بالنص التالي:</p>
+		<p><code class="br-white">هذا متصفح ويب مجاني تم إصداره لأول مرة في عام 2016 ويعتمد على متصفح الويب Chromium.</code></p>
+		
+
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+	<span class="tag">&lt;h1&gt;<span class="txt">قائمة متصفحات الويب الرئيسية</span>&lt;/h1&gt;</span>
+	
+	<span class="tag">&lt;dl&gt;</span>
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Google Chrome</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.2008</span> <span>وتم إصداره لأول مرة في عام</span> <span>Google</span> <span>هذا متصفح ويب مجاني تم تطويره بواسطة</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Firefox</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.2004</span> <span>وتم إنشاؤه لأول مرة في عام</span> <span>Mozilla Corporation</span> <span>هذا متصفح ويب مجاني تم تطويره بواسطة شركة</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Safari</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>. iPhone iPad  Mac</span> <span>وهو المتصفح الافتراضي لأجهزة</span> <span>Apple</span> <span>تم تطوير هذا المتصفح بواسطة</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Brave</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.Chromium</span> <span>هذا متصفح ويب مجاني تم إصداره لأول مرة في عام 2016 ويعتمد على متصفح الويب</span></span><span class="tag">&lt;/dd&gt;</span>
+	
+	<span class="tag">&lt;/dl&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			<h1>قائمة متصفحات الويب الرئيسية</h1>
+			<dl>
+				<dt>Google Chrome</dt>
+				<dd>هذا متصفح ويب مجاني تم تطويره بواسطة Google وتم إصداره لأول مرة في عام 2008.</dd>
+				<dt>Firefox</dt>
+				<dd>هذا متصفح ويب مجاني تم تطويره بواسطة شركة Mozilla Corporation وتم إنشاؤه لأول مرة في عام 2004.</dd>
+				<dt>Safari</dt>
+				<dd>تم تطوير هذا المتصفح بواسطة Apple وهو المتصفح الافتراضي لأجهزة iPhone iPad  Mac .</dd>
+				<dt>Brave</dt>
+				<dd>هذا متصفح ويب مجاني تم إصداره لأول مرة في عام 2016 ويعتمد على متصفح الويب Chromium.</dd>
+			</dl>
+		</div>
+	
+	</section>
+    
+	<section>
+		<h3>الخطوة الأخيرة :</h3>
+		<p>المتصفح الأخير الذي ستضيفه إلى القائمة <em>the list</em> سيكون لمتصفح Arc.</p>
+		<p>أضف عنصر <code class="br">dt</code> آخر يحتوي على النص <code class="br-white">Arc</code>.</p>
+		<p>أسفل عنصر <code class="br">dt</code>، أضف عنصر <code class="br">dd</code> بالنص التالي:</p>
+		<p><code class="br-white">هذا متصفح ويب مجاني يعتمد على Chromium تم إصداره لأول مرة في عام 2023 بواسطة The Browser Company.</code></p>
+		
+
+				<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+	<span class="tag">&lt;h1&gt;<span class="txt">قائمة متصفحات الويب الرئيسية</span>&lt;/h1&gt;</span>
+	
+	<span class="tag">&lt;dl&gt;</span>
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Google Chrome</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.2008</span> <span>وتم إصداره لأول مرة في عام</span> <span>Google</span> <span>هذا متصفح ويب مجاني تم تطويره بواسطة</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Firefox</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.2004</span> <span>وتم إنشاؤه لأول مرة في عام</span> <span>Mozilla Corporation</span> <span>هذا متصفح ويب مجاني تم تطويره بواسطة شركة</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Safari</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>. iPhone iPad  Mac</span> <span>وهو المتصفح الافتراضي لأجهزة</span> <span>Apple</span> <span>تم تطوير هذا المتصفح بواسطة</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Brave</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.Chromium</span> <span>هذا متصفح ويب مجاني تم إصداره لأول مرة في عام 2016 ويعتمد على متصفح الويب</span></span><span class="tag">&lt;/dd&gt;</span>
+		
+		<span class="tag">&lt;dt&gt;</span><span class="txt">Arc</span><span class="tag">&lt;/dt&gt;</span>
+		<span class="tag">&lt;dd&gt;</span><span class="txt"><span>.The Browser Company</span> <span> تم إصداره لأول مرة في عام 2023 بواسطة</span> <span>Chromium</span> <span>هذا متصفح ويب مجاني يعتمد على</span></span><span class="tag">&lt;/dd&gt;</span>
+	
+	<span class="tag">&lt;/dl&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			<h1>قائمة متصفحات الويب الرئيسية</h1>
+			<dl>
+				<dt>Google Chrome</dt>
+				<dd>هذا متصفح ويب مجاني تم تطويره بواسطة Google وتم إصداره لأول مرة في عام 2008.</dd>
+				<dt>Firefox</dt>
+				<dd>هذا متصفح ويب مجاني تم تطويره بواسطة شركة Mozilla Corporation وتم إنشاؤه لأول مرة في عام 2004.</dd>
+				<dt>Safari</dt>
+				<dd>تم تطوير هذا المتصفح بواسطة Apple وهو المتصفح الافتراضي لأجهزة iPhone iPad  Mac .</dd>
+				<dt>Brave</dt>
+				<dd>هذا متصفح ويب مجاني تم إصداره لأول مرة في عام 2016 ويعتمد على متصفح الويب Chromium.</dd>
+				<dt>Arc</dt>
+				<dd>هذا متصفح ويب مجاني يعتمد على Chromium تم إصداره لأول مرة في عام 2023 بواسطة The Browser Company.</dd>
+			
+			</dl>
+		</div>
+		
+	</section>
+    
+
+
+    <h5>مبروك على الانتهاء من هذه الورشة!</h5>
+
+
    
 
-</div>
+</section>
 
 <!-- Pages -->
 <div class="page-nav">

@@ -299,10 +299,15 @@ section {
   background-color: rgb(198, 198, 198);
   font-size: 1rem;
   color: black;
-  
- 
- 
-  
+}
+
+.br-white {
+  border: #1e1e1e solid 1px;
+  padding: 2px;
+  font-weight: 900;
+  background-color: white;
+  font-size: 1rem;
+  color: black;
 }
 
 .long-link {
@@ -369,6 +374,10 @@ section {
 
 .code-block code .value {
   color: yellowgreen;
+}
+
+.code-block code .txt {
+  color: whitesmoke;
 }
 
 .help-code {
