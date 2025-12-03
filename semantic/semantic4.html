@@ -26,28 +26,201 @@
 
 <main>
 
-<!-- semantic 1 -->
-<div class="box">
+<!-- semantic 4 -->
+<section class="box">
 	<div class="sub-title">
         <h2>٤. التعامل مع العناصر الدلالية للنص والوقت</h2>
 		<span class="hint">نظري</span>
-        <p>قريبا</p>
+        <p></p>
 	</div>
 
 	<section id="1">
+		<h3>أ. كيف تعمل علامات الاقتباس المضمنة Inline Quotes والمكدسة Block في اتش.تي.إم.إل HTML ؟</h3>
+		
+		<p>في "اتش.تي.إم.إل" HTML، تُستخدم العناصر المقتبسة <em>Quoted elements</em> لتمييز النص المقتبس <em>quoted text</em> عن المحتوى المحيط به. هذا يُعطي النص المقتبس <em>quoted text</em> تنسيقًا يسهل التعرف عليه <em>easy to identify</em>.</p>
+		
+		<p>يجب استخدام عنصر الاقتباس المقتطع <strong>The block quotation element</strong> لتمثيل مقطع مقتبس من مصدر آخر. يُستخدم هذا العنصر بشكل أساسي للاقتباسات الموسعة. إذا كان لمصدر الاقتباس عنوان <em>address</em>، يُمكنك الاستشهاد به باستخدام سمة الاستشهاد <code class="br">cite</code>. يجب أن تكون قيمة هذه السمة عنوان URL صالحًا.</p>
+	
+		<h4>هذا مثال على اقتباس <em>quote</em> داخل عنصر اقتباس الكتلة <em>block quotation</em> :</h4>
+		
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;blokquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;
+ <span class="txt">"هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟"</span>
+&lt;/blockquote&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<blokquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+ "هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟"
+</blockquote>
+		</div>
+
+		<p>يحتوي هذا العنصر على سمة <code class="br">cite</code>. قيمة هذه السمة هي عنوان URL للمصدر. مع أن هذه السمة لا تُغيّر طريقة عرض الاقتباس، إلا أنها مفيدة جدًا لتزويد قارئات الشاشة ومحركات البحث <em>search engines</em> بمعلومات أكثر حول الاقتباس <em>the quote</em>. في المتصفح، ستلاحظ أن النص مُسطر قليلاً <em>slightly indented</em>.</p>
+
+		<p>إذا كنت ترغب في بدء وإنهاء الاقتباس بعلامات اقتباس <em>quotation marks</em>، فقد تحتاج إلى كتابتها صراحةً داخل النص. يمكنك كتابة النص مباشرةً داخل عنصر الاقتباس <em>The block quotation element</em>، كما فعلتُ للتو، أو وضعه داخل فقرة واحدة أو أكثر. هذا مفيد عندما يحتوي النص على فقرات متعددة، ولكنك ترغب في إبقاءها داخل نفس الاقتباس <em>The same block quote</em>.</p>
+
+
+		<h4>فيما يلي مثال مكون من أربع فقرات:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;blokquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;
+
+ <span class="tag">&lt;p&gt;<span class="txt">.ابنِ مشاريعك. أرِها لأصدقائك. ابنِ مشاريع لأصدقائك</span>&lt;/p&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="txt">.ابنِ شبكة علاقاتك. ساعد من تلتقي بهم في طريقك. ما تدرّ يعود إليك. ستحصل على ما تستحقه</span>&lt;/p&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="txt">.لم يفت الأوان. الحياة طويلة</span>&lt;/p&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="txt">.ستتذكر هذه اللحظة بعد سنوات من الآن، وستكون سعيدًا لأنك اتخذت هذه الخطوة</span>&lt;/p&gt;</span>
+
+&lt;/blockquote&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<blokquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+				<p>ابنِ مشاريعك. أرِها لأصدقائك. ابنِ مشاريع لأصدقائك.</p>
+				<p>ابنِ شبكة علاقاتك. ساعد من تلتقي بهم في طريقك. ما تدرّ يعود إليك. ستحصل على ما تستحقه.</p>
+				<p>لم يفت الأوان. الحياة طويلة.</p>
+				<p>ستتذكر هذه اللحظة بعد سنوات من الآن، وستكون سعيدًا لأنك اتخذت هذه الخطوة.</p>
+			</blockquote>
+		</div>
+
+		<p>جميع الفقرات مُضمنة في عنصر اقتباس مُقسّم واحد <em>The same block quotation element</em>، ما يعني أنها جزء من الاقتباس نفسه. كما هو واضح، يحتوي العنصر على سمة <code class="br">cite</code> بعنوان <b>URL</b> للمصدر. في المتصفح، ستجد أن الفقرات الأربع مُحاذاة لبعضها البعض، ولكنها مُسطرة بالنسبة لحاويتها <i>to their container</i>.</p>
+
+		<p>حتى الآن، كنتُ أستخدم خاصية الاستشهاد <code class="br">cite</code> لتحديد مصدر الاقتباس <em>the source of the quotation</em>، لكنها لا تُظهر المصدر <em>the source</em> للمستخدم، بل تعمل فقط خلف الكواليس <i>behind the scenes</i>.</p>
+	
+		<p>إذا كنت ترغب في إسناد المصدر بصريًا <i>visually</i>، يمكنك إضافة عنصر استشهاد، <code class="br">cite</code> ، خارج عنصر الاقتباس المقتطع <em>The block quotation element</em>. يختلف هذا عن سمة <code class="br">cite</code>. عنصر الاستشهاد <strong>The citation element</strong> هو عنصر "اتش.تي.إم.إل" HTML يمكنك استخدامه لتمييز عنوان <i>title</i> عمل إبداعي مرجعي، مثل كتاب، أو مقال، أو أغنية، أو فيلم، أو موقع إلكتروني، أو بحث.</p>
+
+		<h4>وهنا مثال:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;div&gt;</span>
+ 
+ <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+  هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+ <span class="tag">&lt;/blockquote&gt;</span>
+
+ <span class="tag">&lt;p&gt;</span>—Quincy Larson, <span class="tag">&lt;cite&gt;</span>كيفية تعلم البرمجة والحصول على وظيفة مطور برامج [كتاب كامل].<span class="tag">&lt;/cite&gt;&lt;/p&gt;</span>
+
+<span class="tag">&lt;/div&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<div>
+ 
+			<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+			هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+			</blockquote>
+
+			<p> —Quincy Larson, <cite>كيفية تعلم البرمجة والحصول على وظيفة مطور برامج [كتاب كامل].</cite></p>
+
+			</div>
+		</div>
+
+		<p>يحتوي عنصر الاقتباس المقتطع <em>The block quotation element</em> على نص مقتبس <em>quoted text</em>. أسفل العنصر، يمكنك رؤية فقرة باسم المؤلف، متبوعةً بعنصر استشهاد <em>a citation element</em>. يحتوي عنصر الاستشهاد <em>The citation element</em> على عنوان الكتاب الذي استُخدم فيه الاقتباس <i>the quotation</i>.</p>
+
+		<p>إذا ذهبت إلى المتصفح، فسيكون المصدر <em>the source</em> واضحًا الآن، وستجد أن الاقتباس مأخوذ من كتاب لكوينسي لارسون <i>Quincy Larson</i>. عنوان الكتاب هو <i>"كيف تتعلم البرمجة والحصول على وظيفة مطور برامج"</i>.</p>
+
+		<p>يُنصح باستخدام علامات اقتباس <em>block quotes</em> كتلك للاقتباسات الطويلة من مصادر أخرى. ولكن في بعض الأحيان، قد تحتاج فقط إلى اقتباس بضع كلمات ضمن فقرة أكبر.</p>
+
+		<p>هذا هو بالضبط الغرض من عنصر الاقتباس المضمّن <em>The inline quotation element</em>. فهو مخصص للاقتباسات المضمّنة القصيرة <em>short inline quotations</em> من مصادر أخرى. تُضيف معظم المتصفحات الحديثة علامات اقتباس <em>quotation marks</em> حول الاقتباس المضمّن <em>the inline quote</em> تلقائيًا <i>automatically</i> عند استخدام هذا العنصر.</p>
+
+		<h4>هذا مثال:</h4>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+  ،كما قال كوينسي لارسون
+ <span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+  .الزخم هو كل شيء
+ <span class="tag">&lt;/q&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+
+		<div class="preview">
+			
+			<p>
+				كما قال كوينسي لارسون،
+				<q cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+				الزخم هو كل شيء.
+				</q>
+			</p>
+		</div>
+
+
+		<p>يمكنك رؤية عنصر فقرة <em>a paragraph element</em> يحتوي على نص. جزء من النص عبارة عن اقتباس مضمّن <em>an inline quote</em>، لأنه داخل عنصر الاقتباس المضمّن <em>the inline quotation element</em>. يمكنك أيضًا إضافة سمة <code class="br">cite</code> لنسب المصدر.</p>
+
+		<p>يعمل هذا تمامًا كما كان يعمل مع عنصر الاقتباس <em>the block quotation element</em>. لن تكون هناك أي تغييرات بصرية، ولكنه سيوفر لقارئات الشاشة ومحركات البحث معلومات أكثر حول الاقتباس <i>the quote</i>.</p>
+
+		<p>في المتصفح، ستجد أن النص المقتبس <em>the quoted text</em> جزء من الفقرة، وهو محاط بعلامات اقتباس <em>quotation marks</em>. تُضيف معظم المتصفحات الحديثة علامات الاقتباس هذه تلقائيًا.</p>
+
+		<p>ما الفرق بين علامات الاقتباس المقتطعة <em>block quotes</em> والمضمنة <em>inline quotes</em>؟ يُنصح باستخدام علامات الاقتباس المقتطعة <strong>Block quotes</strong> للاقتباسات الموسعة من مصادر أخرى، بينما يُنصح باستخدام علامات الاقتباس المضمنة <strong>Inline quotes</strong> للاقتباسات القصيرة من مصادر أخرى والتي يجب أن تكون جزءًا من فقرات موجودة.</p>
+
+
+
+				<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+			<h5>ما هو عنصر "اتش.تي.إم.إل" HTML المُستخدم لعرض اقتباسات مُوسّعة من مصادر أخرى؟</h5>
+			
+			<p>١. <code class="br">q</code> ❌</p>
+			<p><mark>٢. <code class="br">blockquote</code> ✅</mark></p>
+			<p>٣. <code class="br">cite</code> ❌</p>
+			<p>٤. <code class="br">p</code> ❌</p>
+			
+			
+			<br>
+
+			<h5>ما هو الغرض من عنصر <code class="br">cite</code> في "اتش.تي.إم.إل" HTML ؟</h5>
+			
+			<p>١. لعرض الاقتباسات المضمنة <em>inline quotations</em>. ❌</p>
+			<p>٢. لتحديد رابط URL مصدر الاقتباس. ❌</p>
+			<p><mark>٣. لتمييز عنوان <em>title</em> العمل الإبداعي المُشار إليه. ✅</mark></p>
+			<p>٤. لعرض الاقتباسات المُوسّعة <em>extended quotations</em>. ❌</p>
+			
+			
+			<br>
+
+			<h5>ما هي سمة "اتش.تي.إم.إل" HTML المُستخدمة لتحديد مصدر الاقتباس في عنصر اقتباس مُضمّن أو مُكبّر؟</h5>
+			
+			<p>١. <code class="br">href</code> ❌</p>
+			<p>٢. <code class="br">src</code> ❌</p>
+			<p>٣. <code class="br">title</code> ❌</p>
+			<p><mark>٤. <code class="br">cite</code> ✅</mark></p>
+			
+			
+
+		</div>
+
+
+
+
+
+
+
 	</section>
 
     <section id="2">
+		<h3>ب. كيف تعرض الاختصارات Abbreviations في اتش.تي.إم.إل HTML ؟</h3>
 	</section>
 
     <section id="3">
+		<h3>ج. كيف تعرض العناوين Addresses في اتش.تي.إم.إل HTML ؟</h3>
 	</section>
 
     <section id="4">
+		<h3>د. كيف تعرض الأوقات Times والتاريخ Dates في اتش.تي.إم.إل HTML ؟</h3>
 	</section>
    
 
-</div>
+</section>
 
 <!-- Pages -->
 <div class="page-nav">
