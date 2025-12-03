@@ -110,12 +110,18 @@ footer .support {
 }
 
 footer .support a{
-  color: black;
+  /* color: black;
   text-decoration: none;
   background: linear-gradient(180deg, #7b2a9f, #fdd82e);
   border-radius: 4px;
-  padding: 0px;
+  padding: 0px; */
   
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(180deg, green, black);
+  border-radius: 4px;
+  padding: 1px;
+  border: green solid 1px;
   
 }
 
