@@ -209,6 +209,103 @@
 
     <section id="2">
 		<h3>ب. كيف تعرض الاختصارات Abbreviations في اتش.تي.إم.إل HTML ؟</h3>
+
+		<p>الاختصار <strong>An abbreviation</strong> هو شكل مُختصر من كلمة أو عبارة. على سبيل المثال، كلمة <b>"Dr"</b> متبوعة بنقطة هي اختصار لكلمة <b>"doctor"</b>.</p>
+	
+		<p>هناك نوعان شائعان من الاختصارات: الاختصارات <strong>acronyms</strong> والأحرف الأولى <strong>initialisms</strong>.</p>
+	
+		<p>الاختصار <strong>An acronym</strong> هو كلمة مكونة من الأحرف الأولى من عبارة، حيث يمثل كل حرف الحرف الأول من كلمة في تلك العبارة.</p>
+	
+		<p><b>GUI</b> مثال على اختصار <em>an acronym</em>، وهو اختصار لـ "واجهة المستخدم الرسومية" (Graphical User Interface). بأخذ الأحرف الأولى من كل كلمة "G" و "U" و "I" ، نحصل على اختصار <i>GUI</i>.</p>
+	
+		<p>يتم تشكيل الحرف الأول <strong>An initialism</strong> من الكلمة من خلال الأحرف الأولى  من العبارة، حيث يمثل كل حرف الحرف الأول <em>the first letter</em> من الكلمة في تلك العبارة.</p>
+	
+		<p>على سبيل المثال، <b>HTML</b> هو اختصار لـ <strong>HyperText Markup Language</strong>، ويتم نطقه من خلال تهجئة كل حرف من الحروف "H" و "T" و "M" و "L" .</p>
+	
+		<p>كلٌّ من الاختصارات <em>acronyms</em> والحروف الأولى <em>initialisms</em> نوعان من الاختصارات. الفرق هو أن الاختصارات <strong>acronyms</strong> تُنطق ككلمات، بينما تُنطق الحروف الأولى <strong>initialisms</strong> كحروف مفردة.</p>
+	
+		<p>إنها مفيدة جدًا لكتابة نصوص أكثر إيجازًا، خاصةً عندما تكون معروفة وسهلة الفهم في سياق معين.</p>
+	
+		<p>إذا كنت بحاجة لعرض اختصارات <strong>abbreviations</strong> ، مثل الإختصارات <em>acronyms</em> أو الأحرف الأولى <em>initialisms</em>، في "اتش.تي.إم.إل" HTML، فإن عنصر الاختصار <em>The abbreviation element</em> هو ما تبحث عنه تمامًا. يجب عليك دائمًا شرح معناها الكامل عند استخدامها لأول مرة. بعد ذلك، يمكنك استخدام عنصر الاختصار <em>The abbreviation element</em> لتمييزها وتقديم مزيد من التفاصيل.</p>
+
+		<h4>فيما يلي مثال حيث يمكنك رؤية فقرة تحتوي على الجملة <code class="br-white">HTML هو أساس الويب</code> :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+ هو أساس الويب<span class="tag">&lt;abbr&gt;<span class="txt">HTML</span>&lt;/abbr&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p><abbr>HTML</abbr> هو أساس الويب</p>
+		</div>
+
+		<p>توجد الأحرف الأولى من HTML ضمن عنصر اختصار <em>an abbreviation element</em>. في المتصفح، ستلاحظ أنه لم يتغير شيء، فهو لا يزال يبدو كنص عادي. يوفر عنصر الاختصار <strong>The abbreviation element</strong> سياقًا مفيدًا، لكن المستخدمين سيظلون يرون الأحرف الأولى كنص عادي.</p>
+
+		<p>ذا كنت تريد مساعدة المستخدمين على فهم معنى هذا الاختصار <em>initialism</em>، فيمكنك عرض شكله الكامل باستخدام سمة <code class="br">title</code>.</p>
+
+		<p>سمة <code class="br">title</code> اختيارية <i>optional</i>، ولكن إذا قررت تضمينها، فيجب أن تكون وصفًا قابلاً للقراءة من قبل الإنسان للاختصار <em>acronym</em> أو الأحرف الأولى <em>initialism</em> من الاسم.</p>
+
+		<h4>لنأخذ نفس المثال السابق، ولكن أضف سمة <code class="br">title</code>. ستكون <code class="br-white">HyperText Markup Language</code>، وهي الشكل الموسع للاسم الأولي <em>initialism</em>:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+ هو أساس الويب<span class="tag">&lt;abbr <span class="attr">title=</span><span class="value">"HyperText Markup Language"</span>&gt;<span class="txt">HTML</span>&lt;/abbr&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p><abbr title="HyperText Markup Language">HTML</abbr> هو أساس الويب</p>
+		</div>
+
+		<p>عادةً، يتغير نمط <i>style</i> عنصر الاختصار <em>the abbreviation element</em> عند إضافة هذه الخاصية <em>attribute</em>. ويعتمد النمط المُحدد على المتصفح. قد تعرض بعض المتصفحات خطًا منقطًا <i>a dotted underline</i>، بينما قد تُحوّل متصفحات أخرى المحتوى إلى أحرف كبيرة صغيرة، أو حتى تُعيّن أنماطًا افتراضية مُعينة، مثل خط منقط. عند تحريك المستخدم مؤشر الماوس فوق الاختصار، يُعرض النموذج الكامل كتلميح <i>a tooltip</i>.</p>
+
+		<p>على الرغم من أنك لا تحتاج بالضرورة إلى استخدام عنصر الاختصار <em>the abbreviation element</em> لكل اختصار على صفحتك على الويب، فمن المستحسن استخدامه للاختصارات التي قد تكون غير واضحة وتلك التي قد تحتاج إلى سياق إضافي.</p>
+	
+		<p>يجب عليك استخدام أفضل حكم لديك للعثور على التوازن الصحيح بين المعلومات والعرض لتجنب تشويش النص مع الحفاظ على الوضوح والإيجاز.</p>
+	
+	
+		<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو العنصر في HTML المستخدم للإشارة إلى اختصار abbreviation أو كلمة مختصرة acronym ؟ </h5>
+
+			<p><mark>١. <code class="br">abbr</code>  ✅</mark></p>
+			<p>٢. <code class="br">acronym</code>  ❌</p>
+			<p>٣. <code class="br">abbrev</code>  ❌</p>
+			<p>٤. <code class="br">acron</code>  ❌</p>
+			
+				
+			<br>
+
+			<h5>ما هو الغرض الأساسي من عنصر <code class="br">abbr</code> ؟</h5>
+
+			<p>١. تنسيق النص كاختصار an abbreviation.  ❌</p>
+			<p><mark>٢. للإشارة إلى اختصار an abbreviation أو كلمة مختصرة acronym وتقديم معلومات إضافية.  ✅</mark></p>
+			<p>٣. لاختصار محتوى صفحة ويب.  ❌</p>
+			<p>٤. لتحسين ترتيب محركات البحث search engine rankings.  ❌</p>
+			
+				
+			<br>
+
+			<h5>ما هي الخاصية التي يمكن استخدامها داخل عنصر <code class="br">abbr</code> لتوفير الشكل الكامل للاختصار أو الاختصار؟</h5>
+
+			<p>١. <code class="br">explain</code>  ❌</p>
+			<p>٢. <code class="br">description</code>  ❌</p>
+			<p><mark>٣. <code class="br">title</code>  ✅</mark></p>
+			<p>٤. <code class="br">fullform</code>  ❌</p>
+			
+				
+			
+
+		</div>
+	
 	</section>
 
     <section id="3">
