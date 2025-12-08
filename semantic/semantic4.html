@@ -310,6 +310,100 @@
 
     <section id="3">
 		<h3>ج. كيف تعرض العناوين Addresses في اتش.تي.إم.إل HTML ؟</h3>
+
+		<p>يُستخدم عنصر عنوان جهة الاتصال <em>The contact address element</em> لعرض معلومات الاتصال الخاصة بقسم على صفحة ويب. يتميز هذا العنصر <code class="br">address</code> بتعدد استخداماته، إذ يُمكن استخدامه في صفحات الأعمال، وصفحات المؤلفين، والمواقع الشخصية، وغيرها.</p>
+	
+		<p>عندما يتعلق الأمر ببناء أقسام الاتصال الخاصة بموقع الويب الخاص بك، يجب عليك استخدام عنصر العنوان الدلالي <code class="br">address</code> بدلاً من عنصر عام مثل <code class="br">div</code>.</p>
+	
+		<h4>فيما يلي مثال لاستخدام عنصر <code class="br">address</code> لصفحة الاتصال الخاصة بالشركة:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;address&gt;</span>
+
+ <span class="tag">&lt;h2&gt;<span class="txt">اسم الشركة</span>&lt;/h2&gt;</span>
+ <span class="tag">&lt;p&gt;</span>
+  ١٢٣٤ شارع إلم <span class="tag">&lt;br /&gt;</span>
+ سبرينغفيلد، إلينوي ٦٢٧٠١ <span class="tag">&lt;br /&gt;</span>
+ الولايات المتحدة الأمريكية
+ <span class="tag">&lt;/p&gt;</span>
+
+ <span class="tag">&lt;p&gt;<span class="txt">الهاتف</span> &lt;a <span class="attr">href=</span><span class="value">"tel:+15555555555"</span><span class="txt">+1 (555) 555-5555</span>&lt;/a&gt;&lt;/p&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="txt">البريد الإلكتروني</span> &lt;a <span class="attr">href=</span><span class="value">"mailto:contact@company.com"</span><span class="txt">contact@company.com</span>&lt;/a&gt;&lt;/p&gt;</span>
+
+<span class="tag">&lt;/address&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			<address>
+
+			<h2>اسم الشركة</h2>
+			<p>
+			١٢٣٤ شارع إلم <br />
+			سبرينغفيلد، إلينوي ٦٢٧٠١ <br />
+			الولايات المتحدة الأمريكية
+			</p>
+
+			<p>الهاتف <a href="tel:+15555555555">55555-555 (555) 1+</a></p>
+			<p>البريد الإلكتروني <a href="mailto:contact@company.com">contact@company.com</a></p>
+
+			</address>
+		
+		</div>
+
+		<p>في هذا المثال، يوجد اسم الشركة، والعنوان الفعلي، ورقم الهاتف، ومعلومات البريد الإلكتروني. بالنسبة للعنوان الفعلي، يُستخدم عنصر فاصل الأسطر، <code class="br">br</code> ، لإظهار التقسيم بين اسم الشارع والمدينة والبلد.</p>
+
+		<p>بالنسبة لرقم الهاتف، لدينا عنصر ربط <em>an anchor element</em> بقيمة <code class="br">href</code> مُعيَّنة لأرقام الهواتف. تُنشئ قيمة <code class="br">+:tel</code> داخل سمة <code class="br">href</code> رابطًا قابلًا للنقر لبدء مكالمة هاتفية على أجهزة مُحدَّدة تدعم هذه الخاصية.</p>
+
+		<p>بالنسبة لعنوان البريد الإلكتروني، يتم استخدام عنصر مرساة آخر <em>anchor element</em> مع تعيين قيمة <code class="br">href</code> إلى رابط <code class="br">mailto</code>. تُستخدم روابط <code class="br">mailto</code> في مستندات "اتش.تي.إم.إل" HTML للسماح للمستخدمين بفتح بريد إلكتروني جديد داخل عميل البريد الإلكتروني المفضل لديهم.</p>
+
+		<p>من عيوب استخدام رابط <code class="br">mailto</code> أن المستخدمين غالبًا ما يعتبرونه بريدًا عشوائيًا. للأسف، يستخدم الكثير من مرسلي البريد العشوائي <strong>Spammers</strong> هذا الخيار لإرسال رسائل بريد إلكتروني إلى المستخدمين. لذا، تذكر ذلك عند استخدامه.</p>
+
+
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الغرض من عنصر <code class="br">address</code> ؟</h5>
+
+			
+			<p> ١. يُستخدم لتحديد قسم لروابط التنقل for navigation links. ❌</p>
+			<p><mark> ٢. يُستخدم لعرض معلومات الاتصال to represent contact information لقسم على صفحة ويب. ✅</mark></p>
+			<p> ٣. يُستخدم لتحديد نمط الخط font style لقسم من الصفحة. ❌</p>
+			<p> ٤. يُستخدم لتجميع المحتوى to group content لتنسيقه باستخدام CSS. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هو استخدام رابط <code class="br">mailto</code> ؟</h5>
+
+			
+			<p> ١. يُستخدم للربط to link بصفحة ويب. ❌</p>
+			<p> ٢. يُستخدم لإنشاء رابط تنزيل ملف a file download link. ❌</p>
+			<p> ٣. يُستخدم لإعادة التوجيه to redirect إلى موقع ويب آخر. ❌</p>
+			<p><mark> ٤. يُستخدم للسماح للمستخدمين بفتح بريد إلكتروني جديد ضمن برنامج البريد الإلكتروني المُفضّل لديهم. ✅</mark></p>
+			
+				
+			<br>
+
+			<h5>ما هو الجانب السلبي لاستخدام روابط <code class="br">mailto</code> ؟</h5>
+
+			<p><mark> ١. هذه الروابط هدفٌ لمرسلي البريد العشوائي Spammers لإرسال رسائل بريد إلكتروني إلى المستخدمين. ✅</mark></p>
+			<p> ٢. تُنشئ هذه الروابط صفحة ويب تلقائيًا. ❌</p>
+			<p> ٣. تُحسّن هذه الروابط من تحسين محركات البحث SEO لموقعك الإلكتروني. ❌</p>
+			<p> ٤. تُحسّن هذه الروابط سرعة تحميل موقعك الإلكتروني. ❌</p>
+			
+				
+			
+
+		</div>
+
+
+
 	</section>
 
     <section id="4">
