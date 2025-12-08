@@ -27,19 +27,737 @@
 <main>
 
 <!-- semantic 1 -->
-<div class="box">
+<section class="box">
 	<div class="sub-title">
         <h2>٥. إنشاء صفحة نصائح كوينسي الوظيفية</h2>
 		<span class="hint">ورشة عمل</span>
-        <p>قريبا</p>
+        <p>في هذه الورشة، ستتدرب على استخدام لغة "اتش.تي.إم.إل" HTML الدلالية من خلال بناء صفحة ويب تتضمن بعض نصائح كوينسي لارسون للحصول على وظيفة مطور. تم إعداد قالب "اتش.تي.إم.إل" HTML الأساسي لك.</p>
 	</div>
 
-	<section>
+		<section>
+		<h3>نموذج "اتش.تي.إم.إل" <em>The HTML boilerplate</em>.</h3>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+        <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+        <span class="tag">&lt;title&gt;</span>نصائح كوينسي للحصول على وظيفة مطور<span class="tag">&lt;/title&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+
+    <span class="tag">&lt;body&gt;</span>
+
+	<span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+
+    <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+			</code></pre>
+		</div>
 	</section>
+
+
+	<section>
+		<h3>الخطوة الأولى :</h3>
+        
+		<p>ابدأ بإنشاء عنصر <code class="br">h1</code> بالنص <code class="br-white">نصائح كوينسي للحصول على وظيفة مطور.</code></p>
+
+        <h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+		</div>
+	
+	</section>
+
+
+    <section>
+		<h3>الخطوة الثانية :</h3>
+
+		<p>الآن، أنشئ فقرة أسفل عنصر <code class="br">h1</code>. أضف النص داخل هذه الفقرة. <code class="br-white">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، يمكنك أن تصبح مطورًا.</code>.</p>
+		
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+	<span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+	<span class="tag">&lt;p&gt;<span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، يمكنك أن تصبح مطورًا.</span>&lt;/p&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			<h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، يمكنك أن تصبح مطورًا.</p>
+		</div>
+	</section>
+
+
+	<section>
+    <h3>الخطوة الثالثة :</h3>
+	
+	<p>في درس سابق تعلمت أن عنصر <code class="br">q</code> يستخدم للتمييز بين النص المقتبس والمحتوى المحيط به.</p>
+
+	<h4>وهنا مثال:</h4>
+
+	<div class="code-block">
+		<pre><code>
+<span class="tag">&lt;p&gt;</span>
+ <span class="tag">&lt;q&gt;<span class="txt">التعلم ممتع!</span>&lt;/q&gt;</span>،قالت نانسي
+<span class="tag">&lt;/p&gt;</span>
+		</code></pre>
+	</div>
+
+	<p>ستضيف معظم المتصفحات الحديثة علامات اقتباس حول الاقتباس المضمن تلقائيًا عند استخدام عنصر <code class="br">q</code>.</p>
+
+	<p>ضع عبارة «يمكنك أن تصبح مطورًا.» داخل عنصر اقتباس مضمَّن <em>in an inline quotation element</em> داخل الفقرة، مع إبقاء باقي الفقرة دون أي تغيير.</p>
+
+	<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q>يمكنك أن تصبح مطورًا.</q> </p>
+
+		</div>
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة الرابعة :</h3>
+		
+		<p>إذا كان مصدر الاقتباس موقعًا إلكترونيًا، يمكنك الاستشهاد به باستخدام سمة <code class="br">cite</code>. يجب أن تكون قيمة هذه السمة عنوان URL صالحًا. مع أن هذه السمة لا تُغيّر طريقة عرض الاقتباس، إلا أنها مفيدة جدًا في تزويد قارئات الشاشة ومحركات البحث بمعلومات أكثر عن الاقتباس.</p>
+
+		<h4>فيما يلي مثال لعنصر اقتباس مضمن <em>inline quotation element</em> مع سمة <code class="br">cite</code>:</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ ،قالت نانسي
+ <span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://example.com"</span>&gt;<span class="txt">التعلم ممتع!</span>&lt;/q&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+		<p>أضف سمة <code class="br">cite</code> إلى عنصر الاقتباس المضمن باستخدام عنوان URL هذا:</p>
+		<p><code class="br-white">https://www.freecodecamp.org/news/learn-to-code-book/</code></p>
+
+			<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+		</div>
+
+	</section>
+    
+
+    <section>
+		<h3>الخطوة الخامسة :</h3>
+		
+		<p>أسفل عنصر الفقرة، أضف عنصر <code class="br">main</code> وقم بتضمين ثلاثة عناصر <code class="br">section</code> بداخله.</p>
+
+					<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+			<section>
+				<section></section>
+				<section></section>
+				<section></section>
+			</section>
+		</div>
+
+		
+	</section>
+
+	<section>
+		<h3>الخطوة السادسة :</h3>
+		
+		<p>داخل عنصر <code class="br">section</code> الأول، أضف عنصر <code class="br">h2</code> مع النص <code class="br-white">تصور النجاح</code>.</p>
+	
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">تصور النجاح</span>&lt;/h2&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+			<section>
+				<section>
+					<h2>تصور النجاح</h2>
+				</section>
+				<section></section>
+				<section></section>
+			</section>
+		</div>
+	</section>
+    
+	<section>
+		<h3>الخطوة السابعة :</h3>
+		
+		<p>أسفل عنصر <code class="br">h2</code>، ستُضيف اقتباسًا آخر لكوينسي. هذه المرة، لن يكون الاقتباس جزءًا من فقرة أكبر، بل ستكون الفقرة بأكملها اقتباسًا. لتمييز النص المقتبس بهذا الشكل، استخدم <em>The block quotation element</em> عنصر الاقتباس الكتلي () : <code class="br">blockquote</code>. في المتصفح، سترى أن النص مُسطر قليلاً.</p>
+		
+		<h4>فيما يلي مثال لعنصر اقتباس كتلة <em>a block quotation element</em> مع نص مقتبس:</h4>
+
+		<div class="code-block"><pre>
+			<code>
+<span class="tag">&lt;blockquote&gt;</span>
+ أول شيء يجب أن تفكر فيه بشأن التعليم هو أن هذا قرار اقتصادي.
+<span class="tag">&lt;/blockquote&gt;</span>
+			</code>
+		</pre></div>
+
+		<p>الآن، داخل <code class="br">section</code> الأول، أضف عنصر اقتباس كتلة <em>a block quotation element</em> أسفل عنصر <code class="br">h2</code> بالنص:</p>
+		<p><code class="br-white">هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟</code></p>
+
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">تصور النجاح</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote&gt;</span>
+    هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   <span class="tag">&lt;/blockquote&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+			<section>
+				<section>
+					<h2>تصور النجاح</h2>
+					<blockquote>
+						هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   					</blockquote>
+				</section>
+				<section></section>
+				<section></section>
+			</section>
+		</div>
+
+	</section>
+
+	<section>
+		<h3>الخطوة الثامنة :</h3>
+
+		<p>تمامًا مثل عنصر الاقتباس المضمن <em>inline quotation element</em> ، يمكنك أيضًا إضافة سمة <code class="br">cite</code> إلى عنصر اقتباس الكتلة <em>a block quotation element</em> .</p>
+
+		<h4>فيما يلي مثال لعنصر اقتباس كتلة <em>a block quotation element</em> مع سمة <code class="br">cite</code>:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/is-college-worth-it/"</span>&gt;</span>
+ أول شيء يجب أن تفكر فيه بشأن التعليم هو أن هذا قرار اقتصادي.
+<span class="tag">&lt;/blockquote&gt;</span>
+			</code></pre>
+		</div>
+
+		<p>الآن، أضف سمة <code class="br">cite</code> إلى عنصر اقتباس الكتلة <em>the block quotation element</em> مع عنوان URL</p>
+
+		<p><code class="br-white">https://www.freecodecamp.org/news/learn-to-code-book/</code></p>
+
+				<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">تصور النجاح</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+    هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   <span class="tag">&lt;/blockquote&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+			<section>
+				<section>
+					<h2>تصور النجاح</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+						هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   					</blockquote>
+				</section>
+				<section></section>
+				<section></section>
+			</section>
+		</div>
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة التاسعة :</h3>
+
+		<p>أسفل عنصر اقتباس الكتلة <em>the block quotation element</em> ، أضف عنصر فقرة بالنص</p>
+		<p><code class="br-white">- كوينسي لارسون، كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</code>.</p>
+
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">تصور النجاح</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+    هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   <span class="tag">&lt;/blockquote&gt;</span>
+   <span class="tag">&lt;p&gt; <span class="txt"> كوينسي لارسون، كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]-</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+			<section>
+				<section>
+					<h2>تصور النجاح</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+						هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   					</blockquote>
+					<p>- كوينسي لارسون، كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</p>
+				</section>
+				<section></section>
+				<section></section>
+			</section>
+		</div>
+
+	</section>
+
+	<section>
+
+		<h3>الخطوة العاشرة :</h3>
+
+		<p>حتى الآن كنت تستخدم سمة <code class="br">cite</code> لإسناد مصدر الاقتباس، ولكن السمة لا تظهر المصدر للمستخدم حقًا.</p>
+
+		<p>إذا كنت ترغب في الإشارة إلى المصدر بصريًا، يمكنك إضافة عنصر استشهاد، <code class="br">cite</code>، خارج عنصر الاقتباس المحظور. عنصر الاستشهاد <em>The citation element</em> هو عنصر HTML يمكنك استخدامه لتحديد عنوان عمل إبداعي مرجعي، مثل كتاب، أو مقال، أو أغنية، أو فيلم، أو موقع إلكتروني، أو بحث.</p>
+
+		<h4>وهنا مثال:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;div&gt;</span>
+ <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/is-college-worth-it/"</span>&gt;</span>
+ أول شيء يجب أن تفكر فيه بشأن التعليم هو أن هذا قرار اقتصادي.
+ <span class="tag">&lt;/blockquote&gt;</span>
+ <span class="tag">&lt;p&gt;</span><span class="tag">&lt;cite&gt;</span>هل ما زالت الدراسة الجامعية تستحق العناء؟ نصائح من خبرتي في تعليم الكبار لمدة ٢٠ عامًا<span class="tag">&lt;/cite&gt;</span>،كوينسي لارسون—<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+			</code></pre>
+		</div>
+
+		<p>داخل عنصر <code class="br">p</code> الموجود أسفل عنصر اقتباس الكتلة <em>the block quotation element</em> ، قم بتغليف <code class="br-white">كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</code> في عنصر <code class="br">cite</code>.</p>
+
+				<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">تصور النجاح</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+    هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   <span class="tag">&lt;/blockquote&gt;</span>
+   <span class="tag">&lt;p&gt;<span class="tag">&lt;cite&gt;<span class="txt">كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</span>&lt;/cite&gt;</span><span class="txt">،كوينسي لارسون—</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+			<section>
+				<section>
+					<h2>تصور النجاح</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+						هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   					</blockquote>
+					<p>- كوينسي لارسون، <cite>كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</cite></p>
+				</section>
+				<section></section>
+				<section></section>
+			</section>
+		</div>
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة 11 :</h3>
+
+		<p>داخل عنصر <code class="br">section</code> الثاني، قم بتضمين عنصر <code class="br">h2</code> مع النص <code class="br-white">أهمية الشبكات</code>.</p>
+
+		<p>أسفل هذا العنوان، أضف عنصر اقتباس كتلة <em>a block quotation element</em> مع سمة <code class="br">cite</code> بقيمة</p>
+		<p><code class="br-white">https://www.freecodecamp.org/news/learn-to-code-book/</code></p>
+
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">تصور النجاح</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+    هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   <span class="tag">&lt;/blockquote&gt;</span>
+   <span class="tag">&lt;p&gt;<span class="tag">&lt;cite&gt;<span class="txt">كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</span>&lt;/cite&gt;</span><span class="txt">،كوينسي لارسون—</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">أهمية الشبكات</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+   <span class="tag">&lt;/blockquote&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+			<section>
+				<section>
+					<h2>تصور النجاح</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+						هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   					</blockquote>
+					<p>- كوينسي لارسون، <cite>كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</cite></p>
+				</section>
+				<section>
+					<h2>أهمية الشبكات</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+   					</blockquote>
+				</section>
+				<section></section>
+			</section>
+		</div>
+
+	</section>
+
+	<section>
+		<h3>الخطوة 12 :</h3>
+
+		<p>يمكنك كتابة النص المقتبس مباشرةً داخل عنصر الاقتباس <em>the block quotation element</em> ، كما فعلت في عنصر <code class="br">section</code> الأول. أو يمكنك دمجه داخل فقرة واحدة أو أكثر. هذا مفيد عندما يحتوي النص على فقرات متعددة، ولكنك ترغب في الاحتفاظ بها داخل نفس عنصر الاقتباس <em>the same block quotation element</em> .</p>
+
+		<h4>فيما يلي مثال مكون من فقرتين:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/is-college-worth-it/"</span>&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="txt">يسألني الكثيرون أسبوعيًا: هل ما زالت الدراسة الجامعية تستحق العناء؟ في هذا الفيديو، الذي مدته ساعة، أجيب على هذا السؤال وأسئلة شائعة أخرى حول الجامعة.</span>&lt;/p&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="txt">لقد عملت في مجال التعليم للبالغين لمدة عقدين من الزمن حتى هذه النقطة، وعلى الرغم من أنني لست خبيراً اقتصادياً في سوق العمل، إلا أنني أشعر بالثقة الكافية للإجابة على هذه الأسئلة.</span>&lt;/p&gt;</span>
+<span class="tag">&lt;/blockquote&gt;</span>
+			</code></pre>
+		</div>
+
+		<p>في <code class="br">section</code> الثاني، داخل عنصر اقتباس الكتلة <em>the block quotation element</em> الموجود، أضف أربعة عناصر <code class="br">p</code> مع النصوص التالية بالترتيب:</p>
+
+		<ul>
+			<li><p>1. يعتمد الحصول على وظيفة بشكل كبير على معارفك.</p></li>
+			<li><p>2. لا بأس أن تكون انطوائيًا، لكن عليك أن تتجاوز حدودك.</p></li>
+			<li><p>3. أنشئ حسابات على GitHub ,Twitter, LinkedIn, DiscordDiscord.</p></li>
+			<li><p>4. احضر اللقاءات والمؤتمرات التقنية. سافر إذا اضطررت.</p></li>
+		</ul>
+		
+		
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">تصور النجاح</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+    هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   <span class="tag">&lt;/blockquote&gt;</span>
+   <span class="tag">&lt;p&gt;<span class="tag">&lt;cite&gt;<span class="txt">كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</span>&lt;/cite&gt;</span><span class="txt">،كوينسي لارسون—</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">أهمية الشبكات</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt">يعتمد الحصول على وظيفة بشكل كبير على معارفك.</span>&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt">لا بأس أن تكون انطوائيًا، لكن عليك أن تتجاوز حدودك.</span>&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt"><span>.GitHub ,Twitter, LinkedIn, Discord</span>أنشئ حسابات على</span>&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt">احضر اللقاءات والمؤتمرات التقنية. سافر إذا اضطررت.</span>&lt;/p&gt;</span>
+   <span class="tag">&lt;/blockquote&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span><span class="tag">&lt;/section&gt;</span>
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+			<section>
+				<section>
+					<h2>تصور النجاح</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+						هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   					</blockquote>
+					<p>- كوينسي لارسون، <cite>كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</cite></p>
+				</section>
+				<section>
+					<h2>أهمية الشبكات</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+						<p>يعتمد الحصول على وظيفة بشكل كبير على معارفك.</p>
+						<p>لا بأس أن تكون انطوائيًا، لكن عليك أن تتجاوز حدودك.</p>
+						<p>أنشئ حسابات على GitHub ,Twitter, LinkedIn, DiscordDiscord.</p>
+						<p>احضر اللقاءات والمؤتمرات التقنية. سافر إذا اضطررت.</p>
+   					</blockquote>
+				</section>
+				<section></section>
+			</section>
+		</div>
+		
+
+
+
+
+	</section>
+
+
+	<section>
+		<h3>الخطوة الأخيرة :</h3>
+
+		<p>في عنصر <code class="br">section</code> الثالث والأخير، سوف تقوم بإنشاء نفس هيكل HTML كما فعلت في القسم السابق.</p>
+
+		<p>أولاً، داخل <code class="br">section</code> الأخير، أضف عنصر <code class="br">h2</code> مع النص <code class="br-white">أهمية بناء السمعة</code>.</p>
+
+		<p>ثم، أسفل عنصر <code class="br">h2</code>، أضف عنصر اقتباس كتلة <em>a block quotation element</em> مع تعيين سمة <code class="br">cite</code> إلى</p>
+
+		<p><code class="br-white">https://www.freecodecamp.org/news/learn-to-code-book/</code></p>
+
+		<p>أخيرًا، قم بتضمين ثلاثة عناصر فقرة داخل عنصر اقتباس الكتلة <em>the block quotation element</em> مع النصوص التالية، بالترتيب:</p>
+
+		<ul>
+			<li><p>1. شارك بعروض فيديو قصيرة لمشاريعك.</p></li>
+			<li><p>2. واظب على التقديم للتحدث في مؤتمرات أكبر فأكبر.</p></li>
+			<li><p>3. انضم إلى جلسات الهاكرز وساعد مَن هم أحدث منك في البرمجة.</p></li>
+		</ul>
+
+
+		<h4>الكود :</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;h1&gt;<span class="txt">نصائح كوينسي للحصول على وظيفة مطور.</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;<span class="txt">.يمكنك أن تصبح مطورًا</span>&lt;/q&gt;</span><span class="txt">تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون،</span>&lt;/p&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">تصور النجاح</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+    هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   <span class="tag">&lt;/blockquote&gt;</span>
+   <span class="tag">&lt;p&gt;<span class="tag">&lt;cite&gt;<span class="txt">كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</span>&lt;/cite&gt;</span><span class="txt">،كوينسي لارسون—</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">أهمية الشبكات</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt">يعتمد الحصول على وظيفة بشكل كبير على معارفك.</span>&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt">لا بأس أن تكون انطوائيًا، لكن عليك أن تتجاوز حدودك.</span>&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt"><span>.GitHub ,Twitter, LinkedIn, Discord</span>أنشئ حسابات على</span>&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt">احضر اللقاءات والمؤتمرات التقنية. سافر إذا اضطررت.</span>&lt;/p&gt;</span>
+   <span class="tag">&lt;/blockquote&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">أهمية بناء السمعة</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt">شارك بعروض فيديو قصيرة لمشاريعك.</span>&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt">واظب على التقديم للتحدث في مؤتمرات أكبر فأكبر.</span>&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;<span class="txt">انضم إلى جلسات الهاكرز وساعد مَن هم أحدث منك في البرمجة.</span>&lt;/p&gt;</span>
+   <span class="tag">&lt;/blockquote&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview" role="presentation">
+			 <h1>نصائح كوينسي للحصول على وظيفة مطور.</h1>
+ 			<p>تعلم البرمجة صعب، ولكن كما يقول كوينسي لارسون، <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">يمكنك أن تصبح مطورًا.</q> </p>
+
+			<section>
+				<section>
+					<h2>تصور النجاح</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+						هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+   					</blockquote>
+					<p>- كوينسي لارسون، <cite>كيفية تعلم البرمجة والحصول على وظيفة مطور [الكتاب الكامل]</cite></p>
+				</section>
+				<section>
+					<h2>أهمية الشبكات</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+						<p>يعتمد الحصول على وظيفة بشكل كبير على معارفك.</p>
+						<p>لا بأس أن تكون انطوائيًا، لكن عليك أن تتجاوز حدودك.</p>
+						<p>أنشئ حسابات على GitHub ,Twitter, LinkedIn, DiscordDiscord.</p>
+						<p>احضر اللقاءات والمؤتمرات التقنية. سافر إذا اضطررت.</p>
+   					</blockquote>
+				</section>
+				<section>
+					<h2>أهمية بناء السمعة</h2>
+					<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+						<p>شارك بعروض فيديو قصيرة لمشاريعك.</p>
+						<p>واظب على التقديم للتحدث في مؤتمرات أكبر فأكبر.</p>
+						<p>انضم إلى جلسات الهاكرز وساعد مَن هم أحدث منك في البرمجة.</p>
+   					</blockquote>
+				</section>
+			</section>
+		</div>
+
+		<h3>مبروك! لقد أنهيتم هذه الورشة.</h3>
+	</section>
+
+
 
    
 
-</div>
+</section>
 
 <!-- Pages -->
 <div class="page-nav">
