@@ -408,6 +408,93 @@
 
     <section id="4">
 		<h3>د. كيف تعرض الأوقات Times والتاريخ Dates في اتش.تي.إم.إل HTML ؟</h3>
+
+		<p>يتم استخدام عنصر <code class="br">time</code> لتمثيل لحظة محددة في الوقت.</p>
+
+		<h4>فيما يلي مثال لاستخدام عنصر <code class="br">time</code> لتمثيل عشرين ساعة، أو الساعة الثامنة مساءً <em>eight PM</em> .</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt; <span class="txt">الحجوزات مخصصة لـ</span> &lt;time <span class="attr">datetime=</span><span class="value">"20:00"</span>&gt;<span class="txt">20:00</span>&lt;/time&gt;&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p> الحجوزات مخصصة لـ <time datetime="20:00">20:00</time></p>
+		</div>
+
+		<p>يتم استخدام سمة <code class="br">datetime</code> لترجمة التواريخ والأوقات إلى تنسيق قابل للقراءة بواسطة الآلة.</p>
+
+		<p>وهذا مهم لأنه يساعد في نتائج محرك البحث ويساعد المتصفح على معالجة معلومات التاريخ والوقت بشكل أكثر فعالية.</p>
+
+		<p>يجب أن تكون قيمة سمة <code class="br">datetime</code> إما سنة صالحة، أو شهر صالح، أو وقت صالح، أو تاريخ محلي، أو تاريخ عالمي، أو سلسلة مدة صالحة.</p>
+
+		<h4>فيما يلي مثال آخر لاستخدام عنصر الوقت <em>The time element</em> لتمثيل تاريخ معين:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt; <span class="txt">التخرج سيكون في</span> &lt;time <span class="attr">datetime=</span><span class="value">"2024-06-15T15:00"</span>&gt;<span class="txt">15 يونيو</span>&lt;/time&gt;&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p> التخرج سيكون في <time datetime="2024-06-15T15:00">15 يونيو</time></p>
+		</div>
+
+		<p>قيمة سمة <code class="br">datetime</code> بتنسيق ISO 8601. ISO 8601 هو معيار دولي لتمثيل التواريخ والأوقات.</p>
+
+		<p>الجزء الأول من هذه القيمة هو السنة والشهر واليوم. الحرف الكبير <b>T</b> في القيمة هو الفاصل بين التاريخ والوقت.</p>
+
+		<p>ستكون الساعة الخامسة عشرة والنصف هي الثالثة بعد الظهر <em>three PM</em> .</p>
+
+		<p>عندما تحتاج إلى تمثيل الأحداث أو تواريخ النشر أو المواعيد، فمن الأفضل استخدام عنصر <code class="br">time</code>.</p>
+
+
+		
+<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما الذي تساعد فيه سمة <code class="br">datetime</code> في عنصر الوقت <code class="br">time</code> ؟</h5>
+
+			
+			<p>١. يُنسّق النص بخط عريض.  ❌</p>
+			<p><mark> ٢. يُحوّل التواريخ والأوقات إلى صيغة قابلة للقراءة آليًا. ✅</mark></p>
+			<p> ٣. يُضيف لونًا إلى النص. ❌</p>
+			<p> ٤. يُنشئ روابط تشعبية لصفحات أخرى. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هو التنسيق الصحيح لقيمة سمة <code class="br">datetime</code> وفقًا لـ ISO 8601؟</h5>
+
+			<p><mark> ١. <code class="br">YYYY-MM-DDTHH:MM:SS</code> ✅</mark></p>
+			<p> ٢. <code class="br">DD-MM-YYYY HH:MM</code> ❌</p>
+			<p> ٣. <code class="br">MM-DD-YYYY HH:MM AM/PM</code> ❌</p>
+			<p> ٤. <code class="br">YYYY/MM/DD HH:MM:SS</code> ❌</p>
+			
+			
+				
+			<br>
+
+			<h5>ماذا يمثل الحرف الكبير <b>T</b> في قيمة datetime ISO 8601؟</h5>
+
+			
+			<p> ١. المنطقة الزمنية <em>The time zone</em> . ❌</p>
+			<p><mark> ٢. الفاصل بين التاريخ والوقت. ✅</mark></p>
+			<p> ٣. عنوان المستند. ❌</p>
+			<p> ٤. درجة الحرارة. ❌</p>
+			
+				
+			
+
+		</div>
+				
+
+
+
 	</section>
    
 
