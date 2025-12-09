@@ -308,6 +308,7 @@ section {
   background-color: white;
   font-size: 1rem;
   color: black;
+  
 }
 
 .long-link {
@@ -333,6 +334,10 @@ section {
   direction: ltr;
   overflow-x: auto;
   color: #071023;
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: auto;
+  text-align: right;
 }
 
 .code-block {
@@ -384,6 +389,7 @@ section {
   display: block;
   direction: ltr;
   overflow-x: auto;
+  
 }
 
 
@@ -393,3 +399,5 @@ form {
   border-radius: 2%;
   padding: 4px;
 }
+
+
