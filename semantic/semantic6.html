@@ -26,26 +26,138 @@
 
 <main>
 
-<!-- semantic 1 -->
-<div class="box">
+<!-- semantic 6 -->
+<section class="box">
 	<div class="sub-title">
         <h2>٦. التعامل مع العناصر الدلالية المتخصصة</h2>
 		<span class="hint">نظري</span>
-        <p>قريبا</p>
+        <p></p>
 	</div>
 
 	<section id="1">
+		<h3>أ. كيف تعرض المعادلات الرياضية Mathematical Equations والصيغ الكيميائية Chemical Formulas في اتش.تي.إم.إل HTML ؟</h3>
+	
+		<p>يُستخدم عنصر النص العلوي <b>The superscript element</b> لعرض نص كنص علوي. النص العلوي هو رمز <em>symbol</em> أو حرف <em>letter</em> مطبوع فوق السطر العادي من النص.</p>
+	
+		<h4>فيما يلي مثال لاستخدام عنصر العلوي <em>the superscript element</em> لتوضيح الأسس:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sup&gt;<span class="txt">2</span>&lt;/sup&gt;</span>2<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>2<sup>2</sup> يساوي 4.</p>
+		</div>
+
+		<p>في هذا المثال، يُغلَّف الرقم 2 بين وسمَي <code class="br">sup</code> ليمثل الحرف العلوي <em>superscript</em> داخل الفقرة. في نافذة المعاينة، سترى أن الرقم 2 الثاني أصغر وأعلى قليلاً من الرقم 2 الأول.</p>
+
+		<p>تشمل حالات الاستخدام الشائعة لعنصر العلوي <em>the superscript element</em> الأسس، والحروف العلوية، والأرقام الترتيبية.</p>
+	
+		<h4>فيما يلي مثال لاستخدام عنصر العلوي <em>the superscript element</em> لكتابة الحروف العلوية:</h4>
+
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ <span>.في بعض المخطوطات</span> <span class="tag">&lt;strong&gt;&lt;sup&gt;<span class="txt">حـ</span>&lt;/sup&gt;</span><span class="txt"> سـ</span><span class="tag">&lt;/strong&gt;</span> بالاختصار <span class="tag">&lt;q&gt;<span class="txt">سماحة</span>&lt;/q&gt;</span> يُشار أحيانًا إلى كلمة
+<span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+
+		<div class="preview">
+			<p>
+				يُشار أحيانًا إلى كلمة <q>سماحة</q> بالاختصار <strong>سـ<sup>حـ</sup></strong> في بعض المخطوطات.
+			</p>
+		</div>
+
+		<p>تشير الحروف العلوية إلى الحروف المكتوبة بشكل علوي <em>in superscript</em> ، عادةً للإشارة إلى الاختصارات <i>abbreviations</i> . الحرف <strong>حـ</strong> مُحاط بعلامات علوية لتوضيح الاختصار في هذا المثال.</p>
+	
+		<p>من المهم ملاحظة أن استخدام عنصر الرفع العلوي <em>The superscript element</em> فقط لأغراض طباعية. إذا كنت ترغب في تصميم نص بخط أساس بارز، فعليك استخدام CSS بدلاً من عنصر الرفع العلوي.</p>
+
+		<p>لتمثيل المعادلات الكيميائية داخل "اتش.تي.إم.إل" HTML، استخدم عنصر "الرمز السفلي" <strong>The subscript element</strong> . يستخدم هذا العنصر رمزًا سفليًا يعرض خطًا أساسيًا منخفضًا باستخدام نص أصغر.</p>
+
+		<h4>فيما يلي مثال لاستخدام عنصر الرمز السفلي <em>The subscript element</em> لإظهار التمثيل الكيميائي لثاني أكسيد الكربون:</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>CO<span class="tag">&lt;sub&gt;</span>2<span class="tag">&lt;/sub&gt;</span><span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+		<div class="preview">
+			<p>CO<sub>2</sub></p>
+		</div>
+
+		<p>يتم وضع الرقم اثنين داخل علامات <code class="br">sub</code> للتوضيح أن الحرف يجب أن يكون منخفضًا.</p>
+
+		<p>تتضمن حالات الاستخدام الشائعة لعنصر المؤشر السفلي <em>The subscript element</em> الصيغ الكيميائية <em>chemical formulas</em> والحواشي السفلية <em>footnotes</em> والمتغيرات المؤشرة السفلية <em>variable subscripts</em>.</p>
+
+		
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الاستخدام الأساسي لعنصر العلوي <em>the superscript element</em> في HTML؟</h5>
+
+			
+			<p>١. لعرض النص بلون مختلف.  ❌</p>
+			<p>٢. لإظهار النص بحجم خط أصغر.  ❌</p>
+			<p><mark>٣. لعرض النص كخط علوي فوق السطر العادي.  ✅</mark></p>
+			<p>٤. لتسطير النص.  ❌</p>
+			
+				
+			<br>
+
+
+			<h5>أي مما يلي يعد مثالاً على استخدام عنصر العلوي <em>the superscript element</em> بشكل صحيح؟</h5>
+
+			
+			<div class="code-block-2"><pre><code>
+ ❌<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sub&gt;<span class="txt">2</span>&lt;/sub&gt;</span>2<span class="tag">&lt;/p&gt;</span>.١</code></pre></div>
+
+			<div class="code-block-2"><pre><code><mark>
+ ✅<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sup&gt;<span class="txt">2</span>&lt;/sup&gt;</span>2<span class="tag">&lt;/p&gt;</span>.٢</code></pre></mark></div>
+
+			<div class="code-block-2"><pre><code>
+ ❌<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sul&gt;<span class="txt">2</span>&lt;/sul&gt;</span>2<span class="tag">&lt;/p&gt;</span>.٣</code></pre></div>
+
+			<div class="code-block-2"><pre><code>
+ ❌<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sutp&gt;<span class="txt">2</span>&lt;/sutp&gt;</span>2<span class="tag">&lt;/p&gt;</span>.٤</code></pre></div>
+			
+				
+			<br>
+
+			<h5>ما الذي يجب استخدامه بدلاً من عنصر العلوي <em>the superscript element</em> إذا كنت تريد تصميم نص بخط أساسي مرتفع لأسباب طباعية؟</h5>
+
+			
+			<p>١. العنصر <code class="br">sub</code>  ❌</p>
+			<p><mark>٢. CSS  ✅</mark></p>
+			<p>٣. العنصر <code class="br">strong</code>  ❌</p>
+			<p>٤. العنصر <code class="br">em</code>  ❌</p>
+			
+				
+			
+
+		</div>
+
+
+
+	
 	</section>
 
+
     <section id="2">
+		<h3>ب. كيف تُمثل أكواد الحاسوب Computer Code في اتش.تي.إم.إل HTML ؟</h3>
 	</section>
 
     <section id="3">
+		<h3>ج. ما هي استخدامات عناصر "U و S و Ruby" وكيف تعمل؟</h3>
 	</section>
 
    
 
-</div>
+</section>
 
 <!-- Pages -->
 <div class="page-nav">
