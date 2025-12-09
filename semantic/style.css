@@ -428,6 +428,16 @@ form {
   padding: 4px;
 }
 
+.preview-eng{
+  direction: ltr;
+  background-color: rgba(255,255,255,0.04);
+  border: white 4px solid;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #9aa6b2;
+  padding: 20px;
+  overflow-x: auto;
+}
+
 
 
 

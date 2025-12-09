@@ -149,6 +149,107 @@
 
     <section id="2">
 		<h3>ب. كيف تُمثل أكواد الحاسوب Computer Code في اتش.تي.إم.إل HTML ؟</h3>
+
+		<p>يُستخدم عنصر الكود المضمّن <strong>The inline code element</strong> لعرض مقتطفات قصيرة من الكود <em>code</em> داخل النص. ومن الاستخدامات الشائعة لهذا العنصر المقالات التقنية وصفحات التوثيق.</p>
+
+		<h4>فيما يلي مثال لاستخدام عنصر <code class="br">code</code> لإظهار مقتطف كود CSS:</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ <span>:استخدم الكود التالي</span><span> CSS </span><span>لتعيين لون النص إلى اللون الأزرق في</span>
+ <span class="tag">&lt;code&gt;</span>color: blue;<span class="tag">&lt;/code&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+		<div class="preview">
+			<p>لتعيين لون النص إلى اللون الأزرق في CSS، استخدم الكود التالي:</p>
+			<code>;color: blue</code>
+		</div>
+
+
+		<p>في هذا المثال، تُستخدم خاصية CSS <code class="br">color</code> لتعيين لون النص إلى الأزرق. بوضع هذا المقطع داخل وسم <code class="br">code</code>، يُعلم المتصفح أن النص جزء من شيفرة مضمنة <em>a piece of inline code</em> .</p>
+
+		<p>سيطبق المتصفح أنماطًا افتراضية <em>default styles</em> للمحتوى داخل عنصر <code class="br">code</code>. النمط الافتراضي هو خط أحادي المسافة <em>a monospaced font</em> .</p>
+
+		<p>عنصر <code class="br">code</code> مُصمم لتمثيل سطر واحد من الكود. إذا أردت تمثيل عدة أسطر، ستحتاج إلى وضع عنصر <code class="br">code</code> داخل عنصر نص مُنسق مسبقًا <em>a preformatted text element</em> .</p>
+
+		<p>يتم استخدام عنصر النص المنسق مسبقًا <strong>The preformatted text element</strong> لتمثيل النص المنسق مسبقًا.</p>
+
+		<h4>فيما يلي مثال لاستخدام عنصر النص المنسق مسبقًا <em>the preformatted text element</em> لإظهار إعلان CSS:</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;pre&gt;</span>
+ <span class="tag">&lt;code&gt;</span>
+  body {
+   color: red;
+  }
+ <span class="tag">&lt;/code&gt;</span>
+<span class="tag">&lt;/pre&gt;</span>
+		</code></pre></div>
+
+		<div class="preview-eng">
+			<pre>
+				<code>
+ body {
+  color: red;
+ }
+				</code>
+			</pre>
+		</div>
+
+
+		<p>عند استخدام عنصر <code class="br">pre</code>، يجب أن تضع في اعتبارك المسافة لأنه سيعرض بالضبط كما هو مكتوب داخل مستند "اتش.تي.إم.إل" HTML.</p>
+
+		<p>ستلاحظ في المتصفح أن الكود مُزاحٌ إلى اليمين بمسافة بادئة. إذا قمت بتغيير المسافة البادئة في مثال الكود، فسترى فرقًا في المسافة البادئة على الشاشة.</p>
+
+		<p>عندما يتعلق الأمر بتضمين أمثلة التعليمات البرمجية داخل مستند HTML الخاص بك، يجب عليك استخدام عنصر <code class="br">code</code> للأمثلة القصيرة المضمنة <em>short inline examples</em> .</p>
+
+		<p>إذا كنت بحاجة إلى عرض مقتطفات برمجية أطول، فسيتعين عليك استخدام عنصري <code class="br">pre</code> و <code class="br">code</code>.</p>
+
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الغرض من عنصر <code class="br">code</code> ؟</h5>
+
+			
+			<p>١. يُستخدم لإنشاء روابط تشعبية hyperlinks لصفحات ويب أخرى.  ❌</p>
+			<p>٢. يُستخدم لتنسيق النص بخط عريض bold أو مائل italic.  ❌</p>
+			<p><mark>٣. يُستخدم لعرض مقتطفات قصيرة من التعليمات البرمجية short snippets of code داخل النص.  ✅</mark></p>
+			<p>٤. يُستخدم لتضمين الصور وملفات الوسائط المتعددة multimedia files .  ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هو استخدام عنصر النص المنسق مسبقًا (<code class="br">pre</code>) ؟</h5>
+
+			
+			<p>١. يُستخدم لتطبيق أنماط CSS على النصوص.  ❌</p>
+			<p>٢. يُستخدم لإنشاء الجداول tables والتخطيطات المنظمة structured layouts.  ❌</p>
+			<p><mark>٣. يُستخدم لعرض النصوص المنسقة مسبقًا preformatted text.  ✅</mark></p>
+			<p>٤. يُستخدم لإدراج الروابط التشعبية hyperlinks وعناوين البريد الإلكتروني.  ❌</p>
+			
+			
+				
+			<br>
+
+			<h5>ما هو التنسيق الافتراضي لعنصر <code class="br">code</code> ؟</h5>
+
+			<p><mark>١. خط أحادي المسافة Monospaced font.  ✅</mark></p>
+			<p>٢. نص مائل Italic بخلفية ملونة colored background.  ❌</p>
+			<p>٣. نص عريض Bold بحجم خط أكبر.  ❌</p>
+			<p>٤. نص مسطر Underlined بخط ثابت العرض.  ❌</p>
+			
+				
+			
+
+		</div>
+
+
+
 	</section>
 
     <section id="3">
