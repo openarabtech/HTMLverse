@@ -26,26 +26,340 @@
 
 <main>
 
-<!-- semantic 1 -->
-<div class="box">
+<!-- semantic 6 -->
+<section class="box">
 	<div class="sub-title">
         <h2>٦. التعامل مع العناصر الدلالية المتخصصة</h2>
 		<span class="hint">نظري</span>
-        <p>قريبا</p>
+        <p></p>
 	</div>
 
 	<section id="1">
+		<h3>أ. كيف تعرض المعادلات الرياضية Mathematical Equations والصيغ الكيميائية Chemical Formulas في اتش.تي.إم.إل HTML ؟</h3>
+	
+		<p>يُستخدم عنصر النص العلوي <b>The superscript element</b> لعرض نص كنص علوي. النص العلوي هو رمز <em>symbol</em> أو حرف <em>letter</em> مطبوع فوق السطر العادي من النص.</p>
+	
+		<h4>فيما يلي مثال لاستخدام عنصر العلوي <em>the superscript element</em> لتوضيح الأسس:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sup&gt;<span class="txt">2</span>&lt;/sup&gt;</span>2<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>2<sup>2</sup> يساوي 4.</p>
+		</div>
+
+		<p>في هذا المثال، يُغلَّف الرقم 2 بين وسمَي <code class="br">sup</code> ليمثل الحرف العلوي <em>superscript</em> داخل الفقرة. في نافذة المعاينة، سترى أن الرقم 2 الثاني أصغر وأعلى قليلاً من الرقم 2 الأول.</p>
+
+		<p>تشمل حالات الاستخدام الشائعة لعنصر العلوي <em>the superscript element</em> الأسس، والحروف العلوية، والأرقام الترتيبية.</p>
+	
+		<h4>فيما يلي مثال لاستخدام عنصر العلوي <em>the superscript element</em> لكتابة الحروف العلوية:</h4>
+
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ <span>.في بعض المخطوطات</span> <span class="tag">&lt;strong&gt;&lt;sup&gt;<span class="txt">حـ</span>&lt;/sup&gt;</span><span class="txt"> سـ</span><span class="tag">&lt;/strong&gt;</span> بالاختصار <span class="tag">&lt;q&gt;<span class="txt">سماحة</span>&lt;/q&gt;</span> يُشار أحيانًا إلى كلمة
+<span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+
+		<div class="preview">
+			<p>
+				يُشار أحيانًا إلى كلمة <q>سماحة</q> بالاختصار <strong>سـ<sup>حـ</sup></strong> في بعض المخطوطات.
+			</p>
+		</div>
+
+		<p>تشير الحروف العلوية إلى الحروف المكتوبة بشكل علوي <em>in superscript</em> ، عادةً للإشارة إلى الاختصارات <i>abbreviations</i> . الحرف <strong>حـ</strong> مُحاط بعلامات علوية لتوضيح الاختصار في هذا المثال.</p>
+	
+		<p>من المهم ملاحظة أن استخدام عنصر الرفع العلوي <em>The superscript element</em> فقط لأغراض طباعية. إذا كنت ترغب في تصميم نص بخط أساس بارز، فعليك استخدام CSS بدلاً من عنصر الرفع العلوي.</p>
+
+		<p>لتمثيل المعادلات الكيميائية داخل "اتش.تي.إم.إل" HTML، استخدم عنصر "الرمز السفلي" <strong>The subscript element</strong> . يستخدم هذا العنصر رمزًا سفليًا يعرض خطًا أساسيًا منخفضًا باستخدام نص أصغر.</p>
+
+		<h4>فيما يلي مثال لاستخدام عنصر الرمز السفلي <em>The subscript element</em> لإظهار التمثيل الكيميائي لثاني أكسيد الكربون:</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>CO<span class="tag">&lt;sub&gt;</span>2<span class="tag">&lt;/sub&gt;</span><span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+		<div class="preview">
+			<p>CO<sub>2</sub></p>
+		</div>
+
+		<p>يتم وضع الرقم اثنين داخل علامات <code class="br">sub</code> للتوضيح أن الحرف يجب أن يكون منخفضًا.</p>
+
+		<p>تتضمن حالات الاستخدام الشائعة لعنصر المؤشر السفلي <em>The subscript element</em> الصيغ الكيميائية <em>chemical formulas</em> والحواشي السفلية <em>footnotes</em> والمتغيرات المؤشرة السفلية <em>variable subscripts</em>.</p>
+
+		
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الاستخدام الأساسي لعنصر العلوي <em>the superscript element</em> في HTML؟</h5>
+
+			
+			<p>١. لعرض النص بلون مختلف.  ❌</p>
+			<p>٢. لإظهار النص بحجم خط أصغر.  ❌</p>
+			<p><mark>٣. لعرض النص كخط علوي فوق السطر العادي.  ✅</mark></p>
+			<p>٤. لتسطير النص.  ❌</p>
+			
+				
+			<br>
+
+
+			<h5>أي مما يلي يعد مثالاً على استخدام عنصر العلوي <em>the superscript element</em> بشكل صحيح؟</h5>
+
+			
+			<div class="code-block-2"><pre><code>
+ ❌<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sub&gt;<span class="txt">2</span>&lt;/sub&gt;</span>2<span class="tag">&lt;/p&gt;</span>.١</code></pre></div>
+
+			<div class="code-block-2"><pre><code><mark>
+ ✅<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sup&gt;<span class="txt">2</span>&lt;/sup&gt;</span>2<span class="tag">&lt;/p&gt;</span>.٢</code></pre></mark></div>
+
+			<div class="code-block-2"><pre><code>
+ ❌<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sul&gt;<span class="txt">2</span>&lt;/sul&gt;</span>2<span class="tag">&lt;/p&gt;</span>.٣</code></pre></div>
+
+			<div class="code-block-2"><pre><code>
+ ❌<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sutp&gt;<span class="txt">2</span>&lt;/sutp&gt;</span>2<span class="tag">&lt;/p&gt;</span>.٤</code></pre></div>
+			
+				
+			<br>
+
+			<h5>ما الذي يجب استخدامه بدلاً من عنصر العلوي <em>the superscript element</em> إذا كنت تريد تصميم نص بخط أساسي مرتفع لأسباب طباعية؟</h5>
+
+			
+			<p>١. العنصر <code class="br">sub</code>  ❌</p>
+			<p><mark>٢. CSS  ✅</mark></p>
+			<p>٣. العنصر <code class="br">strong</code>  ❌</p>
+			<p>٤. العنصر <code class="br">em</code>  ❌</p>
+			
+				
+			
+
+		</div>
+
+
+
+	
 	</section>
 
+
     <section id="2">
+		<h3>ب. كيف تُمثل أكواد الحاسوب Computer Code في اتش.تي.إم.إل HTML ؟</h3>
+
+		<p>يُستخدم عنصر الكود المضمّن <strong>The inline code element</strong> لعرض مقتطفات قصيرة من الكود <em>code</em> داخل النص. ومن الاستخدامات الشائعة لهذا العنصر المقالات التقنية وصفحات التوثيق.</p>
+
+		<h4>فيما يلي مثال لاستخدام عنصر <code class="br">code</code> لإظهار مقتطف كود CSS:</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ <span>:استخدم الكود التالي</span><span> CSS </span><span>لتعيين لون النص إلى اللون الأزرق في</span>
+ <span class="tag">&lt;code&gt;</span>color: blue;<span class="tag">&lt;/code&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+		<div class="preview">
+			<p>لتعيين لون النص إلى اللون الأزرق في CSS، استخدم الكود التالي:</p>
+			<code>;color: blue</code>
+		</div>
+
+
+		<p>في هذا المثال، تُستخدم خاصية CSS <code class="br">color</code> لتعيين لون النص إلى الأزرق. بوضع هذا المقطع داخل وسم <code class="br">code</code>، يُعلم المتصفح أن النص جزء من شيفرة مضمنة <em>a piece of inline code</em> .</p>
+
+		<p>سيطبق المتصفح أنماطًا افتراضية <em>default styles</em> للمحتوى داخل عنصر <code class="br">code</code>. النمط الافتراضي هو خط أحادي المسافة <em>a monospaced font</em> .</p>
+
+		<p>عنصر <code class="br">code</code> مُصمم لتمثيل سطر واحد من الكود. إذا أردت تمثيل عدة أسطر، ستحتاج إلى وضع عنصر <code class="br">code</code> داخل عنصر نص مُنسق مسبقًا <em>a preformatted text element</em> .</p>
+
+		<p>يتم استخدام عنصر النص المنسق مسبقًا <strong>The preformatted text element</strong> لتمثيل النص المنسق مسبقًا.</p>
+
+		<h4>فيما يلي مثال لاستخدام عنصر النص المنسق مسبقًا <em>the preformatted text element</em> لإظهار إعلان CSS:</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;pre&gt;</span>
+ <span class="tag">&lt;code&gt;</span>
+  body {
+   color: red;
+  }
+ <span class="tag">&lt;/code&gt;</span>
+<span class="tag">&lt;/pre&gt;</span>
+		</code></pre></div>
+
+		<div class="preview-eng">
+			<pre>
+				<code>
+ body {
+  color: red;
+ }
+				</code>
+			</pre>
+		</div>
+
+
+		<p>عند استخدام عنصر <code class="br">pre</code>، يجب أن تضع في اعتبارك المسافة لأنه سيعرض بالضبط كما هو مكتوب داخل مستند "اتش.تي.إم.إل" HTML.</p>
+
+		<p>ستلاحظ في المتصفح أن الكود مُزاحٌ إلى اليمين بمسافة بادئة. إذا قمت بتغيير المسافة البادئة في مثال الكود، فسترى فرقًا في المسافة البادئة على الشاشة.</p>
+
+		<p>عندما يتعلق الأمر بتضمين أمثلة التعليمات البرمجية داخل مستند HTML الخاص بك، يجب عليك استخدام عنصر <code class="br">code</code> للأمثلة القصيرة المضمنة <em>short inline examples</em> .</p>
+
+		<p>إذا كنت بحاجة إلى عرض مقتطفات برمجية أطول، فسيتعين عليك استخدام عنصري <code class="br">pre</code> و <code class="br">code</code>.</p>
+
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو الغرض من عنصر <code class="br">code</code> ؟</h5>
+
+			
+			<p>١. يُستخدم لإنشاء روابط تشعبية hyperlinks لصفحات ويب أخرى.  ❌</p>
+			<p>٢. يُستخدم لتنسيق النص بخط عريض bold أو مائل italic.  ❌</p>
+			<p><mark>٣. يُستخدم لعرض مقتطفات قصيرة من التعليمات البرمجية short snippets of code داخل النص.  ✅</mark></p>
+			<p>٤. يُستخدم لتضمين الصور وملفات الوسائط المتعددة multimedia files .  ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هو استخدام عنصر النص المنسق مسبقًا (<code class="br">pre</code>) ؟</h5>
+
+			
+			<p>١. يُستخدم لتطبيق أنماط CSS على النصوص.  ❌</p>
+			<p>٢. يُستخدم لإنشاء الجداول tables والتخطيطات المنظمة structured layouts.  ❌</p>
+			<p><mark>٣. يُستخدم لعرض النصوص المنسقة مسبقًا preformatted text.  ✅</mark></p>
+			<p>٤. يُستخدم لإدراج الروابط التشعبية hyperlinks وعناوين البريد الإلكتروني.  ❌</p>
+			
+			
+				
+			<br>
+
+			<h5>ما هو التنسيق الافتراضي لعنصر <code class="br">code</code> ؟</h5>
+
+			<p><mark>١. خط أحادي المسافة Monospaced font.  ✅</mark></p>
+			<p>٢. نص مائل Italic بخلفية ملونة colored background.  ❌</p>
+			<p>٣. نص عريض Bold بحجم خط أكبر.  ❌</p>
+			<p>٤. نص مسطر Underlined بخط ثابت العرض.  ❌</p>
+			
+				
+			
+
+		</div>
+
+
+
 	</section>
 
     <section id="3">
+		<h3>ج. ما هي استخدامات عناصر "U و S و Ruby" وكيف تعمل؟</h3>
+
+		<p>يُستخدم عنصر التعليق غير المفصل <strong>The unarticulated annotation element</strong> ، أو عنصر <code class="br">u</code> باختصار، لتمثيل النص المضمن <em>inline text</em> الذي تم تطبيق تعليق غير نصي <em>non-textual annotation</em> عليه.</p>
+
+		<h4>فيما يلي مثال على استخدام عنصر <code class="br">u</code> لتسليط الضوء على أخطاء إملائية <em>spelling errors</em> مختلفة:</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ يمكنك استخدام عنصر التعليق غير المفصلي للتمييز
+ <span class="tag">&lt;u&gt;<span class="txt">inccccort</span>&lt;/u&gt;</span> <span class="tag">&lt;u&gt;<span class="txt">spling</span>&lt;/u&gt;</span> <span class="tag">&lt;u&gt;<span class="txt">issses</span>&lt;/u&gt;</span>.
+<span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+		<div class="preview">
+			<p>
+				 يمكنك استخدام عنصر التعليق غير المفصلي للتمييز
+				  <u>inccccort</u> <u>spling</u> <u>issses</u>.				
+			</p>
+		</div>
+
+		<p>في المثال، الكلمات <code class="br">incorrect</code> و <code class="br">spelling</code> و <code class="br">issues</code> مكتوبة بشكل خاطئ. النمط الافتراضي لعنصر <code class="br">u</code> هو خط أسود أسفل النص.</p>
+
+		<p>في لغة HTML4، كان يُستخدم عنصر <code class="br">u</code> لأغراض التنسيق. أما في لغة HTML5، فيُستخدم عنصر <code class="br">u</code> فقط للإشارة إلى أن النص يحتوي على تعليقات توضيحية غير نصية.</p>
+
+		<p>إذا كنت ترغب في تنسيق نص ما باستخدام خط تحته، فيجب عليك استخدام CSS بدلاً من HTML.</p>
+
+		<p>يجب استخدام عنصر الشطب <strong>The strikethrough element</strong> ، أو عنصر <code class="br">s</code> باختصار، للإشارة إلى متى لم يعد النص دقيقًا أو ذا صلة.</p>
+
+		<h4>فيما يلي مثال على استخدام عنصر <code class="br">s</code> لإظهار إلغاء نشاط ما:</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span><span class="tag">&lt;s&gt;</span>.ستبدأ رحلة المشي غداً عند الظهر<span class="tag">&lt;/s&gt;</span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>.نظراً لظروف جوية غير متوقعة، تم إلغاء الرحلة<span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+		<div class="preview">
+			<p><s>ستبدأ رحلة المشي غداً عند الظهر.</s></p>
+			<p>نظراً لظروف جوية غير متوقعة، تم إلغاء الرحلة.</p>
+		</div>
+
+		<p>في هذا المثال، تم شطب الجملة الأولى لأن الرحلة تم إلغاؤها لأسباب تتعلق بالطقس.</p>
+
+		<p>لا ينبغي استخدام عنصر <code class="br">s</code> لعرض التغييرات التي طرأت على المستند. في هذه الحالة، يكون عنصر النص المحذوف وعنصر النص المُدرج أكثر ملاءمة.</p>
+
+		<p>يمثل عنصر <code class="br">ruby</code> نصًا صغيرًا يظهر أعلى أو أسفل النص الرئيسي. ويُستخدم عادةً لعرض نطق الأحرف الآسيوية الشرقية.</p>
+
+		<h4>إليك مثال على عنصر <code class="br">ruby</code> من صفحة وثائق الويب الخاصة بـ MDN:</h4>
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;ruby&gt;</span> 明日 <span class="tag">&lt;rp&gt;</span>(<span class="tag">&lt;/rp&gt;</span><span class="tag">&lt;rt&gt;</span>Ashita<span class="tag">&lt;/rt&gt;</span><span class="tag">&lt;rp&gt;</span>)<span class="tag">&lt;/rp&gt;</span> <span class="tag">&lt;/ruby&gt;</span>
+		</code></pre></div>
+
+		<div class="preview">
+			<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+		</div>
+
+		<p>يتم استخدام عنصر <code class="br">rp</code>، أو عنصر الأقواس الاحتياطية <em>fallback parenthesis element</em> في لغة روبي ruby ، كبديل للمتصفحات التي تفتقر إلى دعم عرض التعليقات التوضيحية في لغة روبي  ruby.</p>
+
+		<p>يُستخدم عنصر <code class="br">rt</code>، أو عنصر نص روبي <em>ruby text element</em>، للإشارة إلى نص التعليق التوضيحي في لغة روبي ruby. ويُستخدم هذا النص عادةً للنطق أو تفاصيل الترجمة في الطباعة في شرق آسيا.</p>
+
+		<p>بينما يمكن استخدام عنصر <code class="br">ruby</code> لأنواع أخرى من التعليقات التوضيحية، فإن حالة الاستخدام الأكثر شيوعًا هي للطباعة في شرق آسيا <em>East Asian typography</em>.</p>
+
+		
+<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما هو استخدام العنصر <code class="br">u</code> ؟</h5>
+			
+			<p>١. يُستخدم لعرض الرموز السفلية subscripts في الصيغ الكيميائية.  ❌</p>
+			<p>٢. يُستخدم لتمثيل مدخلات المستخدم user input في نماذج HTML.  ❌</p>
+			<p><mark>٣. يُستخدم لتمثيل النص المضمن inline text الذي يحتوي على تعليقات توضيحية غير نصية non-textual annotation.  ✅</mark></p>
+			<p>٤. يُستخدم لجعل النص مائلاً italicize في HTML.  ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هو استخدام العنصر <code class="br">s</code> ؟</h5>
+
+			<p><mark>١. يُستخدم هذا الرمز للإشارة إلى أن النص لم يعد دقيقًا accurate أو ذا صلة relevant.  ✅</mark></p>
+			<p>٢. يُستخدم لإنشاء أدوات مساعدة للتنقل navigational aides على مواقع الويب.  ❌</p>
+			<p>٣. يُستخدم لعرض معلومات حقوق النشر copyright information على الصفحات.  ❌</p>
+			<p>٤. يُستخدم لعرض تعليقات الصور captions for images.  ❌</p>
+			
+			
+				
+			<br>
+
+			<h5>ما هو الاستخدام الشائع لعنصر <code class="br">ruby</code> ؟</h5>
+
+			
+			<p>١. يُستخدم لكتابة تطبيقات روبي ruby applications.  ❌</p>
+			<p>٢. يُستخدم لإنشاء عناصر القوائم list items في الصفحة.  ❌</p>
+			<p>٣. يُستخدم لتطبيق خط تحت النص an underline for text.  ❌</p>
+			<p><mark>٤. يُستخدم لعرض نطق the pronunciation الأحرف الآسيوية الشرقية East Asian characters.  ✅</mark></p>
+			
+				
+			
+
+		</div>
+
 	</section>
 
    
 
-</div>
+</section>
 
 <!-- Pages -->
 <div class="page-nav">

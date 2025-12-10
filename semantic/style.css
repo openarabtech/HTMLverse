@@ -352,6 +352,15 @@ section {
   min-width: 100%;
 }
 
+.code-block-2 {
+  direction: ltr;
+  overflow-x: auto;
+  font-size: 1rem;
+  min-width: 100%;
+  text-align: right;
+  
+}
+
 .code-block pre {
   overflow-x: auto;
  
@@ -364,6 +373,25 @@ section {
 .code-block code {
   color: #fff;
   line-height: 1.8;
+  
+  
+}
+
+.code-block-2 pre {
+  overflow-x: auto;
+ 
+}
+
+.code-block-2 * {
+  display: inline;
+}
+
+.code-block-2 code {
+  color: black;
+  line-height: 1.8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
   
 }
 
@@ -399,5 +427,17 @@ form {
   border-radius: 2%;
   padding: 4px;
 }
+
+.preview-eng{
+  direction: ltr;
+  background-color: rgba(255,255,255,0.04);
+  border: white 4px solid;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #9aa6b2;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+
 
 
