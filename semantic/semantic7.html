@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="اتش.تي.إم.إل الدلالية |  إنشاء صفحة مدونة قطط"/>
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<title>HTMLverse | الدلالية</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,21 +27,532 @@
 
 <main>
 
-<!-- semantic 1 -->
-<div class="box">
+<!-- semantic 7 -->
+<section class="box">
 	<div class="sub-title">
         <h2>٧. إنشاء صفحة مدونة قطط</h2>
 		<span class="hint">ورشة عمل</span>
-        <p>قريبا</p>
+        <p>في هذه الورشة، ستتدرب على العمل مع لغة HTML الدلالية من خلال إنشاء صفحة مدونة مخصصة للسيد ويسكرز القط.</p>
 	</div>
 
 	<section>
+		<h3>نموذج "اتش.تي.إم.إل" <em>The HTML boilerplate</em>.</h3>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+        <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+        <span class="tag">&lt;title&gt;</span>مدونة السيد ويسكرز<span class="tag">&lt;/title&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+
+    <span class="tag">&lt;body&gt;</span>
+
+	<span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+
+    <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+			</code></pre>
+		</div>
+	</section>
+
+	<section>
+		<h3>الخطوة 1 :</h3>
+
+		<p>أول قسم <em>section</em> ستقوم بإنشائه هو رأس الصفحة <em>the page header</em>.</p>
+
+		<p>يُستخدم عنصر <code class="br">header</code> لتمثيل المحتوى التمهيدي <em>introductory content</em> مثل التنقل بين الصفحات <em>page navigation</em> والمعلومات التمهيدية <em>introductory information</em> الأخرى.</p>
+	
+		<h4>إليك مثال باستخدام عنصر <code class="br">header</code> :</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;header&gt;</span>
+ <span class="tag">&lt;h1&gt;<span class="txt">عنوان الصفحة الرئيسية هنا</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;img <span class="attr">src=</span><span class="value">"example-logo.png"</span> <span class="attr">alt=</span><span class="value">"Example logo"</span>/&gt;</span>
+<span class="tag">&lt;/header&gt;</span>
+		</code></pre></div>
+
+		<ul>
+			<li>أضف عنصر <code class="br">header</code> داخل عنصر <code class="br">body</code>.</li>
+		</ul>
+
+	</section>
+
+	
+
+	<section>
+		<h3>الخطوة 2 :</h3>
+
+		<p>سيكون <code class="br">header</code> مسؤولاً عن عرض العنوان الرئيسي <em>main title</em> والصورة وقائمة التنقل بين صفحات المدونة.</p>
+
+		<ul>
+			<li>داخل عنصر <code class="br">header</code>، أضف عنوانًا من المستوى الأول <code class="br">h1</code> يحتوي على النص التالي:</li>
+			<p class="br-white">مرحبًا بكم في صفحة مدونة السيد ويسكرز!</p>
+		</ul>
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة 3 :</h3>
+
+		<p>في هذا المحتوى التمهيدي، ستحتاج إلى عرض صورة <em>image</em> للسيد ويسكرز مع تعليق <em>a caption</em>. </p>
+
+		<ul>
+			<li>أسفل عنصر <code class="br">h1</code>، ابدأ بإضافة عنصر <code class="br">figure</code>.</li>
+
+			<li>داخل عنصر <code class="br">figure</code>، أضف عنصر <code class="br">img</code> .</li>
+
+			<li>يجب أن تكون قيمة السمة <code class="br">src</code> للصورة <code class="br">img</code> هي:</li>
+			<p><span class="long-code">"https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"</span> </p>
+				
+			<li><span>ويجب أن يكون للنص البديل <code class="br">alt</code> قيمة</span> <code class="br-white">"قطة في الحديقة"</code>.</li>
+		
+			<li>أسفل عنصر <code class="br">img</code>، أضف تعليقًا <code class="br">figcaption</code> يحتوي على النص : <span><code class="br-white">"السيد ويسكرز في الحديقة"</code></span></li>
+		</ul>
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة 4 :</h3>
+
+		<p>بالنسبة لمدونتك <em>your blog</em>، يجب أن تكون هناك طريقة للمستخدمين للتنقل <em>to navigate</em> بين الأقسام المختلفة <em>different sections</em> في الصفحة.</p>
+
+		<p>يُستخدم عنصر التنقل <code class="br">nav</code> لتوفير روابط تنقل <em>navigation links</em> إلى أقسام <em>sections</em> أخرى في المستند <em>document</em> أو أقسام أخرى في الموقع الإلكتروني <em>the website</em> . في كثير من الأحيان، يُستخدم عنصر التنقل <code class="br">nav</code> للقوائم <em>menus</em> أو جداول المحتويات  <em>table of contents</em>.</p>
+
+		<h4>إليك مثال على استخدام عنصر <code class="br">nav</code> :</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;nav&gt;</span>
+ <span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#"</span>&gt;</span>الصفحة الرئيسية<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#about"</span>&gt;</span>نبذة عنا<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#contact"</span>&gt;</span>الاتصال<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+ <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+		</code></pre></div>
+
+		<ul>
+			<li>أسفل عنصر <code class="br">figure</code> الخاص بك، أضف عنصر <code class="br">nav</code> مع عنصر <code class="br">ul</code> متداخل بداخله <em>nested inside</em>.</li>
+			<li>داخل عنصر <code class="br">ul</code>، أضف ثلاثة عناصر <code class="br">li</code>.</li>
+		</ul>
+
+	</section>
+
+
+
+	<section>
+		<h3>الخطوة 5 :</h3>
+
+		<ul>
+			<li>داخل كل عنصر من عناصر <code class="br">li</code>، ستحتاج إلى عنصر رابط <em>an anchor element</em>.</li>
+			<li>بالنسبة لعنصر الرابط الأول، يجب أن يكون النص <code class="br-white">نبذة عنا</code> وقيمة سمة <code class="br">href</code> هي <code class="br">about#</code>. يمثل رمز الهاش <b>#</b> أمام كلمة <b>about</b> اسم معرف <code class="br">id</code> يمكن إضافته لاحقًا في المشروع.</li>
+			<li>بالنسبة لعنصر الرابط الثاني، يجب أن يكون النص <code class="br-white">منشورات</code> وقيمة سمة <code class="br">href</code> هي <code class="br">posts#</code>.</li>
+			<li>بالنسبة لعنصر الرابط الثالث، يجب أن يكون النص <code class="br-white">اتصل بنا</code> ويجب أن تكون قيمة سمة <code class="br">href</code> هي <code class="br">contact#</code>.</li>
+		</ul>
+
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة 6 :</h3>
+
+		<p>الآن وقد انتهيت من إنشاء رأس الصفحة <em>page header</em>، ستحتاج إلى البدء في إضافة المحتوى الرئيسي <em>main content</em>.</p>
+
+		<ul>
+			<li>أسفل <code class="br">header</code>، أضف عنصر <code class="br">main</code>.</li>
+		</ul>
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة 7 :</h3>
+
+		<p>سيكون القسم الأول <em>The first section</em> في الصفحة هو قسم "نبذة عنا". سيقدم هذا القسم <em>section</em> السيد ويسكرز ويعطي المستخدمين فكرة عن محتوى هذه المدونة.</p>
+
+		<ul>
+			<li>داخل العنصر <code class="br">main</code>، أضف عنصر <code class="br">section</code> مع تعيين سمة المعرف <code class="br">id</code> إلى <code class="br">"about"</code>.</li>
+			<li>داخل عنصر <code class="br">section</code>، أضف عنوانًا من المستوى الثاني <code class="br">h2</code> بنص <code class="br-white">نبذة عنا</code>.</li>
+		</ul>
+
+
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة 8 :</h3>
+
+		<ul>
+			<li>أسفل عنصر <code class="br">h2</code>، أضف عنصر فقرة يحتوي على النص التالي: <code class="br-white">مرحباً! أنا جين دو، كاتبة شغوفة أجد إلهاماً لا ينضب في تصرفات قطي المحبوب، السيد ويسكرز.</code>.</li>
+			
+			<li>أسفل عنصر الفقرة الخاص بك، أضف عنصر فقرة آخر يحتوي على النص التالي: <code class="br-white">طبيعته المرحة وطاقته التي لا تنضب تجعلني دائماً في حالة تأهب. أحبه كثيراً.</code></li>
+		</ul>
+
+
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة 9 :</h3>
+
+		<p>الآن بعد أن أضفت قسم "نبذة عنا"، حاول النقر على رابط <code class="br">نبذة عنا</code> لمشاهدة الصفحة وهي تنتقل إلى ذلك القسم.</p>
+	
+		<p>القسم التالي <em>The next section</em> في صفحة المدونة <em>the blog page</em> سيكون عبارة عن قائمة بالمنشورات <em>posts</em> التي تتحدث عن السيد ويسكرز.</p>
+	
+		<ul>
+			<li>أضف عنصر <code class="br">section</code> آخر مع تعيين المعرف <code class="br">id</code> إلى <code class="br">"posts"</code></li>
+			<li>أضف عنصر <code class="br">h2</code> داخل عنصر <code class="br">section</code> مع نص <code class="br-white">المنشورات</code>.</li>
+		</ul>
+
+
+		
+	
+	
+	</section>
+
+	<section>
+		<h3>الخطوة 10 :</h3>
+
+		<p>بالنسبة لأول منشور في المدونة، ستستخدم عنصر المقالة <em>article element</em>.</p>
+
+		<p>يمثل عنصر <code class="br">article</code> محتوى مكتفياً ذاتياً على صفحة ويب.</p>
+
+		<h4>مثال :</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;article&gt;</span>
+ <span class="tag">&lt;h1&gt;<span class="txt">مثال لعنوان المقالة</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="txt">مثال لنص المقال</span>&lt;/p&gt;</span>
+<span class="tag">&lt;/article&gt;</span>
+		</code></pre></div>
+
+		<ul>
+			<li>أسفل عنصر <code class="br">h2</code>، أضف عنصر <code class="br">article</code>.</li>
+			<li>داخل عنصر <code class="br">article</code>، أضف عنصر <code class="br">h3</code> يحتوي على النص : <code class="br-white">اليوم الأول للسيد ويسكرز في المنزل</code>.</li>
+		</ul>
+
+		<p>يُستخدم عنصر <code class="br">h3</code> هنا لأن الحفاظ على التسلسل الهرمي الصحيح <em>a proper structural hierarchy</em> لعناصر العناوين <em>for heading elements</em> أمرٌ بالغ الأهمية. وبما أن العنوان الفرعي للمنشور هو عنصر <code class="br">h2</code>، فإن المستوى التالي في التسلسل الهرمي سيكون <code class="br">h3</code>.</p>
+
+	</section>
+
+	<section>
+		<h3>الخطوة 11 :</h3>
+
+		<p>ستحتوي هذه المدونة <em>This blog</em> على فقرتين بنص "لوريم إيبسوم" <i>lorem ipsum</i>.</p>
+
+		<p>يُستخدم نص لوريم إيبسوم <i>lorem ipsum</i> عادةً في تطوير مواقع الويب كنص تجريبي  <i>as placeholder text</i>. وهو مفيد عندما ترغب في التركيز <em>to focus</em> على بناء الهيكل الأساسي <em>the basic structure</em> لصفحات الويب الخاصة بك دون الحاجة إلى القلق بشأن المحتوى الفعلي في الوقت الحالي.</p>
+
+		<h4>فيما يلي مثال على استخدام "لوريم إيبسوم":</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+ مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+ إيو كل فبعد الأوروبيّون.
+<span class="tag">&lt;/p&gt;</span>
+		</code></pre></div>
+
+		<ul>
+			<li>أسفل عنصر <code class="br">h3</code> الخاص بك، أضف فقرتين من نص لوريم إيبسوم <em>lorem ipsum</em>.</li>
+		</ul>
+
+	</section>
+
+	<section>
+		<h3>الخطوة 12 :</h3>
+
+		<ul>
+			<li>بالنسبة للمنشور الثاني في المدونة <em>the second blog post</em>، ستحتاج إلى إضافة عنصر <code class="br">article</code> آخر.</li>
+			<li>أضف عنصر <code class="br">h3</code> داخل عنصر <code class="br">article</code> مع نص : <code class="br-white">أول حمام للسيد ويسكرز</code> .</li>
+			<li>أسفل عنصر <code class="br">h3</code> الخاص بك، أضف فقرتين من نص "لوريم إيبسوم" <em>lorem ipsum</em> .</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>الخطوة 13 :</h3>
+
+		<ul>
+			<li>بالنسبة للمنشور الثالث في المدونة <em>the third blog post</em>، ستحتاج إلى إضافة عنصر <code class="br">article</code> آخر.</li>
+			<li>داخل عنصر <code class="br">article</code>، أضف عنصر <code class="br">h3</code> يحتوي على نص : <code class="br-white">حفل عيد ميلاد السيد ويسكرز الأول</code>.</li>
+			<li>أسفل عنصر <code class="br">h3</code> الخاص بك، أضف فقرتين من نص "لوريم إيبسوم" <em>lorem ipsum</em> .</li>
+		</ul>
+
+
+	</section>
+
+	<section>
+		<h3>الخطوة 14 :</h3>
+
+		<p>الآن وقد انتهيت من إضافة جميع منشورات المدونة، حاول النقر <i>clicking</i> على رابط "المنشورات" وسترى أن الصفحة ستنتقل إلى قسم "المنشورات".</p>
+	
+		<p>آخر عنصر يجب إضافته إلى صفحة مدونتك هو قسم الاتصال <em>contact section</em>.</p>
+
+		<ul>
+			<li>أسفل عنصر <code class="br">main</code>، أضف عنصر <code class="br">footer</code>.</li>
+		</ul>
+	
+	
+	</section>
+
+	<section>
+		<h3>الخطوة 15 :</h3>
+
+		<ul>
+			<li>داخل عنصر <code class="br">footer</code>، أضف عنصر <code class="br">section</code> مع تعيين المعرف <code class="br">id</code> إلى <code class="br">"contact"</code>.</li>
+			<li>داخل عنصر <code class="br">section</code>، أضف عنصر <code class="br">h2</code>  بنص : <code class="br-white">اتصل بنا</code> .</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>الخطوة 16 :</h3>
+		<p>في قسم "الاتصال" <em>contact section</em>، ستحتاج إلى عرض معلومات الاتصال <em>contact information</em> بمؤلف المدونة. ستستخدم عنصر "عنوان" <b>address element</b> لهذا الغرض.</p>
+		<p>يُستخدم عنصر <code class="br">address</code> لتمثيل معلومات الاتصال بشخص أو مؤسسة.</p>
+
+		<h4>فيما يلي مثال على استخدام عنصر العنوان <code class="br">address</code> لكتابة عنوان فعلي. يُستخدم عنصر <code class="br">br</code> هنا لإنشاء فاصل أسطر بين سطور النص.</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;address&gt;</span>
+ 1234 شارع الخيال <span class="tag">&lt;br /&gt;</span>
+ مدينة وهمية، الولايات المتحدة الأمريكية
+<span class="tag">&lt;/address&gt;</span>
+		</code></pre></div>
+
+		<ul>
+			<li>أسفل عنصر <code class="br">h2</code> الخاص بك، أضف عنصر <code class="br">address</code>.</li>
+		</ul>
+
+	</section>
+
+	<section>
+		<h3>الخطوة 17 :</h3>
+		<p>في هذه الخطوة، ستحتاج إلى إضافة رقم الهاتف <em>phone number</em> وعنوان البريد الإلكتروني <em>email address</em> لمؤلف المدونة.</p>
+		<ul>
+			<li>أضف عنصر فقرة داخل عنصر <code class="br">address</code> يحتوي على النص التالي: <code class="br-white">الهاتف: 555-555-5555</code>.</li>
+			<li>أسفل عنصر الفقرة هذا، أضف عنصر فقرة آخر بنص : <code class="br-white">البريد الإلكتروني: fake@email.com</code></li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>الخطوة 18 :</h3>
+		<p>لتحسين تجربة المستخدم، ستحتاج إلى تحسين <em>enhance</em> رقم الهاتف بحيث ينقر المستخدمون <em>users tap</em> عليه ويبدأون مكالمة.</p>
+		<h4>إليك كيفية جعل أرقام الهواتف قابلة للنقر <em>clickable</em> :</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;a <span class="attr">href=</span><span class="value">"tel:2345678912"</span>&gt;</span>234-567-8912<span class="tag">&lt;/a&gt;</span>
+		</code></pre></div>
+
+		<ul>
+			<li>قم بتغليف النص <code class="br">5555-555-555</code> في عنصر رابط <em>an anchor element</em> واستخدم <code class="br">:tel</code> لجعله رقم هاتف قابل للنقر.</li>
+		</ul>
+
+	</section>
+
+	<section>
+		<h3>الخطوة الأخيرة :</h3>
+		<p>وبالمثل، ينبغي أن يكون المستخدمون قادرين على النقر <em>click</em> على عنوان البريد الإلكتروني وإرسال <em>send</em> بريد إلكتروني من برنامج البريد الإلكتروني الافتراضي الخاص بهم.</p>
+		<h4>إليك كيفية جعل عناوين البريد الإلكتروني قابلة للنقر <em>clickable</em> :</h4>
+
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;a <span class="attr">href=</span><span class="value">"mailto:contact@company.com"</span>&gt;</span>contact@company.com<span class="tag">&lt;/a&gt;</span>
+		</code></pre></div>
+
+		<p>في هذه الخطوة الأخيرة، قم بتغليف النص <code class="br">fake@email.com</code> في عنصر رابط <em>an anchor element</em> واستخدم <code class="br">:mailto</code> لجعله عنوان بريد إلكتروني قابل للنقر.</p>
+
+		<h5>وبهذا التغيير، أصبحت صفحة مدونتك الآن مكتملة.</h5>
+	</section>
+
+	<section>
+		<h3>حل التطبيق :</h3>
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>مدونة السيد ويسكرز<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;header&gt;</span>
+   <span class="tag">&lt;h1&gt;</span>!مرحبًا بكم في صفحة مدونة السيد ويسكرز<span class="tag">&lt;/h1&gt;</span>
+   <span class="tag">&lt;figure&gt;</span>
+    <span class="tag">&lt;img <span class="attr">src=</span><span class="value">"https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"</span> <span class="attr">alt=</span><span class="value">"قطة في الحديقة"</span>/&gt;</span>
+    <span class="tag">&lt;figcaption&gt;<span class="txt">السيد ويسكرز في الحديقة</span>&lt;/figcaption&gt;</span>
+   <span class="tag">&lt;/figure&gt;</span>
+   <span class="tag">&lt;nav&gt;</span>
+    <span class="tag">&lt;ul&gt;</span>
+     <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#about"</span>&gt;</span>نبذة عنا<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#posts"</span>&gt;</span>منشورات<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#contact"</span>&gt;</span>اتصل بنا<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+   <span class="tag">&lt;/nav&gt;</span>
+  <span class="tag">&lt;/header&gt;</span>
+ 
+  <span class="tag">&lt;main&gt;</span>
+  <span class="tag">&lt;section <span class="attr">id=</span><span class="value">"about"</span>&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">نبذة عنا</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;p&gt;<span class="txt">.مرحباً! أنا جين دو، كاتبة شغوفة أجد إلهاماً لا ينضب في تصرفات قطي المحبوب، السيد ويسكرز</span>&lt;/p&gt;</span>
+   <span class="tag">&lt;p&gt;<span class="txt">.طبيعته المرحة وطاقته التي لا تنضب تجعلني دائماً في حالة تأهب. أحبه كثيراً</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;section <span class="attr">id=</span><span class="value">"posts"</span>&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">المنشورات</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;article&gt;</span>
+    <span class="tag">&lt;h3&gt;<span class="txt">اليوم الأول للسيد ويسكرز في المنزل</span>&lt;/h3&gt;</span>
+	<span class="tag">&lt;p&gt;</span>
+     انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+ 	مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة. 
+	إيو كل فبعد الأوروبيّون. 
+	<span class="tag">&lt;/p&gt;</span>
+	<span class="tag">&lt;p&gt;</span>
+	 انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+     مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+ إيو كل فبعد الأوروبيّون.    
+	<span class="tag">&lt;/p&gt;</span>
+   <span class="tag">&lt;/article&gt;</span>
+   <span class="tag">&lt;article&gt;</span>
+    <span class="tag">&lt;h3&gt;<span class="txt">أول حمام للسيد ويسكرز</span>&lt;/h3&gt;</span>
+	<span class="tag">&lt;p&gt;</span>
+     انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+ 	مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة. 
+	إيو كل فبعد الأوروبيّون. 
+	<span class="tag">&lt;/p&gt;</span>
+	<span class="tag">&lt;p&gt;</span>
+	 انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+     مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+ إيو كل فبعد الأوروبيّون.    
+	<span class="tag">&lt;/p&gt;</span>
+   <span class="tag">&lt;/article&gt;</span>
+   <span class="tag">&lt;article&gt;</span>
+    <span class="tag">&lt;h3&gt;<span class="txt">حفل عيد ميلاد السيد ويسكرز الأول</span>&lt;/h3&gt;</span>
+	<span class="tag">&lt;p&gt;</span>
+     انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+ 	مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة. 
+	إيو كل فبعد الأوروبيّون. 
+	<span class="tag">&lt;/p&gt;</span>
+	<span class="tag">&lt;p&gt;</span>
+	 انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+     مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+ إيو كل فبعد الأوروبيّون.    
+	<span class="tag">&lt;/p&gt;</span>
+   <span class="tag">&lt;/article&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;/main&gt;</span>
+
+  <span class="tag">&lt;footer&gt;</span>
+   <span class="tag">&lt;section <span class="attr">id=</span><span class="value">"contact"</span>&gt;</span>
+   <span class="tag">&lt;h2&gt;<span class="txt">اتصل بنا</span>&lt;/h2&gt;</span>
+   <span class="tag">&lt;address&gt;</span>
+    <span class="tag">&lt;p&gt;&lt;a <span class="attr">href=</span><span class="value">"tel:5555555555"</span>&gt;</span><span>555-555-5555</span><span class="tag">&lt;/a&gt;</span>:الهاتف<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;&lt;a <span class="attr">href=</span><span class="value">"mailto:fake@email.com"</span>&gt;</span><span>fake@email.com</span><span class="tag">&lt;/a&gt;</span>:البريد الإلكتروني<span class="tag">&lt;/p&gt;</span>
+   <span class="tag">&lt;/address&gt;</span>
+  <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;/footer&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+</code></pre></div>
+	</section>
+
+<!-- PREVIEW PREVIEW PREVIEW PREVIEW -->
+
+	<section>
+		<h3>معاينة التطبيق :</h3>
+
+		<div class="preview" role="presentation">
+			
+			<div class="header-s7">
+				<h1>مرحبًا بكم في صفحة مدونة السيد ويسكرز!</h1>
+				<figure>
+					<img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" alt="قطة في الحديقة"/>
+					<figcaption>السيد ويسكرز في الحديقة</figcaption>
+				</figure>
+				  <nav>
+					<ul>
+						<li><a href="#about">نبذة عنا</a></li>
+						<li><a href="#posts">منشورات</a></li>
+						<li><a href="#contact">اتصل بنا</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="main-s7">
+				<section id="about">
+					<h2>نبذة عنا</h2>
+					<p>مرحباً! أنا جين دو، كاتبة شغوفة أجد إلهاماً لا ينضب في تصرفات قطي المحبوب، السيد ويسكرز.</p>
+					<p>طبيعته المرحة وطاقته التي لا تنضب تجعلني دائماً في حالة تأهب. أحبه كثيراً.</p>
+				</section>
+				<section id="posts">
+					<h2>المنشورات</h2>
+					<article>
+						<h3>اليوم الأول للسيد ويسكرز في المنزل</h3>
+						<p>
+							انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+							مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+							إيو كل فبعد الأوروبيّون.
+						</p>
+						<p>
+							انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+							مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+							إيو كل فبعد الأوروبيّون.
+						</p>
+					</article>
+					<article>
+						<h3>حفل عيد ميلاد السيد ويسكرز الأول</h3>
+						<p>
+							انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+							مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+							إيو كل فبعد الأوروبيّون.
+						</p>
+						<p>
+							انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+							مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+							إيو كل فبعد الأوروبيّون.
+						</p>
+					</article>
+					<article>
+						<h3>أول حمام للسيد ويسكرز</h3>
+						<p>
+							انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+							مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+							إيو كل فبعد الأوروبيّون.
+						</p>
+						<p>
+							انه كل تعديل وأزيز, أعلنت السيء واستمرت قام ثم.
+							مسرح وعلى جديدة أم كان, من الى تكبّد ترتيب لتقليعة.
+							إيو كل فبعد الأوروبيّون.
+						</p>
+					</article>
+				</section>
+			</div>
+
+			<div class="footer-s7">
+				<section id="contact">
+					<h2>اتصل بنا</h2>
+					<address>
+						<p>الهاتف:<a href="tel:5555555555"> 5555-555-555 </a></p>
+						<p>البريد الإلكتروني: <a href="mailto:fake@email.com">fake@email.com</a></p>
+					</address>
+				</section>
+			</div>
+			
+		</div>
 	</section>
 
 
    
 
-</div>
+</section>
 
 <!-- Pages -->
 <div class="page-nav">
