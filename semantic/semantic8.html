@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="اتش.تي.إم.إل الدلالية |  إنشاء مركز فعاليات"/>
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./styles/semantic8.css">
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<title>HTMLverse | الدلالية</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,20 +28,162 @@
 <main>
 
 <!-- semantic 8 -->
-<div class="box">
+<section class="box">
 	<div class="sub-title">
         <h2>٨. إنشاء مركز فعاليات</h2>
 		<span class="hint">مختبر</span>
-        <p>قريبا</p>
+        <p>في هذا المختبر، ستستخدم عناصر HTML الدلالية لإنشاء بنية صفحة ويب. ستضيف محتوى وصورًا لجعلها تبدو كمركز فعاليات حقيقي.</p>
 	</div>
 
 	<section>
+	<h3>قصص المستخدم :</h3>
+
+	<h4>١. يجب أن يكون لديك عنصر <code class="br">header</code>.</h4>
+	<h4>٢. يجب أن يكون لديك داخل عنصر <code class="br">header</code> عنصر <code class="br">h1</code> يحتوي على النص <code class="br-white">مركز فعاليات</code>، وعنصر <code class="br">nav</code>.</h4>
+	<h4>٣. يجب أن يحتوي عنصر التنقل <code class="br">nav</code> على قائمة غير مرتبة <em>unordered list</em> من عنصرين، كل عنصر يحتوي على رابط <b>link</b> إلى قسم مختلف من الصفحة. يجب أن يحتوي العنصر الأول على النص <code class="br-white">الفعاليات القادمة</code>، بينما يحتوي العنصر الثاني على النص <code class="br-white">الفعاليات السابقة</code>.</h4>
+	<h4>٤. يجب أن يتم تمثيل كل رابط بواسطة عنصر <code class="br">a</code> مع سمة <code class="br">href</code> التي تربط بالقسم المقابل من الصفحة، <code class="br">upcoming-events#</code> و <code class="br">past-events#</code> على التوالي.</h4>
+	<h4>٥. يجب أن يكون لديك عنصر <code class="br">main</code> يحتوي على الأقسام المختلفة <em>The different sections</em> للصفحة.</h4>
+	<h4>٦. يجب أن يكون لديك عنصران <code class="br">section</code> داخل العنصر <code class="br">main</code>.</h4>
+	<h4>٧. يجب أن يحتوي عنصر <code class="br">section</code> الأول على سمة <code class="br">id</code> بقيمة <code class="br">upcoming-events</code> .</h4>
+	<h4>٨. داخل قسم <code class="br">upcoming-events#</code> ، يجب أن تجد ما يلي:</h4>
+	<ul>
+		<li>عنصر <code class="br">h2</code> يحتوي على النص <code class="br-white">الفعاليات القادمة</code> .</li>
+		<li>عنصران <code class="br">article</code>. يجب أن يُمثل كل مقال حدثًا، وأن يتضمن ما يلي:</li>
+		<ul>
+			<li>عنصر <code class="br">h3</code> لعنوان الحدث.</li>
+			<li>عنصر <code class="br">p</code> لوصف الحدث. يمكنك إضافة التاريخ في الأسفل إذا رغبت.</li>
+		</ul>
+	</ul>
+	<h4>٩. يجب أن يحتوي عنصر <code class="br">section</code> الثاني على سمة <code class="br">id</code> بقيمة <code class="br">past-events</code> .</h4>
+	<h4>١٠. يجب أن تجد داخل قسم <code class="br">past-events#</code> ما يلي:</h4>
+	<ul>
+		<li>عنصر <code class="br">h2</code> يحتوي على النص <code class="br-white">الفعاليات السابقة</code> .</li>
+		<li>عنصران <code class="br">article</code> . يجب أن يُمثل كل عنصر من عناصر المقالة حدثًا ماضيًا، ويجب أن يتضمن ما يلي:</li>
+		<ul>
+			<li>An <code class="br">h3</code> element for the event title.</li>
+			<li>عنصر <code class="br">p</code> لوصف الحدث. يمكنك إضافة التاريخ في الأسفل إذا رغبت.</li>
+			<li>عنصر <code class="br">img</code> يحتوي على السمة <code class="br">src</code> التي تشير إلى ملف صورة والسمة <code class="br">alt</code> التي تحتوي على وصف للصورة.</li>
+		</ul>
+	</ul>
+	<h4><strong>ملاحظة</strong>: يمكنك استخدام أي نص لوصف الفعاليات وتواريخها. كما يمكنك استخدام روابط الصور التالية إذا رغبت:</h4>
+	<ul>
+		<li><code class="long-code">https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg</code>.</li>
+		<li><code class="long-code">https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg</code>.</li>
+	</ul>
+
+
+    
+
+	</section>
+
+	<section>
+		<h3>التطبيق :</h3>
+		<div class="preview" role="presentation">
+			<div class="header-s8">
+				<h1>مركز فعاليات</h1>
+				<nav>
+					<ul>
+						<li><a href="#upcoming-events">الفعاليات القادمة</a></li>
+						<li><a href="#past-events">الفعاليات السابقة</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="main-s8">
+				<section id="upcoming-events">
+					<h2>الفعاليات القادمة</h2>
+					<article>
+						<h3>مؤتمر الذكاء الاصطناعي والتعلم الآلي 2024</h3>
+						<p>انضموا إلينا في رحلة معمقة لاستكشاف أحدث التطورات في مجال الذكاء الاصطناعي والتعلم الآلي. سيشارك رواد الصناعة رؤاهم ودراسات الحالة حول كيفية إحداث الذكاء الاصطناعي تحولاً جذرياً في مختلف القطاعات.</p>
+						<p><time datetime="2024-08-10">التاريخ: 10 أغسطس 2024</time></p>
+					</article>
+					<article>
+						<h3>معسكر تدريبي لتطوير مواقع الويب</h3>
+						<p>فعالية تركز على أحدث التوجهات والتهديدات في مجال الأمن السيبراني. ناقش الخبراء استراتيجيات حماية البيانات وضمان الخصوصية في عالم رقمي متزايد.</p>
+						<p><time datetime="2024-09-05">التاريخ: 5 سبتمبر 2024</time></p>
+					</article>
+				</section>
+				<section id="past-events">
+					<h2>الفعاليات السابقة</h2>
+					<article>
+						<h3>قمة الأمن السيبراني 2024</h3>
+						<p>فعالية تركز على أحدث التوجهات والتهديدات في مجال الأمن السيبراني. ناقش الخبراء استراتيجيات حماية البيانات وضمان الخصوصية في عالم رقمي متزايد.</p>
+						<p><time datetime="2024-06-15">التاريخ: 15 يونيو 2024</time></p>
+						<img src="https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg" alt="Computer" />
+					</article>
+					<article>
+						<h3>معرض بلوك تشين 2024</h3>
+						<p>حدث شامل يغطي مستقبل تقنية البلوك تشين. وشملت المواضيع التمويل اللامركزي (DeFi) والعقود الذكية وتأثير البلوك تشين على مختلف الصناعات.</p>
+						<p><time datetime="2024-07-20">التاريخ: 20 يوليو 2024</time></p>
+						<img src="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg" alt="Blockchain" />
+					</article>
+				</section>
+			</div>
+
+		</div>
+	</section>
+
+	<section>
+		<h3>الحل :</h3>
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>مركز فعاليات<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span> 
+
+ <span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;header&gt;</span>
+   <span class="tag">&lt;h1&gt;<span class="txt">مركز فعاليات</span>&lt;/h1&gt;</span>
+   <span class="tag">&lt;nav&gt;</span>
+    <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#upcoming-events"</span>&gt;</span><span class="txt">الفعاليات القادمة</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#past-events"</span>&gt;</span><span class="txt">الفعاليات السابقة</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+   <span class="tag">&lt;/nav&gt;</span>
+  <span class="tag">&lt;/header&gt;</span>
+
+  <span class="tag">&lt;main&gt;</span>
+   <span class="tag">&lt;section <span class="attr">id=</span><span class="value">"upcoming-events"</span>&gt;</span>
+    <span class="tag">&lt;h2&gt;<span class="txt">الفعاليات القادمة</span>&lt;/h2&gt;</span>
+    <span class="tag">&lt;article&gt;</span>
+	 <span class="tag">&lt;h3&gt;<span class="txt">مؤتمر الذكاء الاصطناعي والتعلم الآلي 2024</span>&lt;/h3&gt;</span>
+	 <span class="tag">&lt;p&gt;<span class="txt">انضموا إلينا في رحلة معمقة لاستكشاف أحدث التطورات في مجال الذكاء الاصطناعي والتعلم الآلي. سيشارك رواد الصناعة رؤاهم ودراسات الحالة حول كيفية إحداث الذكاء الاصطناعي تحولاً جذرياً في مختلف القطاعات.</span>&lt;/p&gt;</span>
+	 <span class="tag">&lt;p&gt;&lt;time <span class="attr">datetime=</span><span class="value">"2024-08-10"</span>&gt;<span class="txt">التاريخ: 10 أغسطس 2024</span>&lt;/time&gt;&lt;/p&gt;</span>
+	<span class="tag">&lt;/article&gt;</span>
+	<span class="tag">&lt;article&gt;</span>
+	 <span class="tag">&lt;h3&gt;<span class="txt">معسكر تدريبي لتطوير مواقع الويب</span>&lt;/h3&gt;</span>
+	 <span class="tag">&lt;p&gt;<span class="txt">فعالية تركز على أحدث التوجهات والتهديدات في مجال الأمن السيبراني. ناقش الخبراء استراتيجيات حماية البيانات وضمان الخصوصية في عالم رقمي متزايد.</span>&lt;/p&gt;</span>
+	 <span class="tag">&lt;p&gt;&lt;time <span class="attr">datetime=</span><span class="value">"2024-09-05"</span>&gt;<span class="txt">التاريخ: 5 سبتمبر 2024</span>&lt;/time&gt;&lt;/p&gt;</span>
+	<span class="tag">&lt;/article&gt;</span>
+   <span class="tag">&lt;/section&gt;</span>
+   <span class="tag">&lt;section <span class="attr">id=</span><span class="value">"past-events"</span>&gt;</span>
+    <span class="tag">&lt;h2&gt;<span class="txt">الفعاليات السابقة</span>&lt;/h2&gt;</span>
+    <span class="tag">&lt;article&gt;</span>
+	 <span class="tag">&lt;h3&gt;<span class="txt">قمة الأمن السيبراني 2024</span>&lt;/h3&gt;</span>
+	 <span class="tag">&lt;p&gt;<span class="txt">فعالية تركز على أحدث التوجهات والتهديدات في مجال الأمن السيبراني. ناقش الخبراء استراتيجيات حماية البيانات وضمان الخصوصية في عالم رقمي متزايد.</span>&lt;/p&gt;</span>
+	 <span class="tag">&lt;p&gt;&lt;time <span class="attr">datetime=</span><span class="value">"2024-06-15"</span>&gt;<span class="txt">التاريخ: 15 يونيو 2024</span>&lt;/time&gt;&lt;/p&gt;</span>
+	 <span class="tag">&lt;img <span class="attr">src=</span><span class="value">"https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg"</span> <span class="attr">alt=</span><span class="value">"Computer"</span>/&gt;</span>
+	<span class="tag">&lt;/article&gt;</span>
+	<span class="tag">&lt;article&gt;</span>
+	 <span class="tag">&lt;h3&gt;<span class="txt">معرض بلوك تشين 2024</span>&lt;/h3&gt;</span>
+	 <span class="tag">&lt;p&gt;<span class="txt">حدث شامل يغطي مستقبل تقنية البلوك تشين. وشملت المواضيع التمويل اللامركزي (DeFi) والعقود الذكية وتأثير البلوك تشين على مختلف الصناعات.</span>&lt;/p&gt;</span>
+	 <span class="tag">&lt;p&gt;&lt;time <span class="attr">datetime=</span><span class="value">"2024-07-20"</span>&gt;<span class="txt">التاريخ: 20 يوليو 2024</span>&lt;/time&gt;&lt;/p&gt;</span>
+	 <span class="tag">&lt;img <span class="attr">src=</span><span class="value">"https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg"</span> <span class="attr">alt=</span><span class="value">"Blockchain"</span>/&gt;</span>
+	<span class="tag">&lt;/article&gt;</span>
+   <span class="tag">&lt;/section&gt;</span>
+  <span class="tag">&lt;/main&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+			</code></pre>
+		</div>
 	</section>
 
 
    
 
-</div>
+</section>
 
 <!-- Pages -->
 <div class="page-nav">
