@@ -26,21 +26,226 @@
 
 <main>
 
-<!-- semantic 8 -->
-<div class="box">
+<!-- semantic 9 -->
+<section class="box">
 	<div class="sub-title">
         <h2>٩. مراجعة اتش.تي.إم.إل الدلالية</h2>
 		<span class="hint">مراجعة</span>
-        <p>قريبا</p>
+        <p></p>
 	</div>
 
 	<section>
+		<h3>أهمية HTML الدلالية</h3>
+
+		<ul>
+			<li><strong>التسلسل الهرمي الهيكلي <em>Structural hierarchy</em> لعناصر العناوين:</strong> من المهم استخدام عنصر العنوان <em>heading element</em> الصحيح للحفاظ على التسلسل الهرمي للمحتوى. عنصر <code class="br">h1</code> هو أعلى مستوى من العناوين، بينما عنصر <code class="br">h6</code> هو أدنى مستوى.</li>
+			<li><strong>عناصر "اتش.تي.إم.إل" للعرض <em>Presentational HTML</em> :</strong> العناصر التي تحدد مظهر المحتوى. مثال: عناصر <code class="br">center</code> و <code class="br">big</code> و <code class="br">font</code> التي تم إيقاف استخدامها.</li>
+			<li><strong>عناصر "اتش.تي.إم.إل" الدلالية <em>Semantic HTML</em> :</strong> العناصر التي تحمل معنى <em>meaning</em> وبنية <em>structure</em> . مثال: <code class="br">header</code> و <code class="br">nav</code> و <code class="br">figure</code>.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>عناصر HTML الدلالية</h3>
+
+		<ul>
+			<li><strong>عنصر الرأس <em>Header</em> :</strong> يُستخدم لتحديد رأس المستند <em>the header of a document</em> أو القسم <em>section</em> .</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;header&gt;</span>
+ <span class="tag">&lt;h1&gt;<span class="txt">تطبيق صور القطط</span>&lt;/h1&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="txt">أهلاً بكم في معرض صور القطط الخاص بنا.</span>&lt;/p&gt;</span>
+<span class="tag">&lt;/header&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>العنصر الرئيسي <em>Main</em> :</strong> يستخدم لاحتواء المحتوى الرئيسي <em>the main content</em> لصفحة الويب.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;main&gt;</span>
+ <span class="tag">&lt;section&gt;</span>
+  <span class="tag">&lt;h2&gt;<span class="txt">صور القطط</span>&lt;/h2&gt;</span>
+  <span class="tag">&lt;p&gt;<span class="txt">تصفح صور القطط الرائعة.</span>&lt;/p&gt;</span>
+ <span class="tag">&lt;/section&gt;</span>
+<span class="tag">&lt;/main&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر القسم <em>Section</em> :</strong> يستخدم لتقسيم <i>to divide</i> المحتوى إلى أقسام أصغر <em>into smaller sections</em> .</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;section&gt;</span>
+ <span class="tag">&lt;h2&gt;<span class="txt">نبذة عنّي</span>&lt;/h2&gt;</span>
+ <span class="tag">&lt;p&gt;<span class="txt">مرحباً، أنا "شهاب"، وأنا مطور مواقع ويب.</span>&lt;/p&gt;</span>
+<span class="tag">&lt;/section&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر قسم التنقل (<code class="br">nav</code>) <em>Navigation Section</em> :</strong> يمثل هذا القسم روابط تنقل <em>navigation links</em> .</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;nav&gt;</span>
+ <span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#photos"</span>&gt;<span class="txt">صور</span>&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;a <span class="attr">href=</span><span class="value">"#videos"</span>&gt;<span class="txt">فيديوهات</span>&lt;/a&gt;&lt;/li&gt;</span>
+ <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر الشكل <em>Figure</em> :</strong> يحتوي على رسومات توضيحية <em>illustrations</em> ومخططات <em>diagrams</em> .</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;figure&gt;</span>
+ <span class="tag">&lt;img</span>
+  <span class="attr">src=</span><span class="value">"https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"</span>
+  <span class="attr">alt=</span><span class="value">".قطتان صغيرتان تنامان معًا على أريكة"</span>
+ <span class="tag">/&gt;</span>
+<span class="tag">&lt;/figure&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر التأكيد (<code class="br">em</code>) <em>Emphasis</em> :</strong> يُشير إلى النص الذي يحتوي على نبرة تأكيد <em>stress emphasis</em> .</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ <span class="tag">&lt;em&gt;</span>.أحلامك<span class="tag">&lt;/em&gt;</span> لا تتخلى أبدًا عن
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر النص الاصطلاحي (<code class="br">i</code>) <em>Idiomatic Text</em> :</strong> يستخدم لتسليط الضوء على الصوت أو الحالة المزاجية البديلة، والمصطلحات الاصطلاحية من لغة أخرى، والمصطلحات التقنية، والأفكار.</li>
+			<div class="code-block"><pre><code>
+<sapn class="tag">&lt;p&gt;</sapn>
+ .في الهواء<span class="tag">&lt;i<span class="attr"> lang=</span><span class="value">"en"</span>&gt;</span> I don't know what <span class="tag">&lt;/i&gt;</span>هناك شيء معين
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<p>تُستخدم السمة <code class="br">lang</code> داخل وسم <code class="br">i</code> المفتوح لتحديد لغة المحتوى. في هذه الحالة، ستكون اللغة هي الانجليزية. لا يُشير عنصر <code class="br">i</code> إلى أهمية النص، بل يُظهر فقط أنه مختلف نوعًا ما عن النص المحيط به.</p>
+			<br />
+			<li><strong>عنصر ذو أهمية بالغة (<code class="br">strong</code>) <em>Strong Importance</em> :</strong> يشير إلى النص ذي الأهمية الكبيرة <em>has strong importance</em> .</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ .قد يسبب هذا المنتج ردود فعل تحسسية <span class="tag">&lt;strong&gt;</span>:تحذير<span class="tag">&lt;/strong&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر "لفت الانتباه إلى" (<code class="br">b</code>) <em>Bring Attention To</em> :</strong> يُستخدم هذا الأسلوب لتسليط الضوء على النصوص غير المهمة لمعنى المحتوى. ويُستخدم عادةً لتسليط الضوء على الكلمات المفتاحية في الملخصات أو أسماء المنتجات في المراجعات.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ .لجودة الصوت<span class="tag"> &lt;b&gt;</span>SuperSound 3000<span class="tag">&lt;/b&gt; </span>لقد قمنا باختبار العديد من المنتجات، بما في ذلك 
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر قائمة الوصف (<code class="br">dl</code>) <em>Description List</em> :</strong> يستخدم لتمثيل قائمة من مجموعات المصطلحات والأوصاف.</li>
+			<li><strong>عنصر مصطلح الوصف (<code class="br">dt</code>) <em>Description Term</em> :</strong> يستخدم لتمثيل المصطلح الذي يتم تعريفه.</li>
+			<li><strong>عنصر تفاصيل الوصف (<code class="br">dd</code>) <em>Description Details</em> :</strong> يستخدم لتمثيل وصف المصطلح.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;dl&gt;</span>
+	<span class="tag">&lt;dt&gt;</span>HTML اتش.تي.إم.إل<span class="tag">&lt;/dt&gt;</span>
+	<span class="tag">&lt;dd&gt;</span>HyperText Markup Language لغة ترميز النص الفائق<span class="tag">&lt;/dd&gt;</span>
+	<span class="tag">&lt;dt&gt;</span>CSS سي.أس.أس<span class="tag">&lt;/dt&gt;</span>
+	<span class="tag">&lt;dd&gt;</span>Cascading Style Sheets أوراق الأنماط المتتالية<span class="tag">&lt;/dd&gt;</span>
+<span class="tag">&lt;/dl&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر الاقتباس المجمّع (<code class="br">blockquote</code>) <em>Block Quotation</em> :</strong> يُستخدم هذا العنصر لتمثيل مقطع مقتبس من مصدر آخر. ويحتوي على سمة <code class="br">cite</code> ، وقيمتها هي عنوان <b>URL</b> للمصدر.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;blokquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;
+ <span class="txt">"هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟"</span>
+&lt;/blockquote&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر الاقتباس (<code class="br">cite</code>) <em>Citation</em> :</strong> تُستخدم هذه العلامة لنسب مصدر العمل المرجعي بصريًا. وتُستخدم أيضًا لتمييز عنوان المرجع.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;div&gt;</span>
+ 
+ <span class="tag">&lt;blockquote <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+  هل يمكنك أن تتخيل كيف سيكون الحال لو كنت مطورًا ناجحًا؟ لو أنشأت أنظمة برمجية يعتمد عليها الناس؟
+ <span class="tag">&lt;/blockquote&gt;</span>
+
+ <span class="tag">&lt;p&gt;</span>—Quincy Larson, <span class="tag">&lt;cite&gt;</span>كيفية تعلم البرمجة والحصول على وظيفة مطور برامج [كتاب كامل].<span class="tag">&lt;/cite&gt;&lt;/p&gt;</span>
+
+<span class="tag">&lt;/div&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر الاقتباس المضمن (<code class="br">q</code>) <em>Inline Quotation</em> :</strong> يستخدم لتمثيل اقتباس قصير ضمن النص.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+  ،كما قال كوينسي لارسون
+ <span class="tag">&lt;q <span class="attr">cite=</span><span class="value">"https://www.freecodecamp.org/news/learn-to-code-book/"</span>&gt;</span>
+  .الزخم هو كل شيء
+ <span class="tag">&lt;/q&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر الاختصار (<code class="br">abbr</code>) <em>Abbreviation</em> :</strong> يُستخدم لتمثيل اختصار أو رمز مختصر. ولمساعدة المستخدمين على فهم معنى الاختصار أو الرمز المختصر، يمكنك عرض شكله الكامل، ووصفًا سهل القراءة، باستخدام سمة <code class="br">title</code>.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ هو أساس الويب<span class="tag">&lt;abbr <span class="attr">title=</span><span class="value">"HyperText Markup Language"</span>&gt;<span class="txt">HTML</span>&lt;/abbr&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر عنوان الاتصال (<code class="br">address</code>) <em>Contact Address</em> :</strong> يستخدم لتمثيل معلومات الاتصال.</li>
+			<br />
+			<li><strong>عنصر التاريخ الوقت (<code class="br">time</code>) <em>Date Time</em> :</strong> يستخدم لتمثيل التاريخ و/أو الوقت. تُستخدم سمة <code class="br">datetime</code> لترجمة التواريخ والأوقات إلى تنسيق قابل للقراءة آليًا.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt; <span class="txt">الحجوزات مخصصة لـ</span> &lt;time <span class="attr">datetime=</span><span class="value">"20:00"</span>&gt;<span class="txt">20:00</span>&lt;/time&gt;&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>سمة التاريخ (<code class="br">datetime</code>) وفقًا لمعيار <em>ISO 8601</em> :</strong> يُستخدم لتمثيل التواريخ والأوقات بتنسيق قابل للقراءة آليًا. التنسيق القياسي هو <code class="br">YYYY-MM-DDThh:mm:ss</code> ، حيث يُمثل الحرف <code class="br">T</code> الكبير فاصلًا بين التاريخ والوقت.</li>
+			<br />
+			<li><strong>عنصر مرتفع (<code class="br">sup</code>) <em>Superscript</em> :</strong> يُستخدم لتمثيل النص المرتفع. تشمل حالات الاستخدام الشائعة لعنصر <code class="br">sup</code> الأسس، والأحرف المرتفعة، والأعداد الترتيبية.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span><span class="txt">.4 يساوي</span><span class="tag">&lt;sup&gt;<span class="txt">2</span>&lt;/sup&gt;</span>2<span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر منخفض (<code class="br">sub</code>) <em>Subscript</em> :</strong> يستخدم لتمثيل النص السفلي. تشمل حالات الاستخدام الشائعة لعنصر النص السفلي الصيغ الكيميائية والحواشي السفلية والرموز السفلية للمتغيرات.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>CO<span class="tag">&lt;sub&gt;</span>2<span class="tag">&lt;/sub&gt;</span><span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر الكود المضمن (<code class="br">code</code>) <em>Inline Code</em> :</strong> يُستخدم لتمثيل جزء من شفرة الحاسوب.</li>
+			<li><strong>عنصر نص منسق مسبقًا (<code class="br">pre</code>) <em>Preformatted Text</em> :</strong> يمثل نصًا منسقًا مسبقًا.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;pre&gt;</span>
+ <span class="tag">&lt;code&gt;</span>
+  body {
+   color: red;
+  }
+ <span class="tag">&lt;/code&gt;</span>
+<span class="tag">&lt;/pre&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر تعليق غير مفصل (<code class="br">u</code>) <em>Unarticulated Annotation</em> :</strong> يُستخدم لتمثيل نطاق من النص المضمن الذي يجب عرضه بطريقة تشير إلى أنه يحتوي على تعليق غير نصي.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ يمكنك استخدام عنصر التعليق غير المفصلي للتمييز
+ <span class="tag">&lt;u&gt;<span class="txt">inccccort</span>&lt;/u&gt;</span> <span class="tag">&lt;u&gt;<span class="txt">spling</span>&lt;/u&gt;</span> <span class="tag">&lt;u&gt;<span class="txt">issses</span>&lt;/u&gt;</span>.
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر شرح روبي (<code class="br">ruby</code>) <em>Ruby Annotation</em> :</strong> تُستخدم هذه الأداة لإضافة تعليقات توضيحية للنصوص تتضمن شرحاً للنطق أو المعنى. ومن الأمثلة على استخدامها في الطباعة في شرق آسيا.</li>
+			<li><strong>عنصر الأقواس الاحتياطي في روبي (<code class="br">rp</code>) <em>Ruby fallback parenthesis</em> :</strong> يُستخدم كخيار احتياطي للمتصفحات التي تفتقر إلى دعم عرض التعليقات التوضيحية للغة روبي.</li>
+			<li><strong>عنصر نص روبي (<code class="br">rt</code>) <em>Ruby text</em> :</strong> يُستخدم للإشارة إلى نص التعليق التوضيحي في لغة روبي. ويُستخدم عادةً للنطق أو تفاصيل الترجمة في الطباعة في شرق آسيا.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;ruby&gt;</span> 明日 <span class="tag">&lt;rp&gt;</span>(<span class="tag">&lt;/rp&gt;</span><span class="tag">&lt;rt&gt;</span>Ashita<span class="tag">&lt;/rt&gt;</span><span class="tag">&lt;rp&gt;</span>)<span class="tag">&lt;/rp&gt;</span> <span class="tag">&lt;/ruby&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>عنصر الشطب (<code class="br">s</code>) <em>Strikethrough</em> :</strong> يُستخدم لتمثيل المحتوى الذي لم يعد دقيقًا أو ذا صلة.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;</span>
+ <span class="tag">&lt;s&gt;</span>.ستبدأ رحلة المشي غداً عند الظهر<span class="tag">&lt;/s&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>
+ .نظراً لظروف جوية غير متوقعة، تم إلغاء الرحلة
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre></div>
+			<br />
+			<li><strong>الروابط الداخلية <em>Internal links</em> :</strong> يُستخدم هذا الأسلوب للربط بقسم آخر من الصفحة باستخدام <code class="br">href="#id"</code> على عنصر <code class="br">a</code> ومنح العنصر الوجهة نفس المعرّف <code class="br">id</code> . ويُستخدم عادةً للروابط السريعة، وجداول المحتويات، أو الصفحات الطويلة ذات الأقسام المتعددة.</li>
+			<div class="code-block"><pre><code>
+<span class="tag">&lt;a <span class="attr">href=</span><span class="value">"#about-section"</span>&gt;<span class="txt">."انتقل إلى قسم "نبذة عنا</span>&lt;/a&gt;</span>
+
+<span class="tag">&lt;section <span class="attr">id=</span><span class="value">"about-section"</span>&gt;</span>
+ <span class="tag">&lt;h2&gt;</span>نبذة عنا<span class="tag">&lt;h2&gt;</span>
+ <span class="tag">&lt;p&gt;</span>.هذا هو قسم "نبذة عنا" في الصفحة<span class="tag">&lt;p&gt;</span>
+<span class="tag">&lt;/section&gt;</span>
+			</code></pre></div>
+
+
+		</ul>
 	</section>
 
 
    
 
-</div>
+</section>
 
 <!-- Pages -->
 <div class="page-nav">
