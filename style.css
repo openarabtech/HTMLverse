@@ -60,7 +60,9 @@ nav {
   gap: 20px;
   overflow-x: auto;
   justify-content: space-around;
-  
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .nav-links a {
