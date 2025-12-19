@@ -29,13 +29,150 @@
         <div class="sub-title">
             <h2>١. العمل مع النماذج</h2>
             <span class="hint">نظري</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
         <section id="1">
             <h3>أ. كيف تعمل النماذج Forms والتسميات Labels وحقول الإدخال Inputs في لغة اتش.تي.إم.إل HTML ؟</h3>
+
+            <p>يُستخدم عنصر النموذج <code class="br">form</code> في لغة HTML لجمع معلومات المستخدم <em>user information</em> ، مثل الأسماء وعناوين البريد الإلكتروني.</p>
+            <h4>إليك مثال على عنصر <code class="br">form</code> :</h4>
+            
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">"يوضع الرابط هنا"</span>&gt;</span>
+ <span class="value">&lt;!-- عناصر الإدخال توضع هنا --&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <p>تحدد خاصية <code class="br">form</code> وجهة إرسال بيانات النموذج عند إرساله. ولجمع معلومات محددة، مثل الأسماء وعناوين البريد الإلكتروني، يمكنك استخدام عنصر الإدخال <code class="br">input</code>.</p>
+            <h4>إليك مثال على استخدام عنصر <code class="br">input</code> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=</span><span class="value">"text"</span> /&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <div class="preview">
+                <form action="">
+                    <input type="text" />
+                </form>
+            </div>
+
+            <br />
+
+            <p>عناصر الإدخال <code class="br">input</code> هي عناصر فارغة ولا تحتوي على وسوم إغلاق. تحدد السمة <code class="br">type</code> نوع البيانات المتوقعة من المستخدم. في هذه الحالة، ستكون البيانات نصًا عاديًا. لإضافة تسمية لعنصر الإدخال <em>input</em> ، يمكنك استخدام عنصر <code class="br">label</code>.</p>
+            
+            <h4>فيما يلي مثال على استخدام عنصر التسمية <code class="br">label</code> مع نص <code class="br">الاسم الكامل:</code> .</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label&gt;</span>
+  :الاسم الكامل
+  <span class="tag">&lt;input <span class="attr">type=</span><span class="value">"text"</span> /&gt;</span>
+ <span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <h5>انقر على النص <code class="br">الاسم الكامل:</code> في نافذة المعاينة وسترى حقل الإدخال يصبح واضحًا.</h5>
+
+            <div class="preview">
+                <form action="">
+                    <label>
+                        الاسم الكامل:
+                        <input type="text" />
+                    </label>
+                </form>
+            </div>
+
+            <br />
+
+            <p>بوضع حقل إدخال <code class="br">input</code> داخل عنصر تسمية <code class="br">label</code>، تُنشئ ارتباطًا ضمنيًا بين التسمية <code class="br">label</code> وحقل الإدخال <code class="br">input</code>. يشير مصطلح "ضمني" <em>"implicit"</em> إلى شيء مفهوم أو مُستنتج دون الحاجة إلى ذكره صراحةً أو تعريفه بخصائص أو عناصر إضافية. لربط تسمية <code class="br">label</code> بحقل إدخال <code class="br">input</code> بشكل صريح، يمكنك استخدام الخاصية <code class="br">for</code>.</p>
+
+            <h4>فيما يلي مثال على استخدام السمة <code class="br">for</code> لتسمية عنوان البريد الإلكتروني :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt; <span class="txt">:البريد الإلكتروني</span> &lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> /&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <h5>تفاعل مع عنصر الإدخال <code class="br">input</code> في نافذة المعاينة عن طريق كتابة عنوان بريد إلكتروني وهمي مثل: <code class="br">jane@example.com</code>.</h5>
+
+            <div class="preview">
+                <form action="">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" />
+                </form>
+            </div>
+
+            <br />
+
+            <p>عند استخدام ربط صريح، يجب أن تتطابق قيم سمة <code class="br">for</code> و <code class="br">id</code>. في هذه الحالة، تم تعيين كلتا القيمتين إلى <code class="br">email</code>. يوفر نوع <em>type</em> البريد الإلكتروني <code class="br">email</code> في حقل الإدخال <em>input</em> تحققًا أساسيًا من صحة تنسيق <em>formatted</em> عناوين البريد الإلكتروني. إذا كنت ترغب في عرض تلميحات <b>hints</b> إضافية للمستخدمين حول المدخلات المتوقعة، يمكنك استخدام سمة <code class="br">placeholder</code>.</p>
+            <h4>إليك مثال على استخدام خاصية <code class="br">placeholder</code> داخل حقل إدخال البريد الإلكتروني:</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt; <span class="txt">:البريد الإلكتروني</span> &lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">placeholder=</span><span class="value">"example@email.com"</span> /&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <h5>انقر على حقل إدخال البريد الإلكتروني وابدأ في كتابة البريد الإلكتروني وسترى النص التوضيحي <em>The placeholder text</em> يختفي.</h5>
+
+            <div class="preview">
+                <form action="">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" placeholder="example@email.com" />
+                </form>
+            </div>
+
+            <br />
+
+            <p>بالنسبة للنص التوضيحي <em>The placeholder</em>، عليك تقديم نص قصير ومفيد لتوضيح تنسيق ونوع البيانات التي تتوقعها من المستخدمين. في هذه الحالة، يُظهر النص التوضيحي، <code class="br">example@email.com</code>، للمستخدم ضرورة إدخال عنوان بريد إلكتروني بتنسيق صحيح.</p>
+
+
+            <!-- QUESTIONS -->
+            <div class="questions">
+                <h4>أسئلة :</h4>
+
+
+                <h5>ما هو دور السمة <code class="br">for</code> داخل عنصر التسمية <code class="br">label</code> ؟</h5>
+
+                
+                <p> ١. يُحدد لون نص التسمية <code class="br">label</code>. ❌</p>
+                <p><mark> ٢. يُستخدم لربط التسمية <code class="br">label</code> بحقل الإدخال <code class="br">input</code> بشكلٍ صريح. ✅</mark></p>
+                <p> ٣. يُحدد محاذاة التسمية <code class="br">label</code> داخل حاويتها. ❌</p>
+                <p> ٤. يُعرّف دالة جافا سكريبت <em>a JavaScript function</em> لتُنفّذ عند النقر على التسمية <code class="br">label</code>. ❌</p>
+                
+                    
+                <br>
+
+
+                <h5>أي من القيم التالية تمثل القيمة الصحيحة لخاصية <code class="br">type</code> المستخدمة داخل المدخلات <em>inputs</em> ؟</h5>
+
+                
+                <p> ١. <code class="br">choice</code> ❌</p>
+                <p> ٢. <code class="br">text-box</code> ❌</p>
+                <p> ٣. <code class="br">numberinput</code> ❌</p>
+                <p><mark> ٤. <code class="br">text</code> ✅</mark></p>
+                
+                    
+                <br>
+
+                <h5>ما هو دور سمة <code class="br">placeholder</code> داخل عنصر الإدخال <code class="br">input</code> ؟</h5>
+
+                <p><mark> ١. يُستخدم هذا الخيار لعرض تلميح <em>hint</em> أو نص توضيحي داخل حقل الإدخال <em>in the input field</em>. ✅</mark></p>
+                <p> ٢. يُحدد نوع حقل الإدخال <em>the type of input field</em>. ❌</p>
+                <p> ٣. يُحدد القيمة الأولية <em>the initial value</em> المعروضة في حقل الإدخال <em>in the input field</em>. ❌</p>
+                <p> ٤. يُشير إلى الحد الأقصى لعدد الأحرف <em>the maximum length of characters</em> المسموح به في حقل الإدخال <em>in the input field</em>. ❌</p>
+                
+            </div>
+
         </section>
         
+
         <section id="2">
             <h3>ب. ما هي أنواع الأزرار Buttons المختلفة، ومتى يُنصح باستخدامها؟</h3>
         </section>
