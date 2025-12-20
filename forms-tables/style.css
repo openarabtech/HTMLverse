@@ -413,6 +413,18 @@ section {
   color: whitesmoke;
 }
 
+.code-block code .jsblue {
+  color: lightblue;
+}
+
+.code-block code .jsgreen {
+  color: lightgreen;
+}
+
+.code-block code .jsyellow {
+  color: yellow;
+}
+
 .help-code {
   display: block;
   direction: ltr;
