@@ -175,8 +175,183 @@
 
         <section id="2">
             <h3>ب. ما هي أنواع الأزرار Buttons المختلفة، ومتى يُنصح باستخدامها؟</h3>
+
+            <p>يُستخدم عنصر <code class="br">button</code> لتنفيذ إجراء معين عند تنشيطه <i>activated</i> .</p>
+            <h4>إليك مثال على عنصر <code class="br">button</code> مع نص الزر <code class="br">ابدأ اللعبة</code>.</h4>
+            
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;button&gt;<span class="txt">ابدأ اللعبة</span>&lt;/button&gt;</span>
+            </code></pre></div>
+            <br />
+
+            <p>من الأمثلة الأخرى لاستخدام عنصر <code class="br">button</code>: إرسال نموذج <em>submitting a form</em> ، أو عرض نافذة منبثقة <em>showing a modal</em> ، أو تبديل <em>toggling</em> فتح وإغلاق قائمة جانبية <em>a side menu</em> . يحتوي عنصر <code class="br">button</code> على سمة "النوع" <code class="br">type</code> التي تتحكم في سلوك الزر عند تفعيله. القيمة الأولى الممكنة لسمة "النوع" هي نوع <code class="br">button</code>.</p>
+            <h4>فيما يلي مثال على استخدام عنصر <code class="br">button</code> مع النوع <em>type</em> زر <code class="br">button</code> ونص <code class="br">إظهار التنبيه</code> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">type=</span><span class="value">"button"</span>&gt;<span class="txt">إظهار التنبيه</span>&lt;/button&gt;</span>
+            </code></pre></div>
+            <br />
+
+            <p>افتراضياً، لن يقوم الزر <em>The button</em> بأي إجراء عند تفعيله. مع ذلك، يمكنك إضافة بعض أكواد جافا سكريبت <em>JavaScript code</em> لجعل الزر تفاعلياً <i>interactive</i> ، كعرض تنبيه <b>alert</b> في هذه الحالة.</p>
+            <h4>انقر على زر <code class="br">إظهار التنبيه</code> لعرض تنبيه منبثق <i>an alert pop up</i> على الشاشة. للتفاعل مع المثال :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;button <span class="attr">type=</span><span class="value">"button"</span>&gt;<span class="txt">إظهار التنبيه</span>&lt;/button&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+ <span class="jsblue">const</span> btn = document.<span class="jsblue">querySelector</span><span class="jsyellow">(<span class="jsgreen">"button"</span>);</span>
+ btn.<span class="jsblue">addEventListener</span><span class="jsyellow">(<span class="jsgreen">"click"</span>, () <span class="jsblue">=> alert</span> (<span class="jsgreen">"لقد نقرت على زر التنبيه"</span>));</span>
+<span class="tag">&lt;/script&gt;</span>
+            </code></pre></div>
+
+            <h5>ملاحظة: يستخدم هذا المثال التفاعلي لغة جافا سكريبت <em>JavaScript</em> ، ولكن لا داعي للقلق بشأن فهم كود جافا سكريبت. ستتعلم جافا سكريبت في وحدات لاحقة.</h5>
+
+            <div class="preview">
+                <button type="button">إظهار التنبيه</button>
+                <script>
+                    const btn = document.querySelector("button");
+                    btn.addEventListener("click", () => alert ("لقد نقرت على زر التنبيه"));
+                </script>
+            </div>
+            <br />
+
+            <p>قيمة أخرى محتملة لخاصية النوع <code class="br">type</code> هي قيمة الإرسال <code class="br">submit</code>.</p>
+            <h4>إليك مثال على استخدام عنصر <code class="br">button</code> من نوع <code class="br">submit</code> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:البريد الإلكتروني</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span> /&gt;</span>
+ <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span class="txt">إرسال النموذج</span>&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <div class="preview">
+                <form action="">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" />
+                    <button type="submit">إرسال النموذج</button>
+                </form>
+            </div>
+            <br />
+
+            <p>يحتوي عنصر النموذج <code class="br">form</code> هذا على تسمية <code class="br">label</code> وحقل إدخال <code class="br">input</code> لعنوان البريد الإلكتروني للمستخدم. عند النقر على زر الإرسال <em>The submit button</em> ، تُرسل بيانات المستخدم إلى الخادم <em>The server</em> وتُعالج <i>be processed</i> . القيمة الثالثة الممكنة لخاصية النوع <code class="br">type</code> هي قيمة إعادة التعيين <code class="br">reset</code>.</p>
+            <h4>إليك مثال على عنصر نموذج <code class="br">form</code> يحتوي على زري إعادة التعيين <em>reset</em> والإرسال <em>submit</em> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:البريد الإلكتروني</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span> /&gt;</span>
+ <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"reset"</span>&gt;<span class="txt">إعادة تعيين النموذج</span>&lt;/button&gt;</span>
+ <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span class="txt">إرسال النموذج</span>&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <h5>تفاعل مع حقل إدخال البريد الإلكتروني في نافذة المعاينة بإدخال عنوان بريد إلكتروني وهمي. ثم انقر على زر إعادة التعيين لمشاهدة بريدك الإلكتروني يختفي من الحقل.</h5>
+
+            <div class="preview">
+                <form action="">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" />
+                    <button type="reset">إعادة تعيين النموذج</button>
+                    <button type="submit">إرسال النموذج</button>
+                </form>
+            </div>
+            <br />
+
+            <p>في هذا المثال المُعدَّل، يُستخدم عنصران، أحدهما مُسمّى <code class="br">label</code> والآخر مُدخل <code class="br">input</code> ، لجمع عنوان البريد الإلكتروني للمستخدم. عند النقر على زر إعادة التعيين <em>The reset button</em> ، سيتم مسح جميع بياناته المُدخلة. من المهم ملاحظة أن أزرار إعادة التعيين ليست الخيار الأمثل عادةً، لأنها قد تؤدي إلى قيام المستخدمين بإعادة تعيين بياناتهم عن طريق الخطأ. كما أن وجود أزرار متعددة <i>multiple buttons</i> في النموذج <em>form</em> قد يُسبب ازدحامًا <i>clutter up</i> في واجهة المستخدم <em>the user interface</em>.</p>
+
+            <p>هناك طريقة أخرى لإنشاء أزرار في لغة HTML وهي استخدام عنصر الإدخال <code class="br">input</code>. يحتوي عنصر الإدخال أيضًا على سمة النوع <code class="br">type</code> التي تتضمن القيم الممكنة التالية: إرسال <code class="br">submit</code>، إعادة تعيين <code class="br">reset</code>، وزر <code class="br">button</code>.</p>
+
+            <h4>فيما يلي مثال على استخدام عنصر الإدخال <code class="br">input</code> مع تعيين النوع <code class="br">type</code> إلى زر <code class="br">button</code> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">class=</span><span class="value">"start-btn"</span> <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">value=</span><span class="value">"ابدأ اللعبة"</span> /&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+ document.<span class="jsblue">addEventListener</span><span class="jsyellow">(<span class="jsgreen">"DOMContentLoaded"</span>, () <span class="jsblue">=></span> {</span>
+  <span class="jsblue">const</span> btn = document.<span class="jsblue">querySelector</span><span class="jsyellow">(<span class="jsgreen">".start-btn"</span>);</span>
+  btn.<span class="jsblue">addEventListener</span><span class="jsyellow">(<span class="jsgreen">"click"</span>, () <span class="jsblue">=></span> {</span>
+   <span class="jsblue">const</span> paraEl = document.<span class="jsblue">createElement</span><span class="jsyellow">(<span class="jsgreen">"p"</span>);</span>
+   <span class="jsblue">const</span> bodyEl = document.<span class="jsblue">querySelector</span><span class="jsyellow">(<span class="jsgreen">"body"</span>);</span>
+
+   bodyEl.<span class="jsblue">appendChild</span><span class="jsyellow">(<span class="txt">paraEl</span>);</span>
+   paraEl.textContent = <span class="jsgreen">"!!!لقد بدأت اللعبة"</span><span class="jsyellow">;</span>
+  <span class="jsyellow">});</span>
+ <span class="jsyellow">});</span>
+<span class="tag">&lt;/script&gt;</span>
+            </code></pre></div>
+
+            <div class="preview previewDiv">
+                <input class="start-btn" type="button" value="ابدأ اللعبة" />
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const btn = document.querySelector(".start-btn");
+                        btn.addEventListener("click", () => {
+                            const paraEl = document.createElement("p");
+                            const previewEl = document.querySelector(".previewDiv");
+
+                            previewEl.appendChild(paraEl);
+                            paraEl.textContent = "لقد بدأت اللعبة!!!";
+                        });
+                    });
+                </script>
+            </div>
+            <br />
+
+            <p>تُستخدم خاصية "القيمة" <code class="br">value</code> لعرض نص الزر <i>the button text</i> . إذن، ما الفرق بين استخدام عنصر الإدخال <code class="br">input</code> وعنصر الزر <code class="br">button</code> ؟ عناصر الإدخال <code class="br">input</code> هي عناصر فارغة <b>void elements</b> ، أي لا يمكن أن تحتوي على عناصر فرعية <em>child nodes</em> ، مثل النص <em>as text</em> ، ولا يمكن أن تحتوي إلا على وسم بداية. من ناحية أخرى، يوفر عنصر الزر <code class="br">button</code> مرونة أكبر لأنه يمكنك تضمين النصوص والصور والأيقونات بداخله.</p>
+
+
+            
+<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>أي من القيم التالية ليست قيمة صالحة لخاصية "النوع" <code class="br">type</code> داخل الأزرار <em>buttons</em> ؟</h5>
+
+			<p><mark> ١. <code class="br">src</code> ✅</mark></p>
+			<p> ٢. <code class="br">button</code> ❌</p>
+			<p> ٣. <code class="br">reset</code> ❌</p>
+			<p> ٤. <code class="br">submit</code> ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هو دور <code class="br">"type="reset</code> داخل عنصر <code class="br">button</code> ؟</h5>
+
+			
+			<p> ١. يُرسل بيانات النموذج form data . ❌</p>
+			<p> ٢. يُعيد تعيين عناصر حقل النص <code class="br">textarea</code> فقط. ❌</p>
+            <p><mark> ٣. يُعيد تعيين النموذج form . ✅</mark></p>
+			<p> ٤. لا يوجد سلوك مُحدد لنوع type "إعادة التعيين" <code class="br">reset</code> . ❌</p>
+			
+			
+				
+			<br>
+
+			<h5>ما هو العنصر الآخر الذي يمكنك استخدامه لتمثيل زر <em>a button</em> ؟</h5>
+
+			
+			<p> ١. <code class="br">img</code> ❌</p>
+			<p> ٢. <code class="br">form</code> ❌</p>
+			<p> ٣. <code class="br">header</code> ❌</p>
+            <p><mark> ٤. <code class="br">input</code> ✅</mark></p>
+			
+				
+			
+
+		</div>
+
+
+
+
+
         </section>
         
+
         <section id="3">
             <h3>ج. ما هو التحقق من صحة البيانات Form Validation من جانب العميل Client-Side في نماذج اتش.تي.إم.إل HTML Forms ، وما هي بعض الأمثلة؟</h3>
         </section>
