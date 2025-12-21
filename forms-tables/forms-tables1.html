@@ -354,6 +354,135 @@
 
         <section id="3">
             <h3>ج. ما هو التحقق من صحة البيانات Form Validation من جانب العميل Client-Side في نماذج اتش.تي.إم.إل HTML Forms ، وما هي بعض الأمثلة؟</h3>
+        
+            <p>عندما يقوم المستخدم بملء نموذج <em>form</em> على موقعك الإلكتروني، من المهم أن يُدخل جميع المعلومات المطلوبة بالتنسيق الصحيح. تحتوي "عناصر التحكم" <em>controls</em> في "نماذج اتش.تي.إم.إل"  <em>HTML form</em> ، مثل "حقول الإدخال" <em>inputs</em> ، على العديد من "آليات التحقق المدمجة" <em>built-in validation</em> التي يمكنك استخدامها للتحقق من صحة البيانات. سيساعد ذلك في ضمان تصحيح المستخدم لهذه الأخطاء قبل إرسال المعلومات ومعالجتها من قِبل "الخادم" <b>The server</b> .</p>
+
+            <p>يشير مصطلح "جانب العميل" <b>client-side</b> إلى كل ما يحدث على جهاز المستخدم، مثل الجزء من موقع الويب أو التطبيق الذي تتفاعل معه مباشرةً. ويشمل ذلك التخطيط والتصميم وأي ميزات تفاعلية <em>interactive features</em> .</p>
+
+            <p>يشير مصطلح "جانب الخادم" <b>server-side</b> إلى كل ما يحدث على الخادم <em>on the server</em> ، أو الحاسوب، أو النظام <em>system</em> الذي يستضيف <em>hosts</em> الموقع الإلكتروني أو التطبيق. ويشمل ذلك معالجة البيانات، وتشغيل التطبيقات، والتعامل مع الطلبات <em>handling requests</em> الواردة من جهاز المستخدم <em>the user's device</em>.</p>
+
+            <p>مع أن "التحقق من صحة البيانات من جانب العميل" <b>client-side validation</b> مهم، إلا أنك تحتاج أيضًا إلى "التحقق من صحة البيانات من جانب الخادم" <b>server-side validation</b> لتعزيز الأمان <em>for added security</em> . إذ يمكن للمستخدمين ذوي النوايا الخبيثة <em>Malicious users</em> تجاوز عمليات التحقق <em>bypass checks</em> من "جانب العميل" <em>client-side</em> ، لذا فإن "التدابير القوية" <em>robust measures</em> من "جانب الخادم" <em>server-side</em> ضرورية. ستتعرف على المزيد حول هذا الموضوع في وحدة لاحقة. أما الآن، فلنلقِ نظرة على بعض الأمثلة على "التحقق من صحة نماذج البيانات" <b>form validation</b> من "جانب العميل" <em>client-side</em> .</p>
+
+            <p>من الأمثلة الشائعة على "التحقق المدمج من صحة البيانات في النماذج" <b>built-in form validation</b> استخدام خاصية "مطلوب" <code class="br">required</code> في "حقول الإدخال" <em>inputs</em> . تُحدد هذه الخاصية <code class="br">required</code> أن المستخدم مُلزم بملء هذا "الجزء من النموذج" <em>portion of the form</em> قبل إرساله.</p>
+
+            <h4>إليك مثال على استخدام السمة <code class="br">required</code>  في حقل إدخال البريد الإلكتروني <em>email input</em> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:البريد الإلكتروني (الحقل المطلوب)</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">required type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span> /&gt;</span>
+ <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span class="txt">إرسال النموذج</span>&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <h5>انقر على زر <code class="br">إرسال النموذج</code> دون تقديم عنوان بريد إلكتروني، وستظهر لك رسالة تطلب منك ملء الحقل.</h5>
+
+            <div class="preview">
+               <form action="">
+                    <label for="email">البريد الإلكتروني (الحقل المطلوب):</label>
+                    <input required type="email" name="email" id="email" />
+                    <button type="submit">إرسال النموذج</button>
+                </form> 
+            </div>
+            
+
+            <h6>سيكون لكل متصفح browser مجموعة أنماط set of styles خاصة به لعرض رسالة التنبيه هذه.</h6>
+
+            <p>من مزايا استخدام "حقل إدخال البريد الإلكتروني" <em>the email input</em> وجود "آلية تحقق أساسية" <em>basic validation</em> لضمان صحة تنسيق عناوين البريد الإلكتروني. على سبيل المثال، إذا كتبت كلمات عشوائية وضغطت على زر الإرسال، فسيظهر المتصفح تنبيهًا يفيد بعدم وجود علامة <code class="br">@</code>.</p>
+        
+            <h5>اكتب <code class="br">abc</code> في "خانة البريد الإلكتروني" <em>the email field</em> واضغط على زر الإرسال. ستظهر لك رسالة تفيد بأن عنوان البريد الإلكتروني غير صالح :</h5>
+        
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:البريد الإلكتروني (الحقل المطلوب)</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input <span class="attr">required type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span> /&gt;</span>
+ <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span class="txt">إرسال النموذج</span>&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <div class="preview">
+                <form action="">
+                    <label for="email">البريد الإلكتروني (الحقل المطلوب):</label>
+                    <input required type="email" name="email" id="email" />
+                    <button type="submit">إرسال النموذج</button>
+                </form>  
+            </div>
+            
+
+            <h6>من المهم ملاحظة أن المتصفحات browsers تتحقق فقط من صحة عناوين البريد الإلكتروني القياسية basic validation for standard email addresses . ويقع على عاتقك إضافة طبقات layers إضافية من التحقق، والتي ستتعرف عليها في وحدات لاحقة.</h6>
+
+            <p>من بين طرق التحقق الأخرى من صحة "مدخلات البريد الإلكتروني" <em>email inputs</em> استخدام سمات <code class="br">minlength</code> و <code class="br">maxlength</code> .</p>
+
+            <h4>إليك مثال باستخدام التحقق الإضافي:</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">""</span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:البريد الإلكتروني (الحقل المطلوب)</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;input 
+    <span class="attr">required</span> 
+    <span class="attr">type=</span><span class="value">"email"</span> 
+    <span class="attr">name=</span><span class="value">"email"</span>
+    <span class="attr">id=</span><span class="value">"email"</span> 
+    <span class="attr">minlength=</span><span class="value">"4"</span> 
+    <span class="attr">maxlength=</span><span class="value">"64"</span> 
+ /&gt;</span>
+ <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span class="txt">إرسال النموذج</span>&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <h5>اكتب <code class="br">b@m</code> في الحقل وانقر على زر الإرسال. ستظهر لك رسالة أن النص لا يستوفي الحد الأدنى المطلوب من الطول.</h5>
+            
+            <div class="preview">
+                <form action="">
+                    <label for="email">البريد الإلكتروني (الحقل المطلوب):</label>
+                    <input required type="email" name="email" id="email" minlength="4" maxlength="64" />
+                    <button type="submit">إرسال النموذج</button>
+                </form> 
+            </div>
+            <br />
+
+            <p>تُستخدم سمات <code class="br">minlength</code> و <code class="br">maxlength</code> لتحديد الحد الأدنى والحد الأقصى لطول "حقل إدخال البريد الإلكتروني" <em>the email input</em> بالأحرف. في حال عدم تحديد الحد الأدنى للطول أو تجاوز الحد الأقصى، سيعرض المتصفح "رسالة تنبيه" <b>alert message</b> .</p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>ما الغرض من سمات <code class="br">minlength</code> و <code class="br">maxlength</code> داخل "المدخلات" <em>inputs</em> ؟</h5>
+
+			
+			<p> ١. تُستخدم هذه الإعدادات للتحكم في "حجم خط" the font size النص داخل "حقل الإدخال" the input field. ❌</p>
+			<p><mark> ٢. تُستخدم هذه الإعدادات لتحديد الحد الأدنى والحد الأقصى لطول "حقل الإدخال" the input بالأحرف. ✅</mark></p>
+			<p> ٣. تُستخدم هذه الخصائص لتحديد "عرض" <code class="br">width</code> "حقل الإدخال" the input field في الصفحة. ❌</p>
+			<p> ٤. تُستخدم هذه الخيارات لتحديد الحد الأقصى لعدد الأحرف التي يمكن كتابتها في "منطقة نصية" <code class="br">textarea</code> . ❌</p>
+
+
+            <br>
+
+			<h5>ما هي السمة المستخدمة لضمان تحديد "حقل الإدخال" <em>input field</em> على أنه "مطلوب" <em>required</em> ؟</h5>
+
+			<p><mark> ١. <code class="br">required</code> ✅</mark></p>
+			<p> ٢. <code class="br">size</code> ❌</p>
+			<p> ٣. <code class="br">minlength</code> ❌</p>
+			<p> ٤. <code class="br">autoplay</code> ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ماذا يحدث إذا حاولت إرسال قيمة بدون علامة <code class="br">@</code> في "حقل إدخال البريد الإلكتروني" <em><code class="br">email</code> input</em> ؟</h5>
+
+			
+			<p> ١. سيتعطل البرنامج. ❌</p>
+			<p> ٢. سيتم إرسال "النموذج" form بنجاح. ❌</p>
+			<p> ٣. لن يحدث شيء. ❌</p>
+			<p><mark> ٤. سيعرض المتصفح "رسالة تنبيه" alert message تفيد بأن "حقل الإدخال" the input يفتقر إلى علامة <code class="br">@</code> . ✅</mark></p>
+			
+				
+			
+			
+		</div>
         </section>
         
         <section id="4">
