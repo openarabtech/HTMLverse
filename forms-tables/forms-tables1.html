@@ -487,6 +487,120 @@
         
         <section id="4">
             <h3>د. ما هي حالات النماذج Form States المختلفة، ولماذا تعد مهمة؟</h3>
+
+            <p>في لغة HTML، يمكن أن تكون "عناصر التحكم في النموذج" <b>form controls</b>، مثل "المدخلات" <em>inputs</em>، في "مراحل" <i>stages</i> أو "حالات" <i>conditions</i> مختلفة مثل "حالة التركيز" <em><code class="br">focused</code> state</em>، أو "حالة القراءة فقط" <em><code class="br">readonly</code> state</em>، أو "حالة التعطيل" <em><code class="br">disabled</code> state</em>.</p>
+            <p>تُعتبر "الحالة الأولى" <b>The first state</b> هي "الحالة الافتراضية" <em>The <code class="br">default</code> state</em>. الحالة الافتراضية "لحقل إدخال البريد الإلكتروني" <em>email address input</em> هي "حقل فارغ" <em>a blank input</em>.</p>
+            <h4>هذا هو شكل "حقل إدخال البريد الإلكتروني" <em>the email input</em> عند عرضه لأول مرة على الصفحة:</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">required type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span> /&gt;</span>
+            </code></pre></div>
+            
+            <div class="preview">
+                <input required type="email" name="email" id="email" />
+            </div>
+            <br />
+
+            <p>عندما ينقر المستخدم على "عنصر تحكم في النموذج" form control أو يحدده باستخدام مفتاح Tab، فهذا يعني أنه في "حالة التركيز" <em><code class="br">focused</code> state</em>. وعندما يكون "حقل الإدخال" <em>input</em> في "حالة التركيز" <em><code class="br">focused</code> state</em>، تُظهر معظم المتصفحات "إطارًا أزرق مميزًا" <em>a blue highlighted border</em> حوله. ولكن يمكنك إضافة "أنماط إضافية" <em>additional styles</em> باستخدام CSS.</p>
+
+            <h4>انقر على أي جزء من المساحة البيضاء في نافذة المعاينة ثم اضغط على مفتاح Tab لرؤية "حالة التركيز" <em>The focus state</em> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">required type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span> /&gt;</span>
+            </code></pre></div>
+            
+            <div class="preview">
+                <input required type="email" name="email" id="email" />
+            </div>
+            <br />
+
+            <p>"حالة أخرى للنموذج" <b>Another form state</b> هي "حالة التعطيل" <em>The <code class="br">disabled</code> state</em>. تُظهر هذه الحالة للمستخدمين أنه لا يمكن "التركيز" <em>focused</em> على "حقل الإدخال" <em>input</em> أو تفعيله.</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">disabled type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span> /&gt;</span>
+            </code></pre></div>
+            
+            <div class="preview">
+                <input disabled type="email" name="email" id="email" />
+            </div>
+            <br />
+
+            <p>على غرار "حالة التركيز" <em>The <code class="br">focused</code> state</em>، يمكنك اختيار إضافة "أنماط إضافية" <em>additional styles</em> لـ "حالة التعطيل" <em>The <code class="br">disabled</code> state</em> باستخدام CSS.</p>
+
+            <p>"نوع آخر من حالات النموذج" <b>Another type of form state</b> هو "حالة القراءة فقط" <em>The <code class="br">readonly</code> state</em>. في هذه الحالة، لا يمكن للمستخدم تعديل "عنصر تحكم النموذج" <em>form control</em>، مثل "حقل الإدخال" <em>input</em>. </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input 
+ <span class="attr">readonly</span> 
+ <span class="attr">type=</span><span class="value">"email"</span> 
+ <span class="attr">name=</span><span class="value">"email"</span>
+ <span class="attr">id=</span><span class="value">"email"</span> 
+ <span class="attr">value=</span><span class="value">"example@email.com"</span> 
+/&gt;</span>
+            </code></pre></div>
+
+            <h5>حاول تعديل القيمة الحالية لـ <code class="br">example@email.com</code> في نافذة المعاينة، وستلاحظ أن ذلك غير ممكن .</h5>
+
+            <div class="preview">
+                <input
+                    readonly
+                    type="email"
+                    name="email"
+                    id="email"
+                    value="example@email.com"
+                />
+            </div>
+            <br />
+
+            <p>يتمثل أحد الاختلافات الرئيسية بين "حالة التعطيل" <em>The <code class="br">disabled</code> state</em> و"حالة القراءة فقط" <em>The <code class="br">readonly</code> state</em> في أن "حالة القراءة فقط" <em><code class="br">readonly</code> state</em> يمكن "التركيز" <em>focused</em> عليها بينما لا يمكن "التركيز" <em>focused</em> على "حالة التعطيل" <em><code class="br">disabled</code> state</em>.</p>
+
+            <p>يُعد فهم "حالات النموذج" <b>form states</b> المختلفة أمرًا مهمًا لأنها تضمن "تجربة مستخدم سلسة" <em>a smooth user experience</em> من خلال توفير ملاحظات وتوجيهات واضحة أثناء "معالجة الأخطاء" <em>handling errors</em>.</p>
+
+
+              <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			
+
+            <h5>ما هي الخاصية المستخدمة "لتعطيل" <em>to disable</em> "حقل الإدخال" <em>an input</em> ؟</h5>
+			
+			<p> ١. <code class="br">readonly</code> ❌</p>
+			<p> ٢. <code class="br">required</code> ❌</p>
+			<p> ٣. <code class="br">checked</code> ❌</p>
+			<p><mark> ٤. <code class="br">disabled</code> ✅</mark></p>
+
+            <br />
+
+            <h5>ما هي السمة المستخدمة لتمييز "المدخلات" <em>inputs</em> "للقراءة فقط" <em>read only</em> ؟</h5>
+			
+			<p> ١. <code class="br">checked</code> ❌</p>
+			<p><mark> ٢. <code class="br">readonly</code> ✅</mark></p>
+			<p> ٣. <code class="br">size</code> ❌</p>
+			<p> ٤. <code class="br">capture</code> ❌</p>
+
+
+            <br />
+
+			<h5>متى تحدث "حالة التركيز" <em>The focus state</em> ؟</h5>
+			
+			<p> ١. عندما يكون "حقل الإدخال" <em>an input field</em> "معطلاً" <em>disabled</em> ولا يمكن التفاعل معه. ❌</p>
+			<p> ٢. عندما يتم التحقق من صحة "حقل الإدخال" <em>an input</em> ويظهر خطأ. ❌</p>
+            <p><mark> ٣. عندما ينقر المستخدم على "حقل إدخال" <em>an input</em> أو يحدده باستخدام مفتاح Tab للتركيز عليه. ✅</mark></p>
+			<p> ٤. عندما يقوم المتصفح بتعبئة "حقل الإدخال" <em>an input field</em> مسبقًا بقيم افتراضية. ❌</p>
+			
+				
+			
+			
+			
+				
+			
+			
+		</div>
+
+
+
         </section>
 
 
