@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="نماذج وجداول اتش.تي.إم.إل | إنشاء نموذج تقييم الفندق"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/forms-tables2.css">
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<title>HTMLverse | النماذج والجداول</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,11 +30,1291 @@
         <div class="sub-title">
             <h2>٢. إنشاء نموذج تقييم الفندق</h2>
             <span class="hint">ورشة عمل</span>
-            <p>قريبًا</p>
+            <p>في هذه الورشة، ستتدرب على العمل مع "نماذج اتش.تي.إم.إل" HTML forms من خلال إنشاء "نموذج تقييم الفندق" Hotel Feedback Form.</p>
         </div>
 
         <section>
+            <h3>نموذج "اتش.تي.إم.إل" <em>The HTML boilerplate</em>.</h3>
+
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>نموذج تقييم الفندق<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+	    </section>
+
+        <section>
+            <h3>الخطوة 1 :</h3>
+            <p>بالنسبة للنص التمهيدي، ستحتاج إلى عرض "العنوان الرئيسي" <em>the main title</em> متبوعًا بملاحظة قصيرة حول ترك "التعليقات" <em>feedback</em>.</p>
+            <ul>
+                <li><p>داخل عنصر <code class="br">body</code> الخاص بك، أضف عنصر <code class="br">header</code>.</p></li>
+                <li><p>داخل عنصر <code class="br">header</code>، أضف عنصر <code class="br">h1</code>. يجب أن يكون نص عنصر <code class="br">h1</code> هو <code class="br-white">نموذج تقييم الفندق</code>.</p></li>
+                <li>أسفل عنصر <code class="br">h1</code>، أضف عنصر <code class="br">p</code>. يجب أن يكون نص عنصر <code class="br">p</code> كالتالي: <code class="br-white">شكرًا لإقامتكم معنا. نرجو تزويدنا بتعليقاتكم حول إقامتكم الأخيرة.</code></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;header&gt;</span>
+  <span class="tag">&lt;h1&gt;<span class="txt">نموذج تقييم الفندق</span>&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;<span class="txt">.شكرًا لإقامتكم معنا. نرجو تزويدنا بتعليقاتكم حول إقامتكم الأخيرة</span>&lt;/p&gt;</span>
+ <span class="tag">&lt;/header&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+ 
         </section>
+
+        <section>
+            <h3>الخطوة 2 :</h3>
+            <p>والآن، حان الوقت لإضافة العنصر الرئيسي <code class="br">main</code> الذي يمثل المحتوى الرئيسي للصفحة.</p>
+        
+                        <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+
+ <span class="tag">&lt;header&gt;</span>
+  <span class="tag">&lt;h1&gt;<span class="txt">نموذج تقييم الفندق</span>&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;<span class="txt">.شكرًا لإقامتكم معنا. نرجو تزويدنا بتعليقاتكم حول إقامتكم الأخيرة</span>&lt;/p&gt;</span>
+ <span class="tag">&lt;/header&gt;</span>
+
+ <span class="tag">&lt;main&gt;</span>
+
+ <span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+        
+        </section>
+
+        <section>
+            <h3>الخطوة 3 :</h3>
+            <p>في الدروس السابقة، تعلمت كيفية التعامل مع عنصر "النموذج" <code class="br">form</code> على النحو التالي:</p>
+            <h4>مثال :</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"القيمة-توضع-هنا"</span> <span class="attr">action=</span><span class="value">"الرابط-يوضع-هنا"</span>&gt;</span>
+ <span class="value">&lt;!-- عناصر الإدخال توضع هنا --&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+            <p>تُستخدم سمة "الإجراء" <code class="br">action</code> لتحديد المكان الذي يجب إرسال "بيانات النموذج" <em>the form data</em> إليه عند إرسال "النموذج" <em>the form</em>.</p>
+            <p>تُستخدم خاصية <code class="br">method</code> لتحديد طريقة <b>HTTP</b> المستخدمة عند إرسال "بيانات النموذج" <em>the form data</em>. وأكثر الطرق شيوعًا هي <code class="br">GET</code> و <code class="br">POST</code>.</p>
+            <h5>ملاحظة: ستتعرف على كيفية عمل طرق HTTP في الوحدات اللاحقة.</h5>
+            <ul>
+                <li>داخل العنصر الرئيسي <code class="br">main</code> الخاص بك، أضف عنصر "نموذج" <code class="br">form</code> مع سمة "إجراء" <code class="br">action</code> مضبوطة على <code class="long-code">"https://hotel-feedback.freecodecamp.org"</code> وسمة "طريقة" <code class="br">method</code> مضبوطة على <code class="br">"POST"</code>.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;main&gt;</span>
+
+ <span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+  
+ <span class="tag">&lt;/form&gt;</span>
+ 
+<span class="tag">&lt;/main&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+
+        <section>
+            <h3>الخطوة 4 :</h3>
+            <p>تتكون "النماذج" <em>Forms</em> من "حقول إدخال" <code class="br">inputs</code> حيث يمكن للمستخدمين إدخال بياناتهم. يمكنك تجميع "حقول الإدخال ذات الصلة" <i>related inputs</i> معًا باستخدام عنصر "مجموعة الحقول" <code class="br">fieldset</code>.</p>
+            <h4>فيما يلي مثال على استخدام عنصر "مجموعة الحقول" <code class="br">fieldset</code> :</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">"/example-url"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="value">&lt;!-- عناصر الإدخال توضع هنا --&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li>داخل عنصر "النموذج" <code class="br">form</code> الخاص بك، أضف عنصر "مجموعة الحقول" <code class="br">fieldset</code>.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+
+ <span class="tag">&lt;fieldset&gt;</span>
+
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+        <section>
+            <h3>الخطوة 5 :</h3>
+            <p>عند العمل مع عناصر "مجموعة الحقول" <code class="br">fieldset</code>، من الشائع استخدام "تسمية توضيحية" <em>caption</em> لوصف "مجموعة المدخلات" <em>the group of inputs</em>. يمكنك استخدام عنصر "الأسطورة" <code class="br">legend</code> لهذا الغرض.</p>
+            <h4>فيما يلي مثال على استخدام عنصر "الأسطورة" <code class="br">legend</code> :</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">action=</span><span class="value">"/example-url"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="value">&lt;!-- عناصر الإدخال توضع هنا --&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li>داخل عنصر "مجموعة الحقول" <code class="br">fieldset</code>، أضف عنصر "الأسطورة" <code class="br">legend</code> يحتوي على النص <code class="br-white">معلومات الشخصية</code>.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 6 :</h3>
+            <p>في الدروس السابقة، تعلمت كيفية ربط عنصر "التسمية" <code class="br">label</code> بعنصر "الإدخال" <code class="br">input</code> على النحو التالي:</p>
+            <h4>المثال :</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;label <span class="attr">for=</span><span class="value">"name"</span>&gt;<span class="txt">:الإسم</span>&lt;/label&gt;</span>
+<span class="tag">&lt;input <span class="attr">type=</span><span class="value">"text"</span> <span class="attr">id=</span><span class="value">"name"</span><span class="attr">name=</span><span class="value">"name"</span>&gt;</span>
+            </code></pre></div>
+            <p>يجب أن تتطابق السمة <code class="br">for</code> في عنصر <code class="br">label</code> مع السمة <code class="br">id</code> في عنصر <code class="br">input</code>. يُعرف هذا بـ"الارتباط الصريح" <b>an explicit association</b>.</p>
+            <ul>
+                <li><p>أسفل عنصر "الأسطورة" <code class="br">legend</code>، أضف عنصر "التسمية" <code class="br">label</code> بنص <code class="br-white">الاسم (مطلوب):</code>. اضبط سمة <code class="br">for</code> الخاصة به على قيمة <code class="br">"full-name"</code>.</p></li>
+                <li>ثم أسفل عنصر "التسمية" <code class="br">label</code>، أضف عنصر "إدخال" <code class="br">input</code> بدون سمات. في الخطوات التالية، ستضيف السمات اللازمة.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input &gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 7 :</h3>
+            <p>عندما يُدخل "المستخدم" <i>a user</i> اسمه الكامل، سيقبل "حقل الإدخال" <code class="br">input</code> "النص العادي" <i>plaintext</i>.</p>
+            <p>في الدروس السابقة، تعلمت كيفية التعامل مع سمة "النوع" <code class="br">type</code> على النحو التالي:</p>
+            <h4>المثال :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">type=</span><span class="value">"text"</span>&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><p>بالنسبة لعنصر الإدخال الحالي <code class="br">input</code>، أضف سمة "النوع" <code class="br">type</code> واضبطها على <code class="br">"text"</code>.</p></li>
+                <li><p>قم أيضًا بمنح عنصر "الإدخال" <code class="br">input</code> سمة "معرف" <code class="br">id</code> بقيمة <code class="br">"full-name"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=</span><span class="value">"text"</span> <span class="attr">id=</span><span class="value">"full-name"</span>&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+        </section>
+
+        <section>
+            <h3>الخطوة 8 :</h3>
+            <p>تُستخدم سمة "الاسم" <code class="br">name</code> لتحديد "بيانات النموذج" <em>form data</em> بعد إرسالها إلى "الخادم" <i>the server</i>.</p>
+            <h4>إليك مثال على كيفية استخدام سمة "الاسم" <code class="br">name</code> :</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">type=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span>&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><p>أضف سمة "الاسم" <code class="br">name</code> إلى عنصر "الإدخال" <code class="br">input</code> بقيمة <code class="br">"name"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=</span><span class="value">"text"</span> <span class="attr">id=</span><span class="value">"full-name"</span> <span class="attr">name=</span><span class="value">"name"</span>&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+        </section>
+
+        <section>
+            <h3>الخطوة 9 :</h3>
+            <p>في الدروس السابقة، تعلمت كيفية التعامل مع العنصر "النائب" <code class="br">placeholder</code> والسمات "المطلوبة" <code class="br">required</code> على النحو التالي:</p>
+            <h4>المثال :</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> placeholder=<span class="value">"على سبيل المثال، فلان بن فلان"</span> required</span>&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><p>بالنسبة لعنصر الإدخال الحالي <code class="br">input</code>، أضف سمة "النائب" <code class="br">placeholder</code> بقيمة <code class="br">"فلان بن فلان"</code>.</p></li>
+                <li><p>أضف أيضًا السمة "مطلوب" <code class="br">required</code> إلى عنصر "الإدخال" <code class="br">input</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"full-name"</span> name=<span class="value">"name"</span> placeholder=<span class="value">"فلان بن فلان"</span> required</span>&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+        <section>
+            <h3>الخطوة 10 :</h3>
+            <p>يجب أن يتضمن نموذج تقييم الفندق الخاص بك أيضًا عنوان البريد الإلكتروني للمستخدم.</p>
+
+            <ul>
+                <li><p>ابدأ بإضافة عنصر "تسمية جديد" <code class="br">label</code> إلى "النموذج" <em>form</em>، مع النص <code class="br-white">عنوان البريد الإلكتروني (مطلوب):</code>. يجب أن يحتوي عنصر "التسمية" <code class="br">label</code> على سمة <code class="br">for</code> مضبوطة على القيمة <code class="br">"email"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"full-name"</span> name=<span class="value">"name"</span> placeholder=<span class="value">"فلان بن فلان"</span> required</span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:عنوان البريد الإلكتروني (مطلوب)</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+        <section>
+            <h3>الخطوة 11 :</h3>
+
+            <ul>
+                <li><p>بعد ذلك، أضف "حقل إدخال" <code class="br">input</code> من نوع <code class="br">"email"</code> أسفل عنصر <code class="br">label</code>  "عنوان البريد الإلكتروني". يجب أن يحتوي هذا الحقل <code class="br">input</code> على سمة "معرف" <code class="br">id</code> بقيمة <code class="br">"email"</code>. كذلك، عيّن سمة <code class="br">name</code> بقيمة <code class="br">"email"</code>.</p></li>
+
+                <li><p>هذا "الإدخال" <code class="br">input</code> مطلوب أيضًا، لذا تأكد من إضافة السمة <code class="br">required</code>.</p></li>
+                
+                <li>وأخيرًا، أضف سمة "العنصر النائب" <code class="br">placeholder</code> وتعيينها إلى <code class="br">"example@email.com"</code>.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"full-name"</span> name=<span class="value">"name"</span> placeholder=<span class="value">"فلان بن فلان"</span> required</span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:عنوان البريد الإلكتروني (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span> placeholder=<span class="value">"example@email.com"</span> required</span>&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 12 :</h3>
+
+            <p>يمكن أن تحتوي "عناصر الإدخال" <em><code class="br">input</code> elements</em> على خاصية "الحجم" <code class="br">size</code>. تحدد هذه الخاصية عدد الأحرف التي يجب أن تظهر أثناء كتابة المستخدم في "حقل الإدخال" <em>the input</em>. يجب أن تكون قيمة "الحجم" <code class="br">size</code> عددًا صحيحًا غير سالب أكبر من الصفر. إذا لم يتم تحديد "الحجم" <code class="br">size</code>، أو تم تحديده بقيمة غير صالحة، فسيكون عرض "حقل الإدخال" <em>the input</em> هو العرض الافتراضي الذي يحدده المتصفح.</p>
+
+            <h4>مثال :</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;label <span class="attr">for=</span><span class="value">"lastName"</span>&gt;<span class="txt">: اللقب</span>&lt;/label&gt;</span>
+<span class="tag">&lt;input <span class="attr">id=<span class="value">"lastName"</span> name=<span class="value">"lastName"</span> type=<span class="value">"text"</span> size=<span class="value">"10"</span></span>&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li>قم بمنح حقلي الإدخال "الاسم"  و"البريد الإلكتروني" سمة "الحجم" <code class="br">size</code> بقيمة <code class="br">"20"</code>.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"full-name"</span> name=<span class="value">"name"</span> placeholder=<span class="value">"فلان بن فلان"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:عنوان البريد الإلكتروني (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span> placeholder=<span class="value">"example@email.com"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 13 :</h3>
+            <p>يجب أن يتضمن نموذج تقييم الفندق "خيارًا" <i>an option</i> للمستخدمين لإضافة أعمارهم.</p>
+            <ul>
+                <li><p>ابدأ بإضافة عنصر "تسمية" <code class="br">label</code> يحتوي على النص <code class="br-white">العمر (اختياري):</code> إلى النموذج.</p></li>
+                <li><p>يجب ضبط السمة <code class="br">for</code> على <code class="br">"age"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"full-name"</span> name=<span class="value">"name"</span> placeholder=<span class="value">"فلان بن فلان"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:عنوان البريد الإلكتروني (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span> placeholder=<span class="value">"example@email.com"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"age"</span>&gt;<span class="txt">:العمر (اختياري)</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+        </section>
+
+        <section>
+            <h3>الخطوة 14 :</h3>
+            <p>يُستخدم "حقل إدخال" الأرقام <em>The number <code class="br">input</code> </em> لإنشاء "حقل إدخال رقمي" <em>a numeric input field </em>.</p>
+            <h4>إليك مثال على حقل إدخال رقمي:</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">type=<span class="value">"number"</span> id=<span class="value">"age"</span> name=<span class="value">"age"</span> min=<span class="value">"18"</span> max=<span class="value">"100"</span> </span>&gt;</span>
+            </code></pre></div>
+            <p>تُستخدم سمات <code class="br">min</code> و <code class="br">max</code> لتعيين القيم الدنيا والقصوى التي يمكن إدخالها في "حقل الإدخال" <code class="br">input</code>.</p>
+            <ul>
+                <li><p>أسفل عنصر "التسمية" <code class="br">label</code> الخاص بك، أضف "حقل إدخال" <em>input</em> مع تعيين سمة "النوع" <code class="br">type</code> إلى <code class="br">"number"</code> ومعرف <code class="br">id</code> إلى <code class="br">"age"</code>.</p></li>
+                <li><p>يجب تعيين سمة "الاسم" <code class="br">name</code> إلى <code class="br">"age"</code>، ويجب تعيين سمة "الحد الأدنى" <code class="br">min</code> إلى <code class="br">"3"</code>، ويجب تعيين سمة "الحد الأقصى" <code class="br">max</code> إلى <code class="br">"100"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"full-name"</span> name=<span class="value">"name"</span> placeholder=<span class="value">"فلان بن فلان"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:عنوان البريد الإلكتروني (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span> placeholder=<span class="value">"example@email.com"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"age"</span>&gt;<span class="txt">:العمر (اختياري)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"number"</span> id=<span class="value">"age"</span> name=<span class="value">"age"</span> min=<span class="value">"3"</span> max=<span class="value">"100"</span> </span>&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+        </section>
+
+        <section>
+            <h3>الخطوة 15 :</h3>
+            <p>سيتولى القسم التالي <i>The next section</i> في النموذج <em>in the form</em> مسؤولية سؤال المستخدمين عما إذا كانوا قد أقاموا في الفندق من قبل.</p>
+            <ul>
+                <li><p>ابدأ بإضافة عنصر "مجموعة الحقول" <code class="br">fieldset</code>.</p></li>
+                <li><p>داخل عنصر "مجموعة الحقول" <code class="br">fieldset</code>، أضف عنصر "الأسطورة" <code class="br">legend</code> بنص: <code class="br-white">هل كانت هذه زيارتك الأولى لفندقنا؟</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"full-name"</span> name=<span class="value">"name"</span> placeholder=<span class="value">"فلان بن فلان"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:عنوان البريد الإلكتروني (مطلوب)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span> placeholder=<span class="value">"example@email.com"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"age"</span>&gt;<span class="txt">:العمر (اختياري)</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"number"</span> id=<span class="value">"age"</span> name=<span class="value">"age"</span> min=<span class="value">"3"</span> max=<span class="value">"100"</span> </span>&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">هل كانت هذه زيارتك الأولى لفندقنا؟</span>&lt;/legend&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+        </section>
+
+        <section>
+            <h3>الخطوة 16 :</h3>
+            <p>إذا كنت تريد من المستخدمين اختيار خيار واحد من "قائمة الخيارات" <i>a list of options</i>، فيمكنك استخدام "مجموعة من أزرار الاختيار" <em>a set of radio buttons</em>.</p>
+            <h4>إليك مثال على "زرين اختياريين" <em>two radio buttons</em> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"yes"</span> name=<span class="value">"first-time"</span></span>&gt;</span>
+<span class="tag">&lt;label <span class="attr">for=</span><span class="value">"yes"</span>&gt;<span class="txt">نعم</span>&lt;/label&gt;</span>  
+<span class="tag">&lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"no"</span> name=<span class="value">"first-time"</span></span>&gt;</span>
+<span class="tag">&lt;label <span class="attr">for=</span><span class="value">"no"</span>&gt;<span class="txt">لا</span>&lt;/label&gt;</span>  
+            </code></pre></div>
+
+            <p>في هذا المثال، يتم تجميع "أزرار الاختيار" <em>the radio buttons</em> معًا باستخدام نفس قيمة سمة "الاسم" <code class="br">name</code>. هذا يعني أنه لا يمكن تحديد سوى زر اختيار واحد في كل مرة.</p>
+
+            <ul>
+                <li><p>أسفل عنصر "الأسطورة" <code class="br">legend</code>، أضف "زر اختيار" <em><code class="br">radio</code> button</em> مع تعيين "المعرف" <code class="br">id</code> إلى <code class="br">"yes-option"</code>، وتعيين سمة "الاسم" <code class="br">name</code> إلى <code class="br">"hotel-stay"</code>.</p></li>
+                <li><p>أسفل "زر الاختيار" <em><code class="br">radio</code> button</em>، أضف عنصر "تسمية" <code class="br">label</code> بالنص <code class="br-white">نعم</code> وسمة <code class="br">for</code> مضبوطة على <code class="br">"yes-option"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">هل كانت هذه زيارتك الأولى لفندقنا؟</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"yes-option"</span> name=<span class="value">"hotel-stay"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"yes-option"</span>&gt;<span class="txt">نعم</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+        </section>
+
+        <section>
+            <h3>الخطوة 17 :</h3>
+            <ul>
+                <li><p>أسفل عنصر "التسمية" <code class="br">label</code>، أضف "زر اختيار" <em><code class="br">radio</code> button</em> مع تعيين "المعرف" <code class="br">id</code> إلى <code class="br">"no-option"</code>، وتعيين سمة "الاسم" <code class="br">name</code> إلى <code class="br">"hotel-stay"</code>.</p></li>
+                <li><p>أسفل "زر الاختيار الجديد" <em>new <code class="br">radio</code> button</em>، أضف عنصر "تسمية" <code class="br">label</code> آخر مع ضبط سمة <code class="br">for</code> على <code class="br">"no-option"</code>. يجب أن يكون نص عنصر "التسمية" <code class="br">label</code> هو <code class="br-white">لا</code>.</p></li>
+            </ul>
+            <p>عند الانتهاء، يمكنك الآن تجربة "أزرار الاختيار" <em>the radio buttons</em> عن طريق تحديد خيار واحد في كل مرة.</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">هل كانت هذه زيارتك الأولى لفندقنا؟</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"yes-option"</span> name=<span class="value">"hotel-stay"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"yes-option"</span>&gt;<span class="txt">نعم</span>&lt;/label&gt;</span>  
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"no-option"</span> name=<span class="value">"hotel-stay"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"no-option"</span>&gt;<span class="txt">لا</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+        <section>
+            <h3>الخطوة 18 :</h3>
+            <p>سيطلب "القسم التالي" <i>The next section</i> من "النموذج" <i>the form</i> من المستخدمين توضيح سبب اختيارهم لهذا الفندق تحديداً. وسيكون بإمكان المستخدمين اختيار "عدة خيارات" <em>multiple options</em>.</p>
+            <ul>
+                <li><p>ابدأ بإضافة عنصر "مجموعة حقول" <code class="br">fieldset</code> آخر.</p></li>
+                <li><p>داخل عنصر "مجموعة الحقول" <code class="br">fieldset</code>، أضف عنصر"الاسطورة" <code class="br">legend</code> مع النص التالي: <code class="br-white">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</code>.</p></li>
+            </ul>
+            
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">هل كانت هذه زيارتك الأولى لفندقنا؟</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"yes-option"</span> name=<span class="value">"hotel-stay"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"yes-option"</span>&gt;<span class="txt">نعم</span>&lt;/label&gt;</span>  
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"no-option"</span> name=<span class="value">"hotel-stay"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"no-option"</span>&gt;<span class="txt">لا</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</span>&lt;/legend&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+            
+        </section>
+
+        <section>
+            <h3>الخطوة 19 :</h3>
+            <p>عندما تريد من المستخدم تحديد خيارات متعددة من قائمة، يمكنك استخدام "مربعات الاختيار" <b>checkboxes</b>.</p>
+            <h4>إليك مثال على كيفية التعامل مع "مربعات الاختيار" <em>checkboxes</em> المتعلقة بخيارات الطعام:</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;fieldset&gt;</span>
+ <span class="tag">&lt;legend&gt;<span class="txt">خيارات الطعام</span>&lt;/legend&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"pizza"</span> name=<span class="value">"food"</span> value=<span class="value">"pizza"</span></span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"pizza"</span>&gt;<span class="txt">بيتزا</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"burger"</span> name=<span class="value">"food"</span> value=<span class="value">"burger"</span></span>&gt;</span>
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"burger"</span>&gt;<span class="txt">برجر</span>&lt;/label&gt;</span>  
+<span class="tag">&lt;/fieldset&gt;</span>
+            </code></pre></div>
+
+            <p>تُستخدم سمة "القيمة" <em>The <code class="br">value</code></em> لتحديد القيمة التي سيتم إرسالها إلى "الخادم" <em>the server</em> عند إرسال "النموذج" <i>the form</i>.</p>
+
+            <ul>
+                <li><p>أسفل عنصر "الأسطورة" <code class="br">legend</code>، أضف "مربع اختيار" <em>a checkbox <code class="br">input</code></em> مع تعيين سمات "المعرف" <code class="br">id</code> و"القيمة" <code class="br">value</code> إلى <code class="br">"ads"</code>، وسمة "الاسم" <code class="br">name</code> إلى <code class="br">"choice"</code>.</p></li>
+                <li><p>أسفل "خانة الاختيار" <em>checkbox <code class="br">input</code></em>، أضف عنصر "تسمية" <code class="br">label</code> بنص <code class="br-white">إعلانات وسائل التواصل الاجتماعي</code>. يجب ضبط خاصية <code class="br">for</code> على <code class="br">"ads"</code>.</p></li>
+            </ul>
+            
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"ads"</span> name=<span class="value">"choice"</span> value=<span class="value">"ads"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"ads"</span>&gt;<span class="txt">إعلانات وسائل التواصل الاجتماعي</span>&lt;/label&gt;</span>  
+  <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>            
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 20 :</h3>
+
+            <ul>
+                <li><p>أضف "خانة اختيار" <em>checkbox <code class="br">input</code></em> أخرى مع تعيين سمات <code class="br">id</code> و <code class="br">value</code>  إلى <code class="br">"recommendation"</code>، وسمة <code class="br">name</code> إلى <code class="br">"choice"</code>.</p></li>
+                <li><p>أسفل "خانة الاختيار" <em>checkbox <code class="br">input</code></em> ، أضف عنصر "تسمية" <code class="br">label</code> آخر بنص <code class="br-white">توصية شخصية</code>. يجب ضبط خاصية <code class="br">for</code> على <code class="br">"recommendation"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"ads"</span> name=<span class="value">"choice"</span> value=<span class="value">"ads"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"ads"</span>&gt;<span class="txt">إعلانات وسائل التواصل الاجتماعي</span>&lt;/label&gt;</span>  
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"recommendation"</span> name=<span class="value">"choice"</span> value=<span class="value">"recommendation"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"recommendation"</span>&gt;<span class="txt">توصية شخصية</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>  
+            
+        </section>
+
+        <section>
+            <h3>الخطوة 21 :</h3>
+
+            <ul>
+                <li><p>بعد ذلك، أضف "خانة اختيار" <em>checkbox <code class="br">input</code></em> أخرى مع تعيين سمات "المعرف" <code class="br">id</code> و"القيمة" <code class="br">value</code> إلى <code class="br">"location"</code>، وسمة "الاسم" <code class="br">name</code> إلى <code class="br">"choice"</code>.</p></li>
+                <li><p>بالنسبة لعنصر "التسمية" <code class="br">label</code> ، يجب تعيين نص <code class="br-white">الموقع</code> وسمة <code class="br">for</code> إلى <code class="br">"location"</code>.</p></li>
+                <li><p>أسفل عنصر "التسمية" هذا <code class="br">label</code> ، أضف "خانة اختيار" <em>checkbox <code class="br">input</code></em> أخرى مع تعيين سمات "المعرف" <code class="br">id</code> و "القيمة" <code class="br">value</code> إلى <code class="br">"reputation"</code>، وسمة "الاسم" <code class="br">name</code> إلى <code class="br">"choice"</code>.</p></li>
+                <li><p>بالنسبة لعنصر "التسمية" <code class="br">label</code>، يجب تعيين نص <code class="br-white">السمعة</code> وسمة <code class="br">for</code> إلى <code class="br">"reputation"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"ads"</span> name=<span class="value">"choice"</span> value=<span class="value">"ads"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"ads"</span>&gt;<span class="txt">إعلانات وسائل التواصل الاجتماعي</span>&lt;/label&gt;</span>  
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"recommendation"</span> name=<span class="value">"choice"</span> value=<span class="value">"recommendation"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"recommendation"</span>&gt;<span class="txt">توصية شخصية</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"location"</span> name=<span class="value">"choice"</span> value=<span class="value">"location"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"location"</span>&gt;<span class="txt">الموقع</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"reputation"</span> name=<span class="value">"choice"</span> value=<span class="value">"reputation"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"reputation"</span>&gt;<span class="txt">السمعة</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>  
+
+
+
+
+        </section>
+        
+
+        <section>
+            <h3>الخطوة 22 :</h3>
+            <p>لجعل "خانة الاختيار" <em>a checkbox input</em> محددة افتراضياً <i>checked by default</i>، يمكنك إضافة السمة <code class="br">checked</code>. </p>
+            <h4>فيما يلي مثال على استخدام السمة <code class="br">checked</code> :</h4>
+            
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;input <span class="attr">checked type=<span class="value">"checkbox"</span> id=<span class="value">"checked"</span> name=<span class="value">"checked"</span></span>&gt;</span>
+            </code></pre></div>  
+
+            <ul>
+                <li><p>أضف السمة <code class="br">checked</code> إلى "حقل إدخال الاختيار" <em>checkbox input</em> الذي يحمل <code class="br">id</code> المعرف <code class="br">"reputation"</code> لجعله محددًا افتراضيًا.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"ads"</span> name=<span class="value">"choice"</span> value=<span class="value">"ads"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"ads"</span>&gt;<span class="txt">إعلانات وسائل التواصل الاجتماعي</span>&lt;/label&gt;</span>  
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"recommendation"</span> name=<span class="value">"choice"</span> value=<span class="value">"recommendation"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"recommendation"</span>&gt;<span class="txt">توصية شخصية</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"location"</span> name=<span class="value">"choice"</span> value=<span class="value">"location"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"location"</span>&gt;<span class="txt">الموقع</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">checked type=<span class="value">"checkbox"</span> id=<span class="value">"reputation"</span> name=<span class="value">"choice"</span> value=<span class="value">"reputation"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"reputation"</span>&gt;<span class="txt">السمعة</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+
+             
+        </section>
+
+        <section>
+            <h3>الخطوة 23 :</h3>
+
+            <ul>
+                <li><p>بالنسبة للإدخال <code class="br">input</code> النهائي والتسمية <code class="br">label</code> داخل "مجموعة الحقول" <code class="br">fieldset</code> هذه، ستضيف "مربع اختيار" <em>a checkbox <code class="br">input</code></em> مع سمات "المعرف" <code class="br">id</code> و"القيمة" <code class="br">value</code> التي تم تعيينها إلى <code class="br">"price"</code>، وسمة "الاسم" <code class="br">name</code> التي تم تعيينها إلى <code class="br">"choice"</code>.</p></li>
+                <li><p>ثم، عنصر "تسمية" <code class="br">label</code> يحتوي على النص <code class="br-white">السعر</code> وتعيين السمة <code class="br">for</code> إلى <code class="br">"choice"</code>.</p></li>
+            </ul>
+
+            <p>يمكنك الآن اختبار "النموذج" <code class="br">form</code> الخاص بك عن طريق تحديد "مربعات الاختيار" <em>checkboxes</em> المختلفة.</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"ads"</span> name=<span class="value">"choice"</span> value=<span class="value">"ads"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"ads"</span>&gt;<span class="txt">إعلانات وسائل التواصل الاجتماعي</span>&lt;/label&gt;</span>  
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"recommendation"</span> name=<span class="value">"choice"</span> value=<span class="value">"recommendation"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"recommendation"</span>&gt;<span class="txt">توصية شخصية</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"location"</span> name=<span class="value">"choice"</span> value=<span class="value">"location"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"location"</span>&gt;<span class="txt">الموقع</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">checked type=<span class="value">"checkbox"</span> id=<span class="value">"reputation"</span> name=<span class="value">"choice"</span> value=<span class="value">"reputation"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"reputation"</span>&gt;<span class="txt">السمعة</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"price"</span> name=<span class="value">"choice"</span> value=<span class="value">"price"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"price"</span>&gt;<span class="txt">السعر</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 24 :</h3>
+
+            <p>سيوفر "القسم التالي" <i>The next section</i> من "النموذج" <i>the form</i> للمستخدمين إمكانية ترك تقييم للفندق.</p>
+
+            <ul>
+                <li><p>ابدأ بإضافة عنصر "مجموعة حقول" <code class="br">fieldset</code> جديد مع عنصر وسيلة إيضاح "الأسطورة" <code class="br">legend</code> متداخل بداخله. يجب أن تحتوي "وسيلة الإيضاح" <code class="br">legend</code> على النص <code class="br-white">التقييمات</code>.</p></li>
+                <li><p>أسفل عنصر "الأسطورة" <code class="br">legend</code>، أضف عنصر "تسمية" <code class="br">label</code>  بالنص <code class="br-white">كيف كانت الخدمة؟</code>. يجب تعيين السمة <code class="br">for</code> إلى <code class="br">"service"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"ads"</span> name=<span class="value">"choice"</span> value=<span class="value">"ads"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"ads"</span>&gt;<span class="txt">إعلانات وسائل التواصل الاجتماعي</span>&lt;/label&gt;</span>  
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"recommendation"</span> name=<span class="value">"choice"</span> value=<span class="value">"recommendation"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"recommendation"</span>&gt;<span class="txt">توصية شخصية</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"location"</span> name=<span class="value">"choice"</span> value=<span class="value">"location"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"location"</span>&gt;<span class="txt">الموقع</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">checked type=<span class="value">"checkbox"</span> id=<span class="value">"reputation"</span> name=<span class="value">"choice"</span> value=<span class="value">"reputation"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"reputation"</span>&gt;<span class="txt">السمعة</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"price"</span> name=<span class="value">"choice"</span> value=<span class="value">"price"</span></span>&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"price"</span>&gt;<span class="txt">السعر</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 25 :</h3>
+
+            <p>عندما تريد من المستخدمين اختيار عناصر من "قائمة منسدلة" <em>a dropdown menu</em>، يمكنك استخدام عنصري <code class="br">select</code> و <code class="br">option</code>.</p>
+
+            <h4>فيما يلي مثال على استخدام عنصري <code class="br">select</code> و <code class="br">option</code> لإنشاء "قائمة منسدلة" <em>a dropdown</em> لمدن مختلفة:</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;label <span class="attr">for=</span><span class="value">"city"</span>&gt;<span class="txt">اختر مدينة: </span>&lt;/label&gt;</span>
+<span class="tag">&lt;select <span class="attr">id=</span><span class="value">"city"</span> <span class="attr">name=</span><span class="value">"city"</span>&gt;</span>
+ <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"new-york"</span>&gt;<span class="txt">نيويورك</span>&lt;/option&gt;</span>
+ <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"los-angeles"</span>&gt;<span class="txt">لوس أنجلوس</span>&lt;/option&gt;</span>
+ <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"chicago"</span>&gt;<span class="txt">شيكاغو</span>&lt;/option&gt;</span>
+ <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"miami"</span>&gt;<span class="txt">ميامي</span>&lt;/option&gt;</span>
+<span class="tag">&lt;/select&gt;</span>  
+            </code></pre></div>
+
+            <ul>
+                <li><p>ابدأ بإضافة عنصر "تحديد" <code class="br">select</code> مع تعيين سمات "الاسم" <code class="br">name</code> و"المعرف" <code class="br">id</code> إلى <code class="br">"service"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ ...
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 26 :</h3>
+
+            <p>داخل عنصر "القائمة المنسدلة" <code class="br">select</code>، أضف عناصر "الخيارات" <code class="br">option</code> الخمسة التالية مع القيم المقابلة لخاصيتي "نص الخيار" <em><code class="br">option</code> text</em> و"قيمته" <code class="br">value</code> :</p>
+
+            <h4>سمات القيمة Value Attributes :</h4>
+            <ul>
+                <li><p>poor</p></li>
+                <li><p>satisfactory</p></li>
+                <li><p>good</p></li>
+                <li><p>very-good</p></li>
+                <li><p>excellent</p></li>
+            </ul>
+
+            <h4>نص عنصر الخيار Option Element Text :</h4>
+            <ul>
+                <li><p>ضعيف</p></li>
+                <li><p>مقبول</p></li>
+                <li><p>جيد</p></li>
+                <li><p>جيد جداً</p></li>
+                <li><p>ممتاز</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ ...
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 27 :</h3>
+
+            <p>لجعل "خيار" <code class="br">option</code> ما "محددًا افتراضيًا" <em>selected by default</em>، يمكنك إضافة السمة "المحددة" <code class="br">selected</code> إلى عنصر "الخيار" <code class="br">option</code> الذي تريد تحديده.</p>
+
+            <h4>إليك مثال باستخدام السمة "المحددة" <code class="br">selected</code> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"amazing"</span>&gt;<span class="txt">مدهش</span>&lt;/option&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><p>داخل عنصر "التحديد" <code class="br">select</code> الخاص بك، أضف السمة "المحددة" <code class="br">selected</code> إلى عنصر "الخيار" <code class="br">option</code> بقيمة <code class="br">"excellent"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ ...
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+
+            
+        </section>
+
+
+        <section>
+            <h3>الخطوة 28 :</h3>
+
+            <p>يجب أن يتيح "نموذج تقييم الفندق" <em>hotel feedback form</em> للمستخدمين أيضاً إمكانية تقييم الطعام.</p>
+
+            <ul>
+                <li><p>ابدأ بإضافة عنصر "تسمية" <code class="br">label</code> بنص <code class="br-white">كيف كان الطعام؟</code>. يجب أن يحتوي عنصر "التسمية" <code class="br">label</code> هذا على سمة <code class="br">for</code> مضبوطة على <code class="br">"food"</code>.</p></li>
+                <li><p>أسفل عنصر "التسمية" <code class="br">label</code> الخاص بك، أضف عنصر "تحديد" <code class="br">select</code> مع تعيين "المعرف" <code class="br">id</code> و"الاسم" <code class="br">name</code> إلى <code class="br">"food"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ ...
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"food"</span>&gt;<span class="txt">كيف كان الطعام؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"food"</span> <span class="attr">name=</span><span class="value">"food"</span>&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+        </section>
+
+
+        <section>
+            <h3>الخطوة 29 :</h3>
+
+            <p>داخل عنصر "القائمة المنسدلة" <code class="br">select</code> ، أضف عناصر "الخيارات" <code class="br">option</code> الخمسة التالية مع القيم المقابلة لخاصيتي "نص الخيار" <em><code class="br">option</code> text</em> و"قيمته" <code class="br">value</code> :</p>
+
+            <h4>سمات القيمة Value Attribute :</h4>
+
+            <ul>
+                <li><p>poor</p></li>
+                <li><p>satisfactory</p></li>
+                <li><p>good</p></li>
+                <li><p>very-good</p></li>
+                <li><p>excellent</p></li>
+            </ul>
+
+
+            <h4>نص عنصر الخيار Option Text :</h4>
+
+            <ul>
+                <li><p>ضعيف</p></li>
+                <li><p>مقبول</p></li>
+                <li><p>جيد</p></li>
+                <li><p>جيد جداً</p></li>
+                <li><p>ممتاز</p></li>
+            </ul>
+
+            <p>لا تنس إضافة السمة "المحددة" <code class="br">selected</code> إلى عنصر "الخيار" <code class="br">option</code> بقيمة <code class="br">"excellent"</code>.</p>
+
+
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ ...
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"food"</span>&gt;<span class="txt">كيف كان الطعام؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"food"</span> <span class="attr">name=</span><span class="value">"food"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            
+        </section>
+
+
+        <section>
+            <h3>الخطوة 30 :</h3>
+
+            <p>سيسمح "القسم الأخير" <i>The last section</i> من "النموذج" <em>the <code class="br">form</code></em> للمستخدمين بتقديم أي ملاحظات إضافية يرغبون بها حول الفندق.</p>
+
+            <ul>
+                <li><p>ابدأ بإضافة عنصر "تسمية" <code class="br">label</code> بنص <code class="br-white">تعليقات أخرى؟</code> وتعيين سمة <code class="br">for</code> إلى <code class="br">"comments"</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ ...
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"food"</span>&gt;<span class="txt">كيف كان الطعام؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"food"</span> <span class="attr">name=</span><span class="value">"food"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"comments"</span>&gt;<span class="txt">تعليقات أخرى؟</span>&lt;/label&gt;</span>  
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 31 :</h3>
+
+            <p>إذا كنت تريد أن يحصل المستخدمون على مساحة أكبر لكتابة تعليقاتهم، يمكنك استخدام عنصر <code class="br">textarea</code>.</p>
+
+            <p>عنصر "منطقة النص" <code class="br">textarea</code> هو عنصر تحكم لإدخال النصوص متعددة الأسطر، يسمح للمستخدمين بإدخال نصوص أطول من سطر واحد. يمكن استخدامه لإنشاء "مربع تعليق" <em>a comment box</em>، أو "حقل إدخال رسالة" <em>a message input</em>، أو أي "حقل إدخال نص" <em>text input</em> آخر يتطلب عدة أسطر.</p>
+
+            <h4>إليك مثال على عنصر <code class="br">textarea</code> :</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;textarea <span class="attr">id=<span class="value">"comments"</span> name=<span class="value">"comments"</span> rows=<span class="value">"4"</span> cols=<span class="value">"50"</span></span>&gt;&lt;/textarea&gt;</span>
+            </code></pre></div>
+
+            <p>تُستخدم سمة "الصفوف" <code class="br">rows</code> لتحديد الارتفاع المرئي لـ"منطقة النص" <code class="br">textarea</code>، وتُستخدم سمة "الأعمدة" <code class="br">cols</code> لتحديد العرض المرئي لـ"منطقة النص" <code class="br">textarea</code>.</p>
+
+            <ul><li><p>أسفل عنصر "التسمية" <code class="br">label</code>، أضف عنصر "منطقة نصية" <code class="br">textarea</code>. في الخطوة التالية، ستضيف السمات اللازمة.</p></li></ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ ...
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"food"</span>&gt;<span class="txt">كيف كان الطعام؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"food"</span> <span class="attr">name=</span><span class="value">"food"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"comments"</span>&gt;<span class="txt">تعليقات أخرى؟</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;textarea&gt;&lt;/textarea&gt;</span>  
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+
+        <section>
+            <h3>الخطوة 32 :</h3>
+
+            <ul>
+                <li><p>بالنسبة لعنصر <code class="br">textarea</code> الخاص بك، أضف سمة <code class="br">id</code> وسمة <code class="br">name</code> بقيمة <code class="br">"comments"</code>.</p></li>
+                <li><p>بالنسبة لخاصية <code class="br">cols</code>، اضبط القيمة على <code class="br">30</code>، وبالنسبة لخاصية <code class="br">rows</code>، اضبط القيمة على <code class="br">10</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ ...
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"food"</span>&gt;<span class="txt">كيف كان الطعام؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"food"</span> <span class="attr">name=</span><span class="value">"food"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+  
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"comments"</span>&gt;<span class="txt">تعليقات أخرى؟</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;textarea <span class="attr">id=<span class="value">"comments"</span> name=<span class="value">"comments"</span> cols=<span class="value">"30"</span> rows=<span class="value">"10"</span></span>&gt;&lt;/textarea&gt;</span>   
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+        <section>
+            <h3>الخطوة 33 :</h3>
+
+            <p>في الخطوة الأخيرة من "ورشة عمل نموذج ملاحظات الفندق" <em>the hotel feedback form workshop</em>، ستحتاج إلى إضافة "زر إرسال" <em>a submit button</em> إلى "النموذج" <em>the form</em>.</p>
+
+            <p>تذكر أنك تعلمت كيفية استخدام "أزرار الإرسال" <em>submit buttons</em> في الدروس السابقة.</p>
+
+            <ul>
+                <li>أضف عنصر "زر" <code class="br">button</code> مع تعيين سمة "النوع" <code class="br">type</code> إلى "إرسال" <code class="br">"submit"</code> وتعيين محتوى النص إلى <code class="br-white">إرسال</code>.</li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+ ...
+ ...
+ ...
+
+ <span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"food"</span>&gt;<span class="txt">كيف كان الطعام؟</span>&lt;/label&gt;</span>
+  <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"food"</span> <span class="attr">name=</span><span class="value">"food"</span>&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+   <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+ <span class="tag">&lt;/fieldset&gt;</span>
+
+ <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"comments"</span>&gt;<span class="txt">تعليقات أخرى؟</span>&lt;/label&gt;</span>
+ <span class="tag">&lt;textarea <span class="attr">id=<span class="value">"comments"</span> name=<span class="value">"comments"</span> cols=<span class="value">"30"</span> rows=<span class="value">"10"</span></span>&gt;&lt;/textarea&gt;</span>  
+ 
+ <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span class="txt">إرسال</span>&lt;/button&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+            </code></pre></div>
+
+            <h4>وبهذا، يكون نموذج تقييم الفندق الخاص بك قد اكتمل!</h4>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- CODE CODE CODE CODE -->
+        <section>
+		<h3>حل التطبيق :</h3>
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>نموذج تقييم الفندق<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;header&gt;</span>
+     <span class="tag">&lt;h1&gt;<span class="txt">نموذج تقييم الفندق</span>&lt;/h1&gt;</span>
+     <span class="tag">&lt;p&gt;<span class="txt">.شكرًا لإقامتكم معنا. نرجو تزويدنا بتعليقاتكم حول إقامتكم الأخيرة</span>&lt;/p&gt;</span>
+  <span class="tag">&lt;/header&gt;</span>
+ 
+  <span class="tag">&lt;main&gt;</span>
+   <span class="tag">&lt;form <span class="attr">method=</span><span class="value">"POST"</span> <span class="attr">action=</span><span class="value">"https://hotel-feedback.freecodecamp.org"</span>&gt;</span>
+    
+   <span class="tag">&lt;fieldset&gt;</span>
+     <span class="tag">&lt;legend&gt;<span class="txt">معلومات شخصية</span>&lt;/legend&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"full-name"</span>&gt;<span class="txt">:الاسم (مطلوب)</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"full-name"</span> name=<span class="value">"name"</span> placeholder=<span class="value">"فلان بن فلان"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span class="txt">:عنوان البريد الإلكتروني (مطلوب)</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span> placeholder=<span class="value">"example@email.com"</span> size=<span class="value">"20"</span> required</span>&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"age"</span>&gt;<span class="txt">:العمر (اختياري)</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;input <span class="attr">type=<span class="value">"number"</span> id=<span class="value">"age"</span> name=<span class="value">"age"</span> min=<span class="value">"3"</span> max=<span class="value">"100"</span> </span>&gt;</span>
+    <span class="tag">&lt;/fieldset&gt;</span>
+    
+    <span class="tag">&lt;fieldset&gt;</span>
+     <span class="tag">&lt;legend&gt;<span class="txt">هل كانت هذه زيارتك الأولى لفندقنا؟</span>&lt;/legend&gt;</span>
+     <span class="tag">&lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"yes-option"</span> name=<span class="value">"hotel-stay"</span></span>&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"yes-option"</span>&gt;<span class="txt">نعم</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"no-option"</span> name=<span class="value">"hotel-stay"</span></span>&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"no-option"</span>&gt;<span class="txt">لا</span>&lt;/label&gt;</span>  
+    <span class="tag">&lt;/fieldset&gt;</span>
+
+    <span class="tag">&lt;fieldset&gt;</span>
+     <span class="tag">&lt;legend&gt;<span class="txt">لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</span>&lt;/legend&gt;</span>
+     <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"ads"</span> name=<span class="value">"choice"</span> value=<span class="value">"ads"</span></span>&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"ads"</span>&gt;<span class="txt">إعلانات وسائل التواصل الاجتماعي</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"recommendation"</span> name=<span class="value">"choice"</span> value=<span class="value">"recommendation"</span></span>&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"recommendation"</span>&gt;<span class="txt">توصية شخصية</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"location"</span> name=<span class="value">"choice"</span> value=<span class="value">"location"</span></span>&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"location"</span>&gt;<span class="txt">الموقع</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;input <span class="attr">checked type=<span class="value">"checkbox"</span> id=<span class="value">"reputation"</span> name=<span class="value">"choice"</span> value=<span class="value">"reputation"</span></span>&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"reputation"</span>&gt;<span class="txt">السمعة</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;input <span class="attr">type=<span class="value">"checkbox"</span> id=<span class="value">"price"</span> name=<span class="value">"choice"</span> value=<span class="value">"price"</span></span>&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"price"</span>&gt;<span class="txt">السعر</span>&lt;/label&gt;</span>    
+    <span class="tag">&lt;/fieldset&gt;</span>
+
+    <span class="tag">&lt;fieldset&gt;</span>
+     <span class="tag">&lt;legend&gt;<span class="txt">التقييمات</span>&lt;/legend&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"service"</span>&gt;<span class="txt">كيف كانت الخدمة؟</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"service"</span> <span class="attr">name=</span><span class="value">"service"</span>&gt;</span>
+      <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+      <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+      <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+      <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+      <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+     <span class="tag">&lt;/select&gt;</span>
+     <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"food"</span>&gt;<span class="txt">كيف كان الطعام؟</span>&lt;/label&gt;</span>
+     <span class="tag">&lt;select <span class="attr">id=</span><span class="value">"food"</span> <span class="attr">name=</span><span class="value">"food"</span>&gt;</span>
+      <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"poor"</span>&gt;<span class="txt">ضعيف</span>&lt;/option&gt;</span>
+      <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"satisfactory"</span>&gt;<span class="txt">مقبول</span>&lt;/option&gt;</span>
+      <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"good"</span>&gt;<span class="txt">جيد</span>&lt;/option&gt;</span>
+      <span class="tag">&lt;option <span class="attr">value=</span><span class="value">"very-good"</span>&gt;<span class="txt">جيد جداً</span>&lt;/option&gt;</span>
+      <span class="tag">&lt;option <span class="attr">selected value=</span><span class="value">"excellent"</span>&gt;<span class="txt">ممتاز</span>&lt;/option&gt;</span>
+     <span class="tag">&lt;/select&gt;</span>
+    <span class="tag">&lt;/fieldset&gt;</span>
+     
+    <span class="tag">&lt;label <span class="attr">for=</span><span class="value">"comments"</span>&gt;<span class="txt">تعليقات أخرى؟</span>&lt;/label&gt;</span>
+    <span class="tag">&lt;textarea <span class="attr">id=<span class="value">"comments"</span> name=<span class="value">"comments"</span> cols=<span class="value">"30"</span> rows=<span class="value">"10"</span></span>&gt;&lt;/textarea&gt;</span>      
+    
+    <span class="tag">&lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span class="txt">إرسال</span>&lt;/button&gt;</span>
+
+   <span class="tag">&lt;/form&gt;</span>
+  <span class="tag">&lt;/main&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre></div>
+        </section>
+
+
+
+
+
+
+        <!-- PREVIEW PREVIEW PREVIEW PREVIEW -->
+        <section>
+            <h3>معاينة التطبيق :</h3>
+            <div class="preview" role="presentation">
+                <div class="header-f7">
+                    <h1>نموذج تقييم الفندق</h1>
+                    <p>شكرًا لإقامتكم معنا. نرجو تزويدنا بتعليقاتكم حول إقامتكم الأخيرة.</p>
+                </div>
+                
+                <div class="main-f7">
+                    <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+                        <fieldset>
+                            <legend>معلومات شخصية</legend>
+                            <label for="full-name">الاسم (مطلوب):</label>
+                            <input type="text" id="full-name" name="name" placeholder="فلان بن فلان" size="20" required>
+                            <label for="email">عنوان البريد الإلكتروني (مطلوب):</label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" size="20" required>
+                            <label for="age">العمر (اختياري):</label>
+                            <input type="number" id="age" name="age" min="3" max="100" >
+                        </fieldset>
+                        <fieldset>
+                            <legend>هل كانت هذه زيارتك الأولى لفندقنا؟</legend>
+                            <input type="radio" id="yes-option" name="hotel-stay">
+                            <label for="yes-option">نعم</label>
+                            <input type="radio" id="no-option" name="hotel-stay">
+                            <label for="no-option">لا</label> 
+                        </fieldset>
+                        <fieldset>
+                            <legend>لماذا اخترت الإقامة في فندقنا؟ (اختر جميع ما ينطبق)</legend>
+                            <input type="checkbox" id="ads" name="choice" value="ads">
+                            <label for="ads">إعلانات وسائل التواصل الاجتماعي</label>
+                            <input type="checkbox" id="recommendation" name="choice" value="recommendation">
+                            <label for="recommendation">توصية شخصية</label>
+                            <input type="checkbox" id="location" name="choice" value="location">
+                            <label for="location">الموقع</label>
+                            <input checked type="checkbox" id="reputation" name="choice" value="reputation">
+                            <label for="reputation">السمعة</label>
+                            <input type="checkbox" id="price" name="choice" value="price">
+                            <label for="price">السعر</label>    
+                        </fieldset>
+                        <fieldset>
+                            <legend>التقييمات</legend>
+                            <label for="service">كيف كانت الخدمة؟</label>
+                            <select id="service" name="service">
+                                <option value="poor">ضعيف</option>
+                                <option value="satisfactory">مقبول</option>
+                                <option value="good">جيد</option>
+                                <option value="very-good">جيد جداً</option>
+                                <option selected value="excellent">ممتاز</option>
+                            </select>
+                            <label for="food">كيف كان الطعام؟</label>
+                            <select id="food" name="food">
+                                <option value="poor">ضعيف</option>
+                                <option value="satisfactory">مقبول</option>
+                                <option value="good">جيد</option>
+                                <option value="very-good">جيد جداً</option>
+                                <option selected value="excellent">ممتاز</option>
+                            </select>
+                        </fieldset>
+                        
+                        <label for="comments">تعليقات أخرى؟</label>
+                        <textarea id="comments" name="comments" cols="30" rows="10"></textarea>    
+                        
+                        <button type="submit">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
         
         
 
