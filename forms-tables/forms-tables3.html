@@ -29,11 +29,243 @@
         <div class="sub-title">
             <h2>٣. العمل مع الجداول</h2>
             <span class="hint">نظري</span>
-            <p>قريبًا</p>
+            <p></p>
         </div>
 
         <section id="1">
             <h3>أ. ما هي استخدامات جداول اتش.تي.إم.إل HTML Tables ، وما هي الاستخدامات التي ينصح بتجنبها؟</h3>
+
+            <p>لم تعد "جداول اتش.تي.إم.إل" <b>HTML tables</b> شائعة الاستخدام كما كانت في السابق، ولكن كـ"مطور واجهات أمامية" <em>a frontend developer</em>، لا يزال من الضروري أن تكون على دراية بها. تُعد "الجداول" <em>Tables</em> من أوائل الطرق التي استخدمها "المطورون" <em>devs</em> لعرض "البيانات" <em>data</em> في "المتصفح" <em>a browser</em> في تسعينيات القرن الماضي.</p>
+
+            <h4>فيما يلي مثال على "الكود" <em>code</em> المستخدم لإنشاء "جدول" <em>a table</em> من "مكتب إحصاأت العمل الأمريكي" <i>the U.S. Bureau of Labor Statistics</i> :</h4>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;table <span class="attr">id=</span><span class="value">"quickfacts"</span>&gt;</span>
+ <span class="tag">&lt;thead&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th <span class="attr">colspan=</span><span class="value">"2"</span>&gt;<span class="txt">حقائق سريعة: مطورو البرمجيات، ومحللو ضمان الجودة، والمختبرون</span>&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/thead&gt;</span>
+ <span class="tag">&lt;tbody&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">متوسط ​​الأجور لعام 2023</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;</span>
+    130,160 دولارًا سنويًا
+    <span class="tag">&lt;br&gt;</span>62.58 دولارًا في الساعة
+   <span class="tag">&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">التعليم النموذجي للمبتدئين</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">درجة البكالوريوس</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">خبرة عملية في مهنة ذات صلة</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">لا أحد</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">التدريب أثناء العمل</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">لا أحد</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">عدد الوظائف، 2022</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">1,795,300</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">توقعات سوق العمل، 2022-2032</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">25% (أسرع بكثير من المتوسط)</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">التغير في التوظيف، 2022-2032</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;<span class="txt">451,200</span>&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/tbody&gt;</span>
+ <span class="tag">&lt;tfoot&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">لو كان لهذا الجدول "تذييل" لكان هنا.</span>&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/tfoot&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+                </code></pre>
+            </div>
+
+            <h4>معاينة كود الجدول :</h4>
+
+            <div class="preview" role="presentation">
+                <table id="quickfacts">
+                    <thead>
+                    <tr>
+                    <th colspan="2">حقائق سريعة: مطورو البرمجيات، ومحللو ضمان الجودة، والمختبرون</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <th>متوسط ​​الأجور لعام 2023</th>
+                    <td>
+                        130,160 دولارًا سنويًا
+                        <br>62.58 دولارًا في الساعة
+                    </td>
+                    </tr>
+                    <tr>
+                    <th>التعليم النموذجي للمبتدئين</th>
+                    <td>درجة البكالوريوس</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                    <th>خبرة عملية في مهنة ذات صلة</th>
+                    <td>لا أحد</td>
+                    </tr>
+                    <tr>
+                    <th>التدريب أثناء العمل</th>
+                    <td>لا أحد</td>
+                    </tr>
+                    <tr>
+                    <th>عدد الوظائف، 2022</th>
+                    <td>1,795,300</td>
+                    </tr>
+                    <tr>
+                    <th>توقعات سوق العمل، 2022-2032</th>
+                    <td>25% (أسرع بكثير من المتوسط)</td>
+                    </tr>
+                    <tr>
+                    <th>التغير في التوظيف، 2022-2032</th>
+                    <td>451,200</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                    <th>لو كان لهذا الجدول "تذييل" لكان هنا.</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <p>كما ترون، يوجد عنصر "جدول" <code class="br">table</code> رئيسي يحمل "المعرّف" <code class="br">id</code> هذا <code class="br">"quickfacts"</code>. ويحتوي هذا العنصر على عناصر فرعية هي: "رأس الجدول" <code class="br">thead</code>، و"جسم الجدول" <code class="br">tbody</code>، و"قاعدة الجدول" <code class="br">tfoot</code>.</p>
+
+            <p>عناصر "رأس الجدول" <em>table head</em>، و"جسمه" <em>body</em>، و"تذييله" <em>foot</em> يمكن أن تحتوي كل منها على عدد من "صفوف الجدول" <em>a table rows, <code class="br">tr</code></em>. ويحتوي كل "صف" <em>table row</em> على "رأس جدول" <em>a table header, <code class="br">th</code></em> يُحدد البيانات الموجودة فيه. كما يمكن أن يحتوي على عدد من "خلايا البيانات الفردية" <em>individual data cells</em>، تُسمى "بيانات الجدول" <em>called table data, <code class="br">td</code></em>.</p>
+
+            <p>هذا عدد كبير من "عناصر اتش.تي.إم.إل" <em>HTML elements</em> . لكن لا تدع الأمر يربكك – فهي تتبع "تسلسلاً هرمياً بسيطاً" <em>a simple hierarchy</em>.</p>
+
+            <h4>إليكم أبسط "جدول" table يمكننا إنشاؤه والذي يتضمن جميع هذه العناصر:</h4>
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;thead&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">عنوان هذا الجدول</span>&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/thead&gt;</span>
+ <span class="tag">&lt;tbody&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">الصف الأول</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;</span>
+    خلية البيانات الأولى
+   <span class="tag">&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">الصف الثاني</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;td&gt;</span>
+    خلية البيانات الثانية
+   <span class="tag">&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/tbody&gt;</span>
+ <span class="tag">&lt;tfoot&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">.قد يحتوي "تذييل" هذا الجدول على تاريخ النشر، أو بيانات المؤلفين، أو معلومات تعريفية أخرى</span>&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/tfoot&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+                </code></pre>
+            </div>
+
+            <h4>معاينة كود الجدول :</h4>
+
+            <div class="preview" role="presentation">
+               <table>
+                <thead>
+                <tr>
+                <th>عنوان هذا الجدول</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <th>الصف الأول</th>
+                <td>
+                    خلية البيانات الأولى
+                </td>
+                </tr>
+                <tr>
+                <th>الصف الثاني</th>
+                <td>
+                    خلية البيانات الثانية
+                </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                <th>قد يحتوي "تذييل" هذا الجدول على تاريخ النشر، أو بيانات المؤلفين، أو معلومات تعريفية أخرى.</th>
+                </tr>
+                </tfoot>
+                </table> 
+            </div>
+
+            <p>كما ترون، فإن البيانات نفسها موجودة دائمًا داخل عنصر <code class="br">tr</code> – وداخل عنصر <code class="br">tr</code> هذا يوجد عنصر <code class="br">th</code> يحتوي على عنوان، وعنصر <code class="br">td</code> يحتوي على بيانات..</p>
+
+            <p>ستختار بعض المواقع الإلكترونية استخدام عناصر <code class="br">div</code> لإنشاء جداولها الخاصة بدلاً من استخدام عنصر "الجدول" <code class="br">table</code> الأكثر ملاءمة.</p>
+
+            <p>على الرغم من أنه من الممكن عرض "البيانات الجدولية" <em>tabular data</em> باستخدام عناصر <code class="br">div</code> العامة، إلا أنه لا يزال من الأفضل استخدام عنصر "الجدول" <code class="br">table</code> بدلاً من ذلك.</p>
+
+            <p>قبل سنوات عديدة، ربما استخدم المطورون "الجدول" <em>a <code class="br">table</code></em> لتحديد مواقع العناصر "الغير البياناتية" <i>non-data</i> على صفحات الويب. لم يُعتبر هذا الأسلوب من أفضل الممارسات آنذاك. لكن قد تصادف بعض "قواعد البيانات البرمجية" <em>codebases</em> التي لا تزال تستخدم "الجداول" <em>tables</em> بهذه الطريقة.</p>
+
+            <p>يستخدم المطورون اليوم تقنيتي <b>CSS flexbox</b> و <b>grid</b> لتصميم مواقعهم. وسنتناول هذه الأدوات بالتفصيل لاحقاً.</p>
+
+            <p>في الوقت الحالي، استخدم "جداول اتش.تي.إم.إل" <em>HTML tables</em> للغرض الأصلي المقصود منها: عرض البيانات الجدولية.</p>
+
+
+            <!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+
+			<h5>في "جدول اتش.تي.إم.إل" HTML table ، ما هي العناصر الموجودة داخل عنصر <code class="br">tr</code> ؟</h5>
+			
+			<p> ١. <code class="br">thead</code> و <code class="br">tfoot</code>. ❌</p>
+			<p><mark> ٢. <code class="br">td</code> و <code class="br">th</code>. ✅</mark></p>
+			<p> ٣. <code class="br">table</code> و <code class="br">tbody</code>. ❌</p>
+			<p> ٤. <code class="br">div</code> و <code class="br">span</code>. ❌</p>
+
+
+            <br>
+
+			<h5>ما هي "الأقسام الرئيسية" <em>the main sections</em> لـ"جدول اتش.تي.إم.إل" HTML table ؟</h5>
+			
+			<p> ١. <code class="br">tabel</code> و <code class="br">div</code> و <code class="br">span</code>. ❌</p>
+			<p> ٢. <code class="br">header</code> و <code class="br">section</code> و <code class="br">footer</code>. ❌</p>
+			<p><mark> ٣. <code class="br">thead</code> و <code class="br">tbody</code> و <code class="br">tfoot</code>. ✅</mark></p>
+            <p> ٤. <code class="br">article</code> و <code class="br">aside</code> و <code class="br">nav</code>. ❌</p>
+			
+				
+			<br>
+
+
+			<h5>ما هو الاستخدام الرئيسي الموصى به لـ"جداول اتش.تي.إم.إل" HTML tables اليوم؟</h5>
+			
+			<p> ١. إنشاء "تخطيطات الصفحات" <em>page layouts</em>. ❌</p>
+            <p><mark> ٢. عرض "البيانات الجدولية" <em>tabular data</em>. ✅</mark></p>
+			<p> ٣. تنسيق الصفحات باستخدام <b>CSS</b>. ❌</p>
+			<p> ٤. إدراج الصور. ❌</p>
+			
+			
+				
+			
+			
+		</div>
+
+
+
+
         </section>
         
         
