@@ -29,10 +29,480 @@
         <div class="sub-title">
             <h2>٤. أنشئ جدولًا للامتحانات النهائية</h2>
             <span class="hint">ورشة عمل</span>
-            <p>قريبًا</p>
+            <p>في هذه الورشة، ستتدرب على العمل مع "جداول اتش.تي.إم.إل" <em>HTML tables</em> من خلال إنشاء جدول امتحان نهائي لمجموعة من الطلاب.</p>
         </div>
 
         <section>
+            <h3>نموذج "اتش.تي.إم.إل" <em>The HTML boilerplate</em>.</h3>
+
+
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>جدول امتحانات التفاضل والتكامل النهائية<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+	    </section>
+
+        <section>
+            <h3>الخطوة 1 :</h3>
+
+            <p>في الدروس السابقة، تعلمت كيفية التعامل مع عنصر "الجدول" <code class="br">table</code> لتمثيل "البيانات الجدولية" <em>tabular data</em> .</p>
+
+            <ul><li><p>داخل عنصر "الجسم" <code class="br">body</code> الخاص بك، قم بتضمين عنصر "الجدول" <code class="br">table</code> .</p></li></ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+
+        <section>
+            <h3>الخطوة 2 :</h3>
+
+            <p>لإضافة عنوان إلى "جدول" <code class="br">table</code>، يمكنك استخدام عنصر "عنوان الجدول" <em>table caption</em> .</p>
+
+            <h4>إليك مثال باستخدام عنصر <code class="br">caption</code> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;caption&gt;<span class="txt">نتائج كرة القدم</span>&lt;/caption&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><p>داخل عنصر "الجدول" <code class="br">table</code> الخاص بك، ضع عنصر "التسمية التوضيحية" <code class="br">caption</code> بداخله النص التالي: <code class="br-white">درجات امتحان التفاضل والتكامل النهائي</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 3 :</h3>
+
+            <p>بالنسبة للقسم الأول من الجدول، ستحتاج إلى تجميع "محتوى العنوان" <em>header content</em> الذي يمثل تسميات "الأعمدة" <em>the column</em> لاسم الطالب الأول واسم عائلته ودرجة الامتحان النهائي.</p>
+
+            <p>عنصر "رأس الجدول"، <code class="br">thead</code>، يُستخدم لتجميع "محتوى رأس الجدول" <i>the header content in a table</i>.</p>
+
+            <h4>إليك مثال باستخدام عنصر <code class="br">thead</code> :</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;thead&gt;</span>
+  <span class="value">&lt;!--  محتوى رأس الصفحة يُكتب هنا  --&gt;</span>
+ <span class="tag">&lt;/thead&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><p>أسفل عنصر "التسمية التوضيحية" <code class="br">caption</code>، أضف عنصر "رأس الجدول" <em>a table head</em> .</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+  <span class="tag">&lt;thead&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+
+        <section>
+            <h3>الخطوة 4 :</h3>
+
+            <p>يتكون عنصر "رأس الجدول" <em>the table head</em> من عنصر "صف الجدول"، <code class="br">tr</code>، الذي يحتوي على عناصر "خلية رأس الجدول"، <code class="br">th</code> .</p>
+
+            <h4>إليك مثال باستخدام عنصري <code class="br">tr</code> و <code class="br">th</code> لجدول رياضي:</h4>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;table&gt;</span>
+ <span class="tag">&lt;thead&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">فريق</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">انتصارات</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;th&gt;<span class="txt">خسائر</span>&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+ <span class="tag">&lt;/thead&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><p>داخل عنصر "رأس الصفحة" <code class="br">thead</code>، أضف عنصر "صف" <code class="br">tr</code>.</p></li>
+                <li><p>أضف ثلاثة عناصر <code class="br">th</code> داخل عنصر <code class="br">tr</code> الخاص بك.</p></li>
+                <li><p>يجب أن يحتوي العنصر <code class="br">th</code> الأول على النص <code class="br-white">اسم العائلة</code>. يجب أن يحتوي العنصر <code class="br">th</code> الثاني على النص <code class="br-white">الاسم الأول</code>. يجب أن يحتوي العنصر <code class="br">th</code> الثالث على النص <code class="br-white">الدرجة</code>.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+  <span class="tag">&lt;thead&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">اسم العائلة</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الاسم الأول</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الدرجة</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+
+
+        </section>
+
+
+        <section>
+            <h3>الخطوة 5 :</h3>
+
+            <p>بعد الانتهاء من "قسم الرأس" <em>the head section</em> ، حان الوقت لإضافة "جسم الجدول"، <em>the table body <code class="br">tbody</code></em>. سيمثل "جسم الجدول" <em>The table body</em> جميع أسماء الطلاب ودرجاتهم.</p>
+
+            <ul>
+                <li><p>أضف عنصر "جسم الجدول" <em>The table body</em> إلى جدولك.</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+  <span class="tag">&lt;thead&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">اسم العائلة</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الاسم الأول</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الدرجة</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+
+  <span class="tag">&lt;tbody&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+        </section>
+
+        <section>
+            <h3>الخطوة 6 :</h3>
+            <p>لإضافة "بيانات الطلاب" <i>student data</i> إلى الجدول <em>the table</em>، ستحتاج إلى استخدام عناصر "صف الجدول" <em>the table row</em> و"بيانات الجدول" <em>the table data</em>.</p>
+            <p>يُستخدم عنصر "بيانات الجدول"، <em>The table data <code class="br">td</code></em>، لإنشاء "خلية" <i>a cell</i> في الجدول.</p>
+
+            <h4>فيما يلي مثال على استخدام عنصر <code class="br">td</code> لجدول لاعبي الرياضة:</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;tr&gt;</span>
+ <span class="tag">&lt;td&gt;<span class="txt">1</span>&lt;/td&gt;</span>
+ <span class="tag">&lt;td&gt;<span class="txt">جون دو</span>&lt;/td&gt;</span>
+ <span class="tag">&lt;td&gt;<span class="txt">الولايات المتحدة</span>&lt;/td&gt;</span>
+<span class="tag">&lt;/tr&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><p>داخل عنصر "جسم الجدول" <em>table body</em> ، أضف عنصر "صف جدول"، <em>a table row <code class="br">tr</code></em> ، مع ثلاثة عناصر "بيانات جدول"، <em>table data <code class="br">td</code></em> .</p></li>
+                <li><p>يجب أن يحتوي عنصر "بيانات الجدول" <em>table data</em> الأول على اسم عائلة <code class="br">ديفيس</code> .</p></li>
+                <li><p>يجب أن يحتوي عنصر "بيانات الجدول" <em>table data</em> الثاني على اسم  <code class="br">أليكس</code> .</p></li>
+                <li><p>يجب أن يحتوي عنصر "بيانات الجدول" <em>table data</em> الثالث على الدرجة  <code class="br">54</code> .</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+  
+  <span class="tag">&lt;thead&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">اسم العائلة</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الاسم الأول</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الدرجة</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+
+  <span class="tag">&lt;tbody&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ديفيس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">أليكس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">54</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+
+
+            
+        </section>
+
+        <section>
+            <h3>الخطوة 7 :</h3>
+            <p>والآن حان الوقت لإضافة طالبين آخرين إلى المجموعة.</p>
+            <ul>
+                <p>باتباع نفس النمط المتبع في الخطوة السابقة، أضف "صفًا ثانيًا" <em>a second row</em> لجدول الطلاب. استخدم البيانات التالية لعناصر "بيانات الجدول" <em>table data</em> :</p>
+                <li><p>اسم العائلة: <code class="br">دو</code></p></li>
+                <li><p>الاسم الأول: <code class="br">سامانثا</code></p></li>
+                <li><p>الدرجة: <code class="br">92</code></p></li>
+
+                <p>بالنسبة لـ "الصف الثالث" <em>the third row</em> من جدول الطلاب، استخدم البيانات التالية لعناصر "بيانات الجدول" <em>table data</em> :</p>
+                <li><p>اسم العائلة: <code class="br">رودريغيز</code></p></li>
+                <li><p>الاسم الأول: <code class="br">ماركوس</code></p></li>
+                <li><p>الدرجة: <code class="br">88</code></p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+  
+  <span class="tag">&lt;thead&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">اسم العائلة</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الاسم الأول</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الدرجة</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+
+  <span class="tag">&lt;tbody&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ديفيس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">أليكس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">54</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">دو</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">سامانثا</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">92</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">رودريغيز</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ماركوس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">88</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+
+
+
+        </section>
+
+
+        <section>
+            <h3>الخطوة 8 :</h3>
+            <p>والآن حان الوقت لإضافة طالبين آخرين إلى المجموعة.</p>
+
+            <ul>
+                <p>باتباع نفس النمط المتبع في الخطوة السابقة، أضف "صفًا رابعاً" <em>a fourth row</em> لجدول الطلاب. استخدم البيانات التالية لعناصر "بيانات الجدول" <em>table data</em> :</p>
+                <li><p>اسم العائلة: <code class="br">تومسون</code></p></li>
+                <li><p>الاسم الأول: <code class="br">جين</code></p></li>
+                <li><p>الدرجة: <code class="br">77</code></p></li>
+
+                <p>بالنسبة لـ "الصف الخامس" <em>the fifth row</em> من جدول الطلاب، استخدم البيانات التالية لعناصر "بيانات الجدول" <em>table data</em> :</p>
+                <li><p>اسم العائلة: <code class="br">ويليامز</code></p></li>
+                <li><p>الاسم الأول: <code class="br">ناتالي</code></p></li>
+                <li><p>الدرجة: <code class="br">83</code></p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+  
+  <span class="tag">&lt;thead&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">اسم العائلة</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الاسم الأول</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الدرجة</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+
+  <span class="tag">&lt;tbody&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ديفيس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">أليكس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">54</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">دو</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">سامانثا</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">92</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">رودريغيز</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ماركوس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">88</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">تومسون</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">جين</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">77</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ويليامز</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ناتالي</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">83</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+
+
+
+        </section>
+
+        <section>
+            <h3>الخطوة 9 :</h3>
+            <p>القسم الأخير الذي يُضاف إلى الجدول هو عنصر "تذييل الجدول" <em>the table foot <code class="br">tfoot</code></em> . سيُستخدم عنصر "تذييل الجدول" <em>The table foot</em> لعرض "متوسط ​​درجات" <i>the average grade</i> جميع الطلاب في الجدول.</p>
+
+            <ul>
+                <li><p>أضف عنصر <code class="br">tfoot</code> إلى الجدول.</p></li>
+                <li><p>داخل عنصر <code class="br">tfoot</code> ، أضف عنصر <code class="br">tr</code> .</p></li>
+                <li><p>داخل عنصر <code class="br">tr</code> ، أضف عنصرين <code class="br">td</code> .</p></li>
+                <li><p>يجب أن يحتوي عنصر <code class="br">td</code> الأول على النص <code class="br-white">المعدل التراكمي</code> . ويجب أن يحتوي عنصر <code class="br">td</code> الثاني على النص <code class="br-white">78.8</code> .</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+  
+  <span class="tag">&lt;thead&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">اسم العائلة</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الاسم الأول</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;<span class="txt">الدرجة</span>&lt;/th&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+
+  <span class="tag">&lt;tbody&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ديفيس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">أليكس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">54</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">دو</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">سامانثا</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">92</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">رودريغيز</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ماركوس</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">88</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">تومسون</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">جين</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">77</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ويليامز</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">ناتالي</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">83</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+
+  <span class="tag">&lt;tfoot&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">المعدل التراكمي</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">78.8</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tfoot&gt;</span>
+
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+
+        </section>
+
+        <section>
+            <h3>الخطوة 10 :</h3>
+            <p>جدولك شبه مكتمل، ولكن هناك شيء أخير يجب إضافته.</p>
+            <p>سيكون من الجيد لو أن عنصر <code class="br">td</code> المستخدم لحساب المعدل التراكمي يمتد على عمودين بدلاً من عمود واحد فقط.</p>
+            <p>للقيام بذلك، يمكنك استخدام سمة <em>colspan</em> على عنصر <code class="br">td</code> .</p>
+            <p>تحدد خاصية <code class="br">colspan</code> عدد الأعمدة التي يجب أن تمتد عليها الخلية.</p>
+            <h4>فيما يلي مثال على استخدام خاصية <code class="br">colspan</code> لجدول رياضي:</h4>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;tr&gt;</span>
+ <span class="tag">&lt;td <span class="attr">colspan=</span><span class="value">"3"</span>&gt;<span class="txt">مجموع النقاط</span>&lt;/td&gt;</span>
+<span class="tag">&lt;/tr&gt;</span>
+            </code></pre></div>
+
+            <ul>
+                <li><p>داخل وسم <code class="br">td</code> الافتتاحي، أضف السمة <code class="br">colspan</code> واضبطها على <code class="br">"2"</code> .</p></li>
+            </ul>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;body&gt;</span>
+ 
+ <span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+  
+  <span class="tag">&lt;thead&gt;</span>
+   ...
+  <span class="tag">&lt;/thead&gt;</span>
+
+  <span class="tag">&lt;tbody&gt;</span>
+   ...
+  <span class="tag">&lt;/tbody&gt;</span>
+
+  <span class="tag">&lt;tfoot&gt;</span>
+   <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td <span class="attr">colspan=</span><span class="value">"2"</span>&gt;<span class="txt">المعدل التراكمي</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;<span class="txt">78.8</span>&lt;/td&gt;</span>
+   <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tfoot&gt;</span>
+
+ <span class="tag">&lt;/table&gt;</span>
+ 
+<span class="tag">&lt;/body&gt;</span>
+            </code></pre></div>
+
+            <h5>وبهذا التغيير، يصبح جدولك جاهزاً!</h5>
         </section>
         
         
@@ -40,7 +510,138 @@
 
     
 
+    
+
+
+
+
+    <!-- CODE CODE CODE CODE -->
+        <section>
+		<h3>حل التطبيق :</h3>
+		<div class="code-block"><pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>جدول امتحانات التفاضل والتكامل النهائية<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;table&gt;</span>
+   <span class="tag">&lt;caption&gt;<span class="txt">درجات امتحان التفاضل والتكامل النهائي</span>&lt;/caption&gt;</span>
+   
+   <span class="tag">&lt;thead&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;th&gt;<span class="txt">اسم العائلة</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;th&gt;<span class="txt">الاسم الأول</span>&lt;/th&gt;</span>
+     <span class="tag">&lt;th&gt;<span class="txt">الدرجة</span>&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;/thead&gt;</span>
+   
+   <span class="tag">&lt;tbody&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">ديفيس</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">أليكس</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">54</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">دو</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">سامانثا</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">92</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">رودريغيز</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">ماركوس</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">88</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">تومسون</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">جين</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">77</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">ويليامز</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">ناتالي</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">83</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;/tbody&gt;</span>
+
+   <span class="tag">&lt;tfoot&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td <span class="attr">colspan=</span><span class="value">"2"</span>&gt;<span class="txt">المعدل التراكمي</span>&lt;/td&gt;</span>
+     <span class="tag">&lt;td&gt;<span class="txt">78.8</span>&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;/tfoot&gt;</span>
+
+  <span class="tag">&lt;/table&gt;</span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre></div>
+        </section>
+
+
+
+
+
+
+        <!-- PREVIEW PREVIEW PREVIEW PREVIEW -->
+        <section>
+            <h3>معاينة التطبيق :</h3>
+            <div class="preview" role="presentation">
+                <table>
+                    <caption>درجات امتحان التفاضل والتكامل النهائي</caption>
+                    <thead>
+                        <tr>
+                            <th>اسم العائلة</th>
+                            <th>الاسم الأول</th>
+                            <th>الدرجة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ديفيس</td>
+                            <td>أليكس</td>
+                            <td>54</td>
+                        </tr>
+                        <tr>
+                            <td>دو</td>
+                            <td>سامانثا</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>رودريغيز</td>
+                            <td>ماركوس</td>
+                            <td>88</td>
+                        </tr>
+                        <tr>
+                           <td>تومسون</td>
+                           <td>جين</td>
+                           <td>77</td>
+                        </tr>
+                        <tr>
+                           <td>ويليامز</td>
+                           <td>ناتالي</td>
+                           <td>83</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">المعدل التراكمي</td>
+                            <td>78.8</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+
     </section>
+
+
+
 
     <!-- Pages -->
     <div class="page-nav">
